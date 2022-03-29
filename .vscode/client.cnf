@@ -1,0 +1,10 @@
+[client***REMOVED***
+host     = localhost
+user     = root
+password =
+socket   = /var/run/mysqld/mysqld.sock
+[mysql_upgrade***REMOVED***
+host     = localhost
+user     = root
+password =
+socket   = /var/run/mysqld/mysqld.sock

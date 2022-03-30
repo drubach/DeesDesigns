@@ -13,8 +13,7 @@ This site is designed to give the user a visually pleasing way to browse the ser
 
 For inspiration, I looked at a number of Bootstrap Templates to get a beautiful front end design. In the end, I chose the [LONELY***REMOVED***(https://bootstrapmade.com/demo/Lonely/) template from [BOOTSTRAPMADE***REMOVED***(https://bootstrapmade.com/). Interestingly enough, this was made especially for a small graphic design firm.
 
-### **User Stories:**
-#### **First Time Visitor Goals:**
+### **User Stories:**#### **First Time Visitor Goals:**
 * Easily understand the purpose of the site.
 * Quickly learn how to navigate the site and make sure it is intuitively accessible for first time users.
 * Visually appealing to have a pleasant first experience.
@@ -30,6 +29,8 @@ For inspiration, I looked at a number of Bootstrap Templates to get a beautiful 
 * See my order history to see what I have already bought.
 * Have the option to custom order if I want to change something to a particular product.
 #### **Site Owner Goals:**
+* Showcase work.
+* Process orders online.
 * Be able to update portfolio.
 * See a list of orders.
 * Upload finished work and have customer receive notification of completion.
@@ -46,9 +47,13 @@ For inspiration, I looked at a number of Bootstrap Templates to get a beautiful 
 <hr>
 
 ### **Wireframes:**
-* Desktop - [View***REMOVED***()
-* Tablet - [View***REMOVED***()
-* Mobile - [View***REMOVED***()
+* Desktop - [View***REMOVED***(media/Desktop%20-%20Dees.pdf)
+* Tablet - [View***REMOVED***(media/Tablet%20-%20Dees.pdf)
+* Mobile - [View***REMOVED***(media/Mobile%20-%20Dees.pdf)
+<hr>
+
+### **Database Schema:**
+* Schema - [View***REMOVED***(media/DatabaseDesign%20-%20Dees.pdf)
 <hr>
 
 ### **Features:**

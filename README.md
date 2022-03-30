@@ -47,13 +47,13 @@ For inspiration, I looked at a number of Bootstrap Templates to get a beautiful 
 <hr>
 
 ### **Wireframes:**
-* Desktop - [View](media/Desktop%20-%20Dees.pdf)
-* Tablet - [View](media/Tablet%20-%20Dees.pdf)
-* Mobile - [View](media/Mobile%20-%20Dees.pdf)
+* Desktop - [View](media/Desktop-Dees.png)
+* Tablet - [View](media/Tablet-Dees.png)
+* Mobile - [View](media/Mobile-Dees.png)
 <hr>
 
 ### **Database Schema:**
-* Diagram - [View](media/DatabaseDesign%20-%20Dees.pdf)
+* Diagram - [View](media/DatabaseDesign-Dees.png)
 <hr>
 
 ### **Features:**

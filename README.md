@@ -1,108 +1,111 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Dee's Designs**
 
-Welcome USER_NAME,
+This project is meant to provide an online presence for the small local business, Dee's Designs.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Dee's Designs is a small singularly owned boutique graphic design business based in western NY. This project gives Dee's Designs an online platform to advertise their services, and for customers to purchase them, create accounts, edit delivery information, and provide quick contact with the business owner.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Take a look at the project [here]().
+<hr>
 
-## Gitpod Reminders
+## **UX**
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+This site is designed to give the user a visually pleasing way to browse the services and examples for the boutique graphic design firm, Dee's Designs.
 
-`python3 -m http.server`
+For inspiration, I looked at a number of Bootstrap Templates to get a beautiful front end design. In the end, I chose the [LONELY](https://bootstrapmade.com/demo/Lonely/) template from [BOOTSTRAPMADE](https://bootstrapmade.com/). Interestingly enough, this was made especially for a small graphic design firm.
 
-A blue button should appear to click: _Make Public_,
+### **User Stories:**
+#### **First Time Visitor Goals:**
+* Easily understand the purpose of the site.
+* Quickly learn how to navigate the site and make sure it is intuitively accessible for first time users.
+* Visually appealing to have a pleasant first experience.
+* Be able to quickly browse examples of designs to quickly determine interest.
+* Be able to contact the owner of the store if I have any questions.
+* Be able to create an account, submit a request for work.
+#### **Returning Visitor Goals:**
+* Be able to login/register so information can be saved, and chekcout is handled efficiently.
+* Be able to login with my Google account so creating an account is painless.
+* Have items that I my have in my project cart still be there when I return.
+#### **Frequent User Goals:**
+* Be able to save my profile information so that I don't have to re-enter every time I order.
+* See my order history to see what I have already bought.
+* Have the option to custom order if I want to change something to a particular product.
+#### **Site Owner Goals:**
+* Be able to update portfolio.
+* See a list of orders.
+* Upload finished work and have customer receive notification of completion.
+### **Design Features Include:**
+* **Mobile Menu** - Consolidating the menu down for mobile devices lets it be flexible for device size.
 
-Another blue button should appear to click: _Open Browser_.
+* **Flexible Footer** - Custom JS was written to measure the window and content and intelligently place the footer either fixed at the bottom, or at the bottom of the content.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* **Breadcrumbs** - Breadcrumb headers are included on each page for a beautiful and uniform appearance.
 
-A blue button should appear to click: _Make Public_,
+* **Testimonial Carousel** - Testimonials from satisfied customers cycle through on the home page for a pleasing experience.
 
-Another blue button should appear to click: _Open Browser_.
+* **Color Scheme** - The primary colors for the site came from the Bootstrap template. They include white, gray, greenish -blue-gray and a pastel rose color. 
+<hr>
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### **Wireframes:**
+* Desktop - [View]()
+* Tablet - [View]()
+* Mobile - [View]()
+<hr>
 
-To log into the Heroku toolbelt CLI:
+### **Features:**
+* **User Registration** - Allows user to store their delivery information, their default email, name, phone number, submit a request for services and view their order history.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+* ~~**Google Sheets Integration** - When an order is created, the order information from the Order Model gets pushed to a Google Sheet for the owner of the store to keep track of.~~
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+* **SSO** - Allauth supports signing in and creating an account through many providers, I implemented Google and Facebook.
 
-------
+* ~~**2 Factor Authentication** - Django-allauth-2fa supports 2 factor authentication through authentication apps like Google Authenticator.~~
 
-## Release History
+* **Contact Page** - Allows end users to send emails and questions to the store owner for easy correspondence.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+* **Cart Model** - Allows users that are registered with the site to have their cart data stored for easy access if they leave the site and log back in.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+* **Responsiveness** - Site responds to all device sizes and looks natural on Desktop, Mobile, and Tablet views.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+* **Customizable Store** - Flexible product design allows the owner to add products, edit products, and delete them as their store changes.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+* **Checkout** - Integration with Stripe allows people to shop and buy products, complete with confirmation emails for both the consumer, and the store owner.
+<hr>
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### **Technologies Used:**
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+#### **Languages Used:**
+* HTML5
+* CSS3
+* JavaScript
+* Python
+* Jinja
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+#### **Frameworks, Libraries & Programs Used:**
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+* **Bootstrap 4.5.0** - Bootstrap was used to assist with the responsiveness and styling of the website.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+* **Font Awesome** - Font Awesome was used on most pages throughout the website to add icons for aesthetic purposes.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+* **Git** - Git was used for version control by utilizing VS Code to commit to Git and Push to GitHub.
+GitHub
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+* **GitHub** -  is used to store the project's code after being pushed from Git.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+* **Balsamiq** - Balsamiq was used to create the wireframes during the design process.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+* **JQuery** - JQuery was used to write shorter, simpler Javascript.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+* **Hover.css** - Hover.css is used to change the text and background color of buttons and links upon hovering over them.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+* **Django** - Django is the Python framework that this project was built on.
+Allauth
 
-------
+* **Allauth** -  is used for the authentication models, and SSO for this project.
 
-## FAQ about the uptime script
+* ~~**Django-GSheets** - A forked branch of django-gsheets was used for Google Sheet integration which coerces all data in a model to a string so it can be passed to the sheet.~~ 
 
-**Why have you added this script?**
+* **Postgres SQL** - Django uses a relational database system by default, and Heroku has a free Postgres extension to add on to any app.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+* ~~**Allauth 2FA** - Adds 2 factor authentication to django-allauth.~~
+<hr>
 
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!

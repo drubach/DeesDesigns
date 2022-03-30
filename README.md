@@ -59,11 +59,7 @@ For inspiration, I looked at a number of Bootstrap Templates to get a beautiful 
 ### **Features:**
 * **User Registration** - Allows user to store their delivery information, their default email, name, phone number, submit a request for services and view their order history.
 
-* ~~**Google Sheets Integration** - When an order is created, the order information from the Order Model gets pushed to a Google Sheet for the owner of the store to keep track of.~~
-
 * **SSO** - Allauth supports signing in and creating an account through many providers, I implemented Google and Facebook.
-
-* ~~**2 Factor Authentication** - Django-allauth-2fa supports 2 factor authentication through authentication apps like Google Authenticator.~~
 
 * **Contact Page** - Allows end users to send emails and questions to the store owner for easy correspondence.
 
@@ -107,10 +103,6 @@ Allauth
 
 * **Allauth** -  is used for the authentication models, and SSO for this project.
 
-* ~~**Django-GSheets** - A forked branch of django-gsheets was used for Google Sheet integration which coerces all data in a model to a string so it can be passed to the sheet.~~ 
-
 * **Postgres SQL** - Django uses a relational database system by default, and Heroku has a free Postgres extension to add on to any app.
-
-* ~~**Allauth 2FA** - Adds 2 factor authentication to django-allauth.~~
 <hr>
 

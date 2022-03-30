@@ -53,7 +53,7 @@ For inspiration, I looked at a number of Bootstrap Templates to get a beautiful 
 <hr>
 
 ### **Database Schema:**
-* Schema - [View](media/DatabaseDesign%20-%20Dees.pdf)
+* Diagram - [View](media/DatabaseDesign%20-%20Dees.pdf)
 <hr>
 
 ### **Features:**

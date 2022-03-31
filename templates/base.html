@@ -8,12 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    {% end block %}
+    {% endblock %}
 
     {% block extra_meta %}
-    {% end block %}
+    {% endblock %}
         
-    <title>Dee's Designs {% block extra_title %}{% end block %}</title>
+    <title>Dee's Designs {% block extra_title %}{% endblock %}</title>
     <meta content="Online presence for Dee's Designs, boutique graphic design firm." name="description">
     <meta content="graphic design, logos, icons, posters, portaits" name="keywords">
 
@@ -34,10 +34,10 @@
 
     <!-- Template Main CSS File -->
     <link href="static/lonely/assets/css/style.css" rel="stylesheet">
-    {% end block %}
+    {% endblock %}
 
     {% block extra_css %}
-    {% end block %}
+    {% endblock %}
 
     {% block corejs %}
     <!-- Vendor JS Files -->
@@ -51,10 +51,10 @@
 
     <!-- Template Main JS File -->
     <script src="static/lonely/assets/js/main.js"></script>
-    {% end block %}
+    {% endblock %}
 
     {% block extra_js %}
-    {% end block %}
+    {% endblock %}
 
   <!-- =======================================================
   * Template Name: Lonely - v4.7.0
@@ -65,6 +65,8 @@
 </head>
 
 <body>
+    {% block hero %}
+    {% endblock %}
 
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
@@ -140,7 +142,7 @@
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-    {% blcok postload_js %}
+    {% block postload_js %}
     {% endblock %}
 
 </body>

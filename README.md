@@ -106,3 +106,6 @@ Allauth
 * **Postgres SQL** - Django uses a relational database system by default, and Heroku has a free Postgres extension to add on to any app.
 <hr>
 
+## Bugs
+
+* **Slider not working** - Direction to implement correctly from [Easy Tutorials YouTube Channel](https://www.youtube.com/watch?v=9yLxmbICrTM).

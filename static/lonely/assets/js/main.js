@@ -256,7 +256,10 @@
       1200: {
         slidesPerView: 3,
       }
-    }
+    },
+    observer: true, 
+    observeParents: true,
+    observeSlideChildren: true
   });
 
 })()

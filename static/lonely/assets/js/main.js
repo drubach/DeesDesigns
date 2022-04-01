@@ -257,6 +257,9 @@
         slidesPerView: 3,
   ***REMOVED***
 ***REMOVED***
+    observer: true, 
+    observeParents: true,
+    observeSlideChildren: true
   });
 
 })()

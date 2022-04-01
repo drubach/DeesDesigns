@@ -109,3 +109,5 @@ Allauth
 ## Bugs
 
 * **Slider not working** - Direction to implement correctly from [Easy Tutorials YouTube Channel***REMOVED***(https://www.youtube.com/watch?v=9yLxmbICrTM).
+
+* **Counters not working** - Direction to implement correctly from [GitHubHot.com***REMOVED***(https://githubhot.com/repo/cncagency/purecounterjs).

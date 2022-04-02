@@ -117,6 +117,8 @@ Allauth
 
 * **Counters not working** - Direction to implement correctly from [GitHubHot.com](https://githubhot.com/repo/cncagency/purecounterjs).
 
+* **Back to top button not working** - Moved position of Javascript to the bottom of the HTML body.
+
 ## **Credits**
 ### **Media**
 * The majority of the media was provided within the Bootstrap template.

@@ -20,8 +20,6 @@
     <!-- Favicons -->
     <link href="static/lonely/assets/img/DeesDesignsFavicon.ico" rel="icon">
     <link href="static/lonely/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-    <!-- link rel="shortcut icon" href="media/DeesDesignsFavicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" -->
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i&subset=cyrillic" rel="stylesheet">
@@ -61,28 +59,28 @@
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <div class="logo">
-        <h1><a href= "{% url 'home' %}">Dee's Designs</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href= "{% url 'home' %}"><img src="{{ MEDIA_URL}} DeeDesignsIcon.jpg" alt="Dee's Designs" class="img-fluid"></a> -->
-      </div>
+        <div class="logo">
+            <h1><a href= "{% url 'home' %}">Dee's Designs</a></h1>
+        </div>
 
       {% block navbar%}
         <nav id="navbar" class="navbar">
-            {% comment %} <ul>
-            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-            <li><a class="nav-link scrollto" href="#about">About</a></li>
-            <li><a class="nav-link scrollto" href="#services">Services</a></li>
-            <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
-            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-            <li class="dropdown"><a href="#"><span>My Account</span> <i class="bi bi-chevron-down"></i></a>
+            <nav id="navbar" class="navbar">
                 <ul>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Register</a></li>
+                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#about">About</a></li>
+                    <li><a class="nav-link scrollto" href="#services">Services</a></li>
+                    <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
+                    <li><a class="nav-link scrollto" href="#testimonials">Testimonials</a></li>
+                    <li><a class="nav-link scrollto" href="#">Contact</a></li>
+                    <li class="dropdown"><a href="#"><span>My Account </span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Register</a></li>
+                        </ul>
+                    </li>
                 </ul>
-            </li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i> {% endcomment %}
+                <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
       {% endblock %}
 
@@ -119,6 +117,9 @@
         <div class="copyright">
             &copy; Copyright <strong><span>Dee's Designs</span></strong>. All Rights Reserved
         </div>
+        <div class="privacy-policy-link">
+            View our <a href="/privacypolicy/">Privacy Policy</a>
+          </div>
         <div class="credits">
             <!-- All the links in the footer should remain intact. -->
             <!-- You can delete the links only if you purchased the pro version. -->

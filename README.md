@@ -4,7 +4,7 @@ This project is meant to provide an online presence for the small local business
 
 Dee's Designs is a small singularly owned boutique graphic design business based in western NY. This project gives Dee's Designs an online platform to advertise their services, and for customers to purchase them, create accounts, edit delivery information, and provide quick contact with the business owner.
 
-Take a look at the project [here***REMOVED***().
+[Take a look at the project here***REMOVED***().
 <hr>
 
 ## **UX**
@@ -12,8 +12,10 @@ Take a look at the project [here***REMOVED***().
 This site is designed to give the user a visually pleasing way to browse the services and examples for the boutique graphic design firm, Dee's Designs.
 
 For inspiration, I looked at a number of Bootstrap Templates to get a beautiful front end design. In the end, I chose the [LONELY***REMOVED***(https://bootstrapmade.com/demo/Lonely/) template from [BOOTSTRAPMADE***REMOVED***(https://bootstrapmade.com/). Interestingly enough, this was made especially for a small graphic design firm.
+<hr>
 
-### **User Stories:**#### **First Time Visitor Goals:**
+### **User Stories:**
+#### **First Time Visitor Goals:**
 * Easily understand the purpose of the site.
 * Quickly learn how to navigate the site and make sure it is intuitively accessible for first time users.
 * Visually appealing to have a pleasant first experience.
@@ -34,6 +36,8 @@ For inspiration, I looked at a number of Bootstrap Templates to get a beautiful 
 * Be able to update portfolio.
 * See a list of orders.
 * Upload finished work and have customer receive notification of completion.
+<hr>
+
 ### **Design Features Include:**
 * **Mobile Menu** - Consolidating the menu down for mobile devices lets it be flexible for device size.
 
@@ -80,6 +84,7 @@ For inspiration, I looked at a number of Bootstrap Templates to get a beautiful 
 * JavaScript
 * Python
 * Jinja
+<hr>
 
 #### **Frameworks, Libraries & Programs Used:**
 
@@ -106,8 +111,37 @@ Allauth
 * **Postgres SQL** - Django uses a relational database system by default, and Heroku has a free Postgres extension to add on to any app.
 <hr>
 
-## Bugs
+## **Bugs**
 
 * **Slider not working** - Direction to implement correctly from [Easy Tutorials YouTube Channel***REMOVED***(https://www.youtube.com/watch?v=9yLxmbICrTM).
 
 * **Counters not working** - Direction to implement correctly from [GitHubHot.com***REMOVED***(https://githubhot.com/repo/cncagency/purecounterjs).
+
+## **Credits**
+### **Media**
+* The majority of the media was provided within the Bootstrap template.
+
+* Favicons were generated using this [Generator***REMOVED***(https://www.favicon-generator.org/).
+<hr>
+
+### **Content**
+
+* Any content not provided in the template was written by the developer.
+<hr>
+
+### **Code**
+* Some of the Python and HTML templating was taken from the Boutique Ado Project because the premise of an online store is the same.
+
+* Some ideas were also taken from looking at the website for the online business [VyeRose***REMOVED***(https://vyerose.herokuapp.com/).
+
+* Code for sending an email manually in Django was taken from this Stack Overflow post.
+
+* Documentation for implementing signing in with Google was provided by the Django Allauth docs.
+
+* HTML and CSS for Google sign in button found in this Codepen post.
+<hr>
+
+## **Acknowledgments**
+* My mentor Caleb Mbakwe for continuous and helpful support/design suggestions.
+* My son for his patient assistance and encouragement that an old dog can learn new tricks.
+<hr>

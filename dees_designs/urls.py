@@ -22,4 +22,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')), #Required by allauth.(Other items settings.py)
     path('', include('home.urls'))
-***REMOVED***+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+***REMOVED***+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 

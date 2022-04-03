@@ -134,7 +134,7 @@
   }, true)
 
   /**
-   * Scrool with offset on links with a class name .scrollto
+   * Scroll with offset on links with a class name .scrollto
    */
   on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
@@ -256,10 +256,7 @@
       1200: {
         slidesPerView: 3,
       }
-    },
-    observer: true, 
-    observeParents: true,
-    observeSlideChildren: true
+    }
   });
 
 })()

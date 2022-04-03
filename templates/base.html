@@ -67,12 +67,12 @@
         <nav id="navbar" class="navbar">
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="#services">Services</a></li>
-                    <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
-                    <li><a class="nav-link scrollto" href="#testimonials">Testimonials</a></li>
-                    <li><a class="nav-link scrollto" href="#">Contact</a></li>
+                    <li><a class="nav-link scrollto active" href="{% url 'home' %}">Home</a></li>
+                    <li><a class="nav-link scrollto" href="{% url 'home' %}#about">About</a></li>
+                    <li><a class="nav-link scrollto" href="{% url 'home' %}#services">Services</a></li>
+                    <li><a class="nav-link scrollto" href="{% url 'home' %}#portfolio">Portfolio</a></li>
+                    <li><a class="nav-link scrollto" href="{% url 'home' %}#testimonials">Testimonials</a></li>
+                    <li><a class="nav-link scrollto" href="{% url 'home' %}#contact">Contact</a></li>
                     <li class="dropdown"><a href="#"><span>My Account </span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                         <li><a href="#">Login</a></li>
@@ -89,7 +89,7 @@
 
   {% if messages %}
       <div class="message-container">
-      ***REMOVED***% comment %} {% for message in messages %}
+      ***REMOVED***% for message in messages %}
           ***REMOVED***% with message.level as level %}
               ***REMOVED***% if level == 40 %}
                   ***REMOVED***% include 'includes/toasts/toast_error.html' %}
@@ -101,7 +101,7 @@
                   ***REMOVED***% include 'includes/toasts/toast_info.html' %}
               ***REMOVED***% endif %}
           ***REMOVED***% endwith %}
-      ***REMOVED***% endfor %} {% endcomment %}
+      ***REMOVED***% endfor %}
       </div>
 ***REMOVED***% endif %}
 
@@ -142,6 +142,10 @@
     
     <!-- Template Main JS File -->
     <script src="{% static 'lonely/assets/js/main.js' %}"></script>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
 ***REMOVED***% endblock %}
 
 ***REMOVED***% block postload_js %}

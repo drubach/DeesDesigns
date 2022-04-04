@@ -75,9 +75,18 @@
                     <li><a class="nav-link scrollto" href="{% url 'home' %}#contact">Contact</a></li>
                     <li class="dropdown"><a href="#"><span>My Account </span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Register</a></li>
-                        </ul>
+                            {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                    <li><a href="{% url 'admin:index' %}" class="dropdown-item">Site Management</a></li>
+                                {% endif %}
+                                    <li><a href="#" class="dropdown-item">My Profile</a></li>
+                                    <li><a href="#" class="dropdown-item">Projects</a></li>
+                                    <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
+                            {% else %}
+                                <li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
+                                <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
+                            {% endif %}
+                        </ul>                       
                     </li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -146,6 +155,8 @@
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/0ead8c87cb.js" crossorigin="anonymous"></script>
     {% endblock %}
 
     {% block postload_js %}

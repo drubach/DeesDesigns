@@ -1,1194 +1,1194 @@
 [
-***REMOVED***
-      "pk": 1,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 2,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 4,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 3,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 4,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 5,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 6,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 7,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 4,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 8,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 9,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 10,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 11,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 12,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 1,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 13,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 14,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 1,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 15,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 1,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 16,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 17,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 1,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 18,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 19,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 20,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 21,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 22,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 4,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 23,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 24,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 25,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 26,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 27,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 28,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 4,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 29,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 30,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 31,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 32,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 33,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 34,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 1,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 35,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 36,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 4,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 37,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-  
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 38,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 39,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 40,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 41,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 42,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 43,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 44,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 1,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 45,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 46,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 47,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 48,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 1,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 49,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 4,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 50,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 51,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 1,
-        "completed": 1.8,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 52,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 53,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 1.7,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 54,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 55,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 4,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 56,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1.9,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 57,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 58,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1.3,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 59,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 4,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 60,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 4,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 61,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 62,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 63,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 64,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 19,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 65,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 4,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 66,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 4,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 67,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 68,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 69,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 13,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 70,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 12,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 71,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 4,
-        "completed": 13,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 72,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 73,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 74,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 12,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 75,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 76,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 77,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 1,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 78,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 79,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 80,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 81,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 82,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 1,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 83,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 84,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 2,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
-      "pk": 85,
-      "model": "projects.project",
-      "fields": {
-        "profile_id": 1,
-        "project_name": "Duis aute irure dolor in reprehenderit",
-        "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
-        "cost": 500,
-        "type": 3,
-        "completed": 1,
-        "paid": 1,
-        "image": "*.jpg"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***
-  
+  {
+    "pk": 1,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 2,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 5000,
+      "type": 4,
+      "completed": 1,
+      "paid": 1,
+      "image": "t4_mural_3.jpg"
+***REMOVED***
+  },
+  {
+    "pk": 3,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 4,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 1,
+      "paid": 1,
+      "image": "t3_poster_1.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 5,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 1,
+      "paid": 1,
+      "image": "t3_poster_2.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 6,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 7,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 9000,
+      "type": 4,
+      "completed": 1,
+      "paid": 1,
+      "image": "t4_mural_2.jpg"
+***REMOVED***
+  },
+  {
+    "pk": 8,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 1,
+      "paid": 1,
+      "image": "t3_poster_3.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 9,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 10,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 1,
+      "paid": 1,
+      "image": "t3_poster_4.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 11,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 12,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 150,
+      "type": 1,
+      "completed": 1,
+      "paid": 1,
+      "image": "t1_icon_0.png"
+***REMOVED***
+  },
+  {
+    "pk": 13,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 14,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 150,
+      "type": 1,
+      "completed": 1,
+      "paid": 1,
+      "image": "t1_icon_1.png"
+***REMOVED***
+  },
+  {
+    "pk": 15,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 150,
+      "type": 1,
+      "completed": 1,
+      "paid": 1,
+      "image": "t1_icon_2.png"
+***REMOVED***
+  },
+  {
+    "pk": 16,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 17,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 150,
+      "type": 1,
+      "completed": 1,
+      "paid": 1,
+      "image": "t1_icon_3.png"
+***REMOVED***
+  },
+  {
+    "pk": 18,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 19,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 20,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 1,
+      "paid": 1,
+      "image": "t3_poster_5.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 21,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 1,
+      "paid": 1,
+      "image": "t3_poster_6.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 22,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 6000,
+      "type": 4,
+      "completed": 1,
+      "paid": 1,
+      "image": "t4_mural_1.jpg"
+***REMOVED***
+  },
+  {
+    "pk": 23,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 24,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 25,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 26,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 1,
+      "paid": 1,
+      "image": "t3_poster_7.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 27,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 1,
+      "paid": 1,
+      "image": "t3_poster_8.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 28,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 1500,
+      "type": 4,
+      "completed": 1,
+      "paid": 1,
+      "image": "t4_portrait_5.jpg"
+***REMOVED***
+  },
+  {
+    "pk": 29,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 30,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 31,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 1,
+      "paid": 1,
+      "image": "t3_poster_9.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 32,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 33,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 34,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 150,
+      "type": 1,
+      "completed": 1,
+      "paid": 1,
+      "image": "t1_icon_4.png"
+***REMOVED***
+  },
+  {
+    "pk": 35,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 36,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 1600,
+      "type": 4,
+      "completed": 1,
+      "paid": 1,
+      "image": "t4_portrait_4.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 37,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 38,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 39,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 1,
+      "paid": 1,
+      "image": "t3_poster_10.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 40,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 1,
+      "paid": 1,
+      "image": "t3_poster_11.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 41,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 1,
+      "paid": 1,
+      "image": "t3_poster_12.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 42,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 1,
+      "paid": 1,
+      "image": "t3_poster_13.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 43,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 1,
+      "paid": 1,
+      "image": "t3_poster_14.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 44,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 150,
+      "type": 1,
+      "completed": 1,
+      "paid": 1,
+      "image": "t1_icon_5.png"
+***REMOVED***
+  },
+  {
+    "pk": 45,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 46,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 47,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 1,
+      "paid": 1,
+      "image": "t3_poster_15.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 48,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 150,
+      "type": 1,
+      "completed": 1,
+      "paid": 1,
+      "image": "t1_icon_6.png"
+***REMOVED***
+  },
+  {
+    "pk": 49,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 4,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 50,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 51,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 150,
+      "type": 1,
+      "completed": 1.8,
+      "paid": 1,
+      "image": "t1_icon_7.png"
+***REMOVED***
+  },
+  {
+    "pk": 52,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 1,
+      "paid": 1,
+      "image": "t3_poster_16.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 53,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 1.7,
+      "paid": 1,
+      "image": "t3_poster_17.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 54,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 55,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 900,
+      "type": 4,
+      "completed": 1,
+      "paid": 1,
+      "image": "t4_portrait_3.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 56,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1.9,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 57,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 1,
+      "paid": 1,
+      "image": "t3_poster_18.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 58,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1.3,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 59,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 4,
+      "paid": 1,
+      "image": "t3_poster_19.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 60,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 900,
+      "type": 4,
+      "completed": 1,
+      "paid": 1,
+      "image": "t4_portrait_2.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 61,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 62,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 1,
+      "paid": 1,
+      "image": "t3_poster_20.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 63,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 1,
+      "paid": 1,
+      "image": "t3_poster_21.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 64,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 19,
+      "paid": 1,
+      "image": "t3_poster_22.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 65,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 4,
+      "paid": 1,
+      "image": "t3_poster_23.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 66,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 4,
+      "paid": 1,
+      "image": "t3_poster_24.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 67,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 68,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 69,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 13,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 70,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 12,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 71,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 1500,
+      "type": 4,
+      "completed": 13,
+      "paid": 1,
+      "image": "t4_portrait_1.jpg"
+***REMOVED***
+  },
+  {
+    "pk": 72,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 73,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 74,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 12,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 75,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 76,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 77,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 150,
+      "type": 1,
+      "completed": 1,
+      "paid": 1,
+      "image": "t1_icon_8.png"
+***REMOVED***
+  },
+  {
+    "pk": 78,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 79,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 80,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 1,
+      "paid": 1,
+      "image": "t3_poster_25.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 81,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 82,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 150,
+      "type": 1,
+      "completed": 1,
+      "paid": 1,
+      "image": "t1_icon_9.png"
+***REMOVED***
+  },
+  {
+    "pk": 83,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 1,
+      "paid": 1,
+      "image": "t3_poster_26.jpeg"
+***REMOVED***
+  },
+  {
+    "pk": 84,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 500,
+      "type": 2,
+      "completed": 1,
+      "paid": 1,
+      "image": "t2_logo.png"
+***REMOVED***
+  },
+  {
+    "pk": 85,
+    "model": "projects.project",
+    "fields": {
+      "profile_id": 1,
+      "project_name": "Duis aute irure dolor in reprehenderit",
+      "description": "Lorem ipsum dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.",
+      "cost": 2000,
+      "type": 3,
+      "completed": 1,
+      "paid": 1,
+      "image": "t3_poster_27.jpeg"
+***REMOVED***
+  }
+***REMOVED***
+

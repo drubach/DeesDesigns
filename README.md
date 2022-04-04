@@ -124,6 +124,10 @@ Allauth
 * The majority of the media was provided within the Bootstrap template.
 
 * Favicons were generated using this [Generator***REMOVED***(https://www.favicon-generator.org/).
+
+* Icons were taken from [Flaticon.com***REMOVED***(https://www.flaticon.com/packs/alphabet-and-numbers-18).
+
+* Logos, poster, portraits and murals were taken from [Kaggle.com***REMOVED***(https://www.kaggle.com/datasets/thedownhill/art-images-drawings-painting-sculpture-engraving).
 <hr>
 
 ### **Content**

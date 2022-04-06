@@ -119,6 +119,8 @@ Allauth
 
 * **Back to top button not working** - Moved position of Javascript to the bottom of the HTML body.
 
+* **Couldn't load example project data** - Error: "sqlite3.IntegrityError: UNIQUE constraint failed: projects_project.user_id" resulted from using models.OneToOneField. Changed to models.ForeignKey for user_id for project and issue resolved.
+
 ## **Credits**
 ### **Media**
 * The majority of the media was provided within the Bootstrap template.

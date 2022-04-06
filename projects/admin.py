@@ -5,6 +5,7 @@ from .models import Project, Type
 # Register your models here.
 
 class ProjectAdmin(admin.ModelAdmin):
+    """ View for project administration. """
     list_display = (
         'user',
         'type',
@@ -15,6 +16,7 @@ class ProjectAdmin(admin.ModelAdmin):
 
     ordering = ('user', 'type', 'completed', 'paid')
 class TypeAdmin(admin.ModelAdmin):
+    """ View for Type administration. """
     list_display = (
         'friendly_name',
         'name',

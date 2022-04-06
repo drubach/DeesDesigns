@@ -1006,6 +1006,10 @@ section {
 #footer .copyright {
   text-align: center;
 }
+#footer .privacy-policy-link {
+  padding-top: 8px;
+  text-align: center;
+}
 #footer .credits {
   padding-top: 8px;
   text-align: center;

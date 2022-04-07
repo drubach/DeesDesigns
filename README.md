@@ -142,6 +142,8 @@ Allauth
 
 * Some ideas were also taken from looking at the website for the online business [VyeRose](https://vyerose.herokuapp.com/).
 
+* Thumbnail code for project images was taken from [W3 Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_thumbnail_image).
+
 * Code for sending an email manually in Django was taken from this Stack Overflow post.
 
 * Documentation for implementing signing in with Google was provided by the Django Allauth docs.

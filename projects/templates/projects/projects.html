@@ -22,10 +22,35 @@
         </section><!-- End Breadcrumbs Section -->
 
         <section class="inner-page">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                    ***REMOVED***{ projects }}
+            <div class="container col-10 offset-1">
+                <div class="row mt-1 mb-2">
+                    <div class="row">
+                    ***REMOVED***% for project in projects %}
+                            <div class="col-sm-12 col-md-6 col-lg-4">
+                                <div class="card-project h-100">
+                                ***REMOVED***% if project.image %}
+                                    <a href="">
+                                        <img src="{{ project.image.url }}" alt="Project Image" style="width:100px">
+                                    </a>
+                                ***REMOVED***% else %}
+                                    <a href="">
+                                        <img src="{{ MEDIA_URL }}noimage.png" alt="Project Image" style="width:150px">
+                                    </a>
+                                ***REMOVED***% endif %}
+                                    <div class="card-project-body">
+                                        <p class="mb-0">Name: {{ project.project_name }}</p>
+                                    </div>
+                                    <div class="card-project-footer">
+                                        <p class="mb-0">Type: {{ project.type }}</p>
+                                    ***REMOVED***% if project.completed %}
+                                            <p>Project complete</p>
+                                    ***REMOVED***% else %}
+                                            <p>Project in progress</p>
+                                    ***REMOVED***% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                    ***REMOVED***% endfor %}     
                     </div>
                 </div>
             </div>

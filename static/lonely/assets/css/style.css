@@ -474,6 +474,15 @@ section {
 /*--------------------------------------------------------------
 # Projects
 --------------------------------------------------------------*/
+.sort-select-wrapper {
+  width: 100%;
+  text-align: center;
+  margin: 5px 0px 5px 0px;
+}
+.custom-select {
+  border-radius: 5px;
+  border-color: #5a656e;
+}
 .card-project {
   padding-top: 15px;
   overflow: hidden;

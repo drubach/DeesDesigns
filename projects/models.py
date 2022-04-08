@@ -4,6 +4,10 @@ from django.contrib.auth.models import User
 
 class Type(models.Model):
     """ db Model for Types of projects """
+    class Meta:
+        """ Ensure plural name for the group. """
+        verbose_name_plural = 'Types'
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 

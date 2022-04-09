@@ -593,10 +593,10 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
-.portfolio .portfolio-item {
+.project .project-item {
   margin-bottom: 30px;
 }
-.portfolio #portfolio-flters {
+.project #project-flters {
   padding: 0;
   margin: 0 auto 35px auto;
   list-style: none;
@@ -606,7 +606,7 @@ section {
   padding: 2px 15px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.08);
 }
-.portfolio #portfolio-flters li {
+.project #project-flters li {
   cursor: pointer;
   display: inline-block;
   padding: 10px 15px 8px 15px;
@@ -618,19 +618,19 @@ section {
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
 }
-.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+.project #project-flters li:hover, .project #project-flters li.filter-active {
   color: #d43076;
 }
-.portfolio #portfolio-flters li:last-child {
+.project #project-flters li:last-child {
   margin-right: 0;
 }
-.portfolio .portfolio-wrap {
+.project .project-wrap {
   transition: 0.3s;
   position: relative;
   overflow: hidden;
   z-index: 1;
 }
-.portfolio .portfolio-wrap::before {
+.project .project-wrap::before {
   content: "";
   background: rgba(44, 73, 100, 0.6);
   position: absolute;
@@ -642,7 +642,7 @@ section {
   z-index: 2;
   opacity: 0;
 }
-.portfolio .portfolio-wrap .portfolio-info {
+.project .project-wrap .project-info {
   opacity: 0;
   position: absolute;
   top: 10%;
@@ -652,17 +652,17 @@ section {
   z-index: 3;
   transition: all ease-in-out 0.3s;
 }
-.portfolio .portfolio-wrap .portfolio-info h4 {
+.project .project-wrap .project-info h4 {
   font-size: 20px;
   color: #fff;
   font-weight: 600;
 }
-.portfolio .portfolio-wrap .portfolio-info p {
+.project .project-wrap .project-info p {
   color: #ffffff;
   font-size: 14px;
   text-transform: uppercase;
 }
-.portfolio .portfolio-wrap .portfolio-links {
+.project .project-wrap .project-links {
   opacity: 0;
   left: 0;
   right: 0;
@@ -672,28 +672,28 @@ section {
   position: absolute;
   transition: all ease-in-out 0.3s;
 }
-.portfolio .portfolio-wrap .portfolio-links a {
+.project .project-wrap .project-links a {
   color: #fff;
   margin: 0 2px;
   font-size: 28px;
   display: inline-block;
   transition: 0.3s;
 }
-.portfolio .portfolio-wrap .portfolio-links a:hover {
+.project .project-wrap .project-links a:hover {
   color: #e684ae;
 }
-.portfolio .portfolio-wrap:hover::before {
+.project .project-wrap:hover::before {
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   opacity: 1;
 }
-.portfolio .portfolio-wrap:hover .portfolio-info {
+.project .project-wrap:hover .project-info {
   opacity: 1;
   top: calc(50% - 48px);
 }
-.portfolio .portfolio-wrap:hover .portfolio-links {
+.project .project-wrap:hover .project-links {
   opacity: 1;
   bottom: calc(50% - 50px);
 }
@@ -701,54 +701,54 @@ section {
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
-.portfolio-details {
+.project-details {
   padding-top: 40px;
 }
-.portfolio-details .portfolio-details-slider img {
+.project-details .project-details-slider img {
   width: 100%;
 }
-.portfolio-details .portfolio-details-slider .swiper-pagination {
+.project-details .project-details-slider .swiper-pagination {
   margin-top: 20px;
   position: relative;
 }
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+.project-details .project-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
   opacity: 1;
   border: 1px solid #d43076;
 }
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+.project-details .project-details-slider .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #d43076;
 }
-.portfolio-details .portfolio-info {
+.project-details .project-info {
   padding: 30px;
   box-shadow: 0px 0 30px rgba(44, 73, 100, 0.08);
 }
-.portfolio-details .portfolio-info h3 {
+.project-details .project-info h3 {
   font-size: 22px;
   font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #eee;
 }
-.portfolio-details .portfolio-info ul {
+.project-details .project-info ul {
   list-style: none;
   padding: 0;
-  font-size: 15px;
+  font-size: 12px;
 }
-.portfolio-details .portfolio-info ul li + li {
-  margin-top: 10px;
+.project-details .project-info ul li + li {
+  margin-top: 5px;
 }
-.portfolio-details .portfolio-description {
+.project-details .project-description {
   padding-top: 30px;
 }
-.portfolio-details .portfolio-description h2 {
+.project-details .project-description h2 {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
 }
-.portfolio-details .portfolio-description p {
+.project-details .project-description p {
   padding: 0;
 }
 
@@ -953,6 +953,60 @@ section {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+.project-details {
+  padding-top: 40px;
+}
+.project-details .project-details-slider img {
+  width: 100%;
+}
+.project-details .project-details-slider {
+  margin-top: 20px;
+  position: relative;
+}
+.project-details .project-details-slider {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #d43076;
+}
+.project-details .project-details-slider {
+  background-color: #d43076;
+}
+.project-details .project-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(44, 73, 100, 0.08);
+}
+.project-details .project-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+.project-details .project-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 12px;
+}
+.project-details .project-info ul li + li {
+  margin-top: 5px;
+}
+.project-details .project-description {
+  padding-top: 30px;
+}
+.project-details .project-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.project-details .project-description p {
+  padding: 0;
 }
 
 /*--------------------------------------------------------------

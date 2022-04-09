@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% comment %} {% block extra_title %}{% endblock %} {% endcomment %}
+
+{% block content %}
+<main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Project Detail</h2>
+          <ol>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'projects' %}">My Projects</a></li>
+            <li>Project Detail</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- Breadcrumbs Section -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="project-details" class="project-details">
+      <div class="container-fluid">
+
+        <div class="row"> <!--gy-4-->
+
+          <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="pd-image-container my-5">
+                {% if project.image %}
+                    <a href="{{ project.image.url }}" target="_blank">
+                        <img src="{{ project.image.url }}" alt="Project Image" style="width:250px">
+                    </a>
+                {% else %}
+                    <a href="">
+                        <img src="{{ MEDIA_URL }}noimage.png" alt="Project Image" style="width:250px">
+                    </a>
+                {% endif %}
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="project-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><p class="mb-0"><strong>Name</strong>: {{ project.project_name }}</p></li>
+                <li><p class="mb-0"><strong>Type</strong>: {{ project.type }}</p></li>
+                <li><p class="mb-0"><strong>Client</strong>: XYZ Company</p></li>
+                <li>
+                    <p class="mb-0">
+                        {% if project.completed %}
+                            <p>Project complete</p>
+                        {% else %}
+                            <p>Project in progress</p>
+                        {% endif %}
+                    </p>
+                </li>
+              </ul>
+            </div>
+            <div class="project-description">
+              <h4>This is an example of project detail</h4>
+              <p>
+                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Project Details Section -->
+
+  </main><!-- End #main -->
+
+
+{% endblock %}

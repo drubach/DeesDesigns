@@ -5,7 +5,6 @@
 
 {% block content %}
     <main id="main">
-
         <!-- ======= Breadcrumbs Section ======= -->
         <section class="breadcrumbs">
             <div class="container">
@@ -13,7 +12,8 @@
                 <div class="d-flex justify-content-between align-items-center">
                 <h2>My Projects</h2>
                     <ol>
-                        <li><a href="{% url 'projects' %}">My Projects</a></li>
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="">My Projects</a></li>
                         <li></li>
                     </ol>
                 </div>
@@ -45,11 +45,11 @@
                             <div class="col-sm-12 col-md-6 col-lg-4">
                                 <div class="card-project h-100">
                                     {% if project.image %}
-                                    <a href="">
+                                    <a href="{% url 'project_detail' project.id %}">
                                         <img src="{{ project.image.url }}" alt="Project Image" style="width:75px">
                                     </a>
                                     {% else %}
-                                    <a href="">
+                                    <a href="{% url 'project_detail' project.id %}">
                                         <img src="{{ MEDIA_URL }}noimage.png" alt="Project Image" style="width:75px">
                                     </a>
                                     {% endif %}

@@ -1,0 +1,1 @@
+web: gunicorn dees_designs.wsgi:application

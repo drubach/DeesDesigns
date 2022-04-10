@@ -2,39 +2,39 @@
 <html>
   <head>
     <title>{% block head_title %}{% endblock %}</title>
-***REMOVED***% block extra_head %}
-***REMOVED***% endblock %}
+    {% block extra_head %}
+    {% endblock %}
   </head>
   <body>
-***REMOVED***% block body %}
+    {% block body %}
 
-***REMOVED***% if messages %}
+    {% if messages %}
     <div>
       <strong>Messages:</strong>
       <ul>
-    ***REMOVED***% for message in messages %}
+        {% for message in messages %}
         <li>{{message}}</li>
-    ***REMOVED***% endfor %}
+        {% endfor %}
       </ul>
     </div>
-***REMOVED***% endif %}
+    {% endif %}
 
     <div>
       <strong>Menu:</strong>
       <ul>
-    ***REMOVED***% if user.is_authenticated %}
+        {% if user.is_authenticated %}
         <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
         <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
-    ***REMOVED***% else %}
+        {% else %}
         <li><a href="{% url 'account_login' %}">Sign In</a></li>
         <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
-    ***REMOVED***% endif %}
+        {% endif %}
       </ul>
     </div>
-***REMOVED***% block content %}
-***REMOVED***% endblock %}
-***REMOVED***% endblock %}
-***REMOVED***% block extra_body %}
-***REMOVED***% endblock %}
+    {% block content %}
+    {% endblock %}
+    {% endblock %}
+    {% block extra_body %}
+    {% endblock %}
   </body>
 </html>

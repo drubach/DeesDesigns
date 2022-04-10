@@ -30,15 +30,15 @@
 
           <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="pd-image-container my-5">
-            ***REMOVED***% if project.image %}
+                {% if project.image %}
                     <a href="{{ project.image.url }}" target="_blank">
                         <img src="{{ project.image.url }}" alt="Project Image" style="width:250px">
                     </a>
-            ***REMOVED***% else %}
+                {% else %}
                     <a href="">
                         <img src="{{ MEDIA_URL }}noimage.png" alt="Project Image" style="width:250px">
                     </a>
-            ***REMOVED***% endif %}
+                {% endif %}
             </div>
           </div>
 
@@ -51,11 +51,11 @@
                 <li><p class="mb-0"><strong>Client</strong>: XYZ Company</p></li>
                 <li>
                     <p class="mb-0">
-                    ***REMOVED***% if project.completed %}
+                        {% if project.completed %}
                             <p>Project complete</p>
-                    ***REMOVED***% else %}
+                        {% else %}
                             <p>Project in progress</p>
-                    ***REMOVED***% endif %}
+                        {% endif %}
                     </p>
                 </li>
               </ul>

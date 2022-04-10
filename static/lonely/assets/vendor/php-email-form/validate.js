@@ -20,7 +20,7 @@
       if( ! action ) {
         displayError(thisForm, 'The form action property is not set!')
         return;
-  ***REMOVED***
+      }
       thisForm.querySelector('.loading').classList.add('d-block');
       thisForm.querySelector('.error-message').classList.remove('d-block');
       thisForm.querySelector('.sent-message').classList.remove('d-block');
@@ -35,18 +35,18 @@
               .then(token => {
                 formData.set('recaptcha-response', token);
                 php_email_form_submit(thisForm, action, formData);
-          ***REMOVED***)
-        ***REMOVED*** catch(error) {
+              })
+            } catch(error) {
               displayError(thisForm, error)
-        ***REMOVED***
-      ***REMOVED***);
-    ***REMOVED*** else {
+            }
+          });
+        } else {
           displayError(thisForm, 'The reCaptcha javascript API url is not loaded!')
-    ***REMOVED***
-  ***REMOVED*** else {
+        }
+      } else {
         php_email_form_submit(thisForm, action, formData);
-  ***REMOVED***
-***REMOVED***);
+      }
+    });
   });
 
   function php_email_form_submit(thisForm, action, formData) {
@@ -54,26 +54,26 @@
       method: 'POST',
       body: formData,
       headers: {'X-Requested-With': 'XMLHttpRequest'}
-***REMOVED***)
+    })
     .then(response => {
       if( response.ok ) {
         return response.text()
-  ***REMOVED*** else {
+      } else {
         throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
-  ***REMOVED***
-***REMOVED***)
+      }
+    })
     .then(data => {
       thisForm.querySelector('.loading').classList.remove('d-block');
       if (data.trim() == 'OK') {
         thisForm.querySelector('.sent-message').classList.add('d-block');
         thisForm.reset(); 
-  ***REMOVED*** else {
+      } else {
         throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
-  ***REMOVED***
-***REMOVED***)
+      }
+    })
     .catch((error) => {
       displayError(thisForm, error);
-***REMOVED***);
+    });
   }
 
   function displayError(thisForm, error) {

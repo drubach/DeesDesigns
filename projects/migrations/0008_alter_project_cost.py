@@ -7,7 +7,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('projects', '0007_project_user'),
-    ***REMOVED***
+    ]
 
     operations = [
         migrations.AlterField(
@@ -15,4 +15,4 @@ class Migration(migrations.Migration):
             name='cost',
             field=models.DecimalField(decimal_places=0, max_digits=8),
         ),
-    ***REMOVED***
+    ]

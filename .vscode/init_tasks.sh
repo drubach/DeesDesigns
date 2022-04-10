@@ -10,7 +10,7 @@ echo "Setting the greeting"
 sed -i "s/USER_NAME/$GITPOD_GIT_USER_NAME/g" ${GITPOD_REPO_ROOT}/README.md
 echo "Creating the gitpod user in MySQL"
 RESULT="$(mysql -sse "SELECT EXISTS(SELECT 1 FROM mysql.user WHERE user = 'gitpod')")"
-if [ "$RESULT" = 1 ***REMOVED***; then
+if [ "$RESULT" = 1 ]; then
   echo "gitpod already exists"
 else
   mysql -e "CREATE USER 'gitpod'@'%' IDENTIFIED BY '';" -u root

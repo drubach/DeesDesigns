@@ -13,10 +13,10 @@
   const select = (el, all = false) => {
     el = el.trim()
     if (all) {
-      return [...document.querySelectorAll(el)***REMOVED***
-***REMOVED*** else {
+      return [...document.querySelectorAll(el)]
+    } else {
       return document.querySelector(el)
-***REMOVED***
+    }
   }
 
   /**
@@ -27,10 +27,10 @@
     if (selectEl) {
       if (all) {
         selectEl.forEach(e => e.addEventListener(type, listener))
-  ***REMOVED*** else {
+      } else {
         selectEl.addEventListener(type, listener)
-  ***REMOVED***
-***REMOVED***
+      }
+    }
   }
 
   /**
@@ -52,10 +52,10 @@
       if (!section) return
       if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
         navbarlink.classList.add('active')
-  ***REMOVED*** else {
+      } else {
         navbarlink.classList.remove('active')
-  ***REMOVED***
-***REMOVED***)
+      }
+    })
   }
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
@@ -69,13 +69,13 @@
 
     if (!header.classList.contains('header-scrolled')) {
       offset -= 16
-***REMOVED***
+    }
 
     let elementPos = select(el).offsetTop
     window.scrollTo({
       top: elementPos - offset,
       behavior: 'smooth'
-***REMOVED***)
+    })
   }
 
   /**
@@ -89,11 +89,11 @@
       if ((headerOffset - window.scrollY) <= 0) {
         selectHeader.classList.add('fixed-top')
         nextElement.classList.add('scrolled-offset')
-  ***REMOVED*** else {
+      } else {
         selectHeader.classList.remove('fixed-top')
         nextElement.classList.remove('scrolled-offset')
-  ***REMOVED***
-***REMOVED***
+      }
+    }
     window.addEventListener('load', headerFixed)
     onscroll(document, headerFixed)
   }
@@ -106,10 +106,10 @@
     const toggleBacktotop = () => {
       if (window.scrollY > 100) {
         backtotop.classList.add('active')
-  ***REMOVED*** else {
+      } else {
         backtotop.classList.remove('active')
-  ***REMOVED***
-***REMOVED***
+      }
+    }
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
   }
@@ -130,7 +130,7 @@
     if (select('#navbar').classList.contains('navbar-mobile')) {
       e.preventDefault()
       this.nextElementSibling.classList.toggle('dropdown-active')
-***REMOVED***
+    }
   }, true)
 
   /**
@@ -146,9 +146,9 @@
         let navbarToggle = select('.mobile-nav-toggle')
         navbarToggle.classList.toggle('bi-list')
         navbarToggle.classList.toggle('bi-x')
-  ***REMOVED***
+      }
       scrollto(this.hash)
-***REMOVED***
+    }
   }, true)
 
   /**
@@ -158,8 +158,8 @@
     if (window.location.hash) {
       if (select(window.location.hash)) {
         scrollto(window.location.hash)
-  ***REMOVED***
-***REMOVED***
+      }
+    }
   });
 
   /**
@@ -171,7 +171,7 @@
       let portfolioIsotope = new Isotope(portfolioContainer, {
         itemSelector: '.portfolio-item',
         layoutMode: 'fitRows'
-  ***REMOVED***);
+      });
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
@@ -179,14 +179,14 @@
         e.preventDefault();
         portfolioFilters.forEach(function(el) {
           el.classList.remove('filter-active');
-    ***REMOVED***);
+        });
         this.classList.add('filter-active');
 
         portfolioIsotope.arrange({
           filter: this.getAttribute('data-filter')
-    ***REMOVED***);
-  ***REMOVED*** true);
-***REMOVED***
+        });
+      }, true);
+    }
 
   });
 
@@ -206,12 +206,12 @@
     autoplay: {
       delay: 5000,
       disableOnInteraction: false
-***REMOVED***
+    },
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
       clickable: true
-***REMOVED***
+    }
   });
 
   /**
@@ -226,9 +226,9 @@
         let progress = select('.progress .progress-bar', true);
         progress.forEach((el) => {
           el.style.width = el.getAttribute('aria-valuenow') + '%'
-    ***REMOVED***);
-  ***REMOVED***
-***REMOVED***)
+        });
+      }
+    })
   }
 
   /**
@@ -240,23 +240,23 @@
     autoplay: {
       delay: 5000,
       disableOnInteraction: false
-***REMOVED***
+    },
     slidesPerView: 'auto',
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
       clickable: true
-***REMOVED***
+    },
     breakpoints: {
       320: {
         slidesPerView: 1,
         spaceBetween: 40
-  ***REMOVED***
+      },
 
       1200: {
         slidesPerView: 3,
-  ***REMOVED***
-***REMOVED***
+      }
+    }
   });
 
 })()

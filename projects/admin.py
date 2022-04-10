@@ -1,11 +1,11 @@
-***REMOVED*** Add models for Projects app. ***REMOVED***
+""" Add models for Projects app. """
 from django.contrib import admin
 from .models import Project, Type
 
 # Register your models here.
 
 class ProjectAdmin(admin.ModelAdmin):
-    ***REMOVED*** View for project administration. ***REMOVED***
+    """ View for project administration. """
     list_display = (
         'user',
         'type',
@@ -16,7 +16,7 @@ class ProjectAdmin(admin.ModelAdmin):
 
     ordering = ('user', 'type', 'completed', 'paid')
 class TypeAdmin(admin.ModelAdmin):
-    ***REMOVED*** View for Type administration. ***REMOVED***
+    """ View for Type administration. """
     list_display = (
         'friendly_name',
         'name',

@@ -14,13 +14,13 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   function Waypoint(options) {
     if (!options) {
       throw new Error('No options passed to Waypoint constructor')
-***REMOVED***
+    }
     if (!options.element) {
       throw new Error('No element option passed to Waypoint constructor')
-***REMOVED***
+    }
     if (!options.handler) {
       throw new Error('No handler option passed to Waypoint constructor')
-***REMOVED***
+    }
 
     this.key = 'waypoint-' + keyCounter
     this.options = Waypoint.Adapter.extend({}, Waypoint.defaults, options)
@@ -33,15 +33,15 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     this.group = Waypoint.Group.findOrCreate({
       name: this.options.group,
       axis: this.axis
-***REMOVED***)
+    })
     this.context = Waypoint.Context.findOrCreateByElement(this.options.context)
 
-    if (Waypoint.offsetAliases[this.options.offset***REMOVED***) {
-      this.options.offset = Waypoint.offsetAliases[this.options.offset***REMOVED***
-***REMOVED***
+    if (Waypoint.offsetAliases[this.options.offset]) {
+      this.options.offset = Waypoint.offsetAliases[this.options.offset]
+    }
     this.group.add(this)
     this.context.add(this)
-    allWaypoints[this.key***REMOVED*** = this
+    allWaypoints[this.key] = this
     keyCounter += 1
   }
 
@@ -54,10 +54,10 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   Waypoint.prototype.trigger = function(args) {
     if (!this.enabled) {
       return
-***REMOVED***
+    }
     if (this.callback) {
       this.callback.apply(this, args)
-***REMOVED***
+    }
   }
 
   /* Public */
@@ -65,7 +65,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   Waypoint.prototype.destroy = function() {
     this.context.remove(this)
     this.group.remove(this)
-    delete allWaypoints[this.key***REMOVED***
+    delete allWaypoints[this.key]
   }
 
   /* Public */
@@ -97,13 +97,13 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
   /* Private */
   Waypoint.invokeAll = function(method) {
-    var allWaypointsArray = [***REMOVED***
+    var allWaypointsArray = []
     for (var waypointKey in allWaypoints) {
-      allWaypointsArray.push(allWaypoints[waypointKey***REMOVED***)
-***REMOVED***
+      allWaypointsArray.push(allWaypoints[waypointKey])
+    }
     for (var i = 0, end = allWaypointsArray.length; i < end; i++) {
-      allWaypointsArray[i***REMOVED***[method***REMOVED***()
-***REMOVED***
+      allWaypointsArray[i][method]()
+    }
   }
 
   /* Public */
@@ -123,8 +123,8 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   Waypoint.enableAll = function() {
     Waypoint.Context.refreshAll()
     for (var waypointKey in allWaypoints) {
-      allWaypoints[waypointKey***REMOVED***.enabled = true
-***REMOVED***
+      allWaypoints[waypointKey].enabled = true
+    }
     return this
   }
 
@@ -146,7 +146,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     return document.documentElement.clientWidth
   }
 
-  Waypoint.adapters = [***REMOVED***
+  Waypoint.adapters = []
 
   Waypoint.defaults = {
     context: window,
@@ -160,10 +160,10 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   Waypoint.offsetAliases = {
     'bottom-in-view': function() {
       return this.context.innerHeight() - this.adapter.outerHeight()
-***REMOVED***
+    },
     'right-in-view': function() {
       return this.context.innerWidth() - this.adapter.outerWidth()
-***REMOVED***
+    }
   }
 
   window.Waypoint = Waypoint
@@ -191,19 +191,19 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     this.oldScroll = {
       x: this.adapter.scrollLeft(),
       y: this.adapter.scrollTop()
-***REMOVED***
+    }
     this.waypoints = {
       vertical: {},
       horizontal: {}
-***REMOVED***
+    }
 
     element.waypointContextKey = this.key
-    contexts[element.waypointContextKey***REMOVED*** = this
+    contexts[element.waypointContextKey] = this
     keyCounter += 1
     if (!Waypoint.windowContext) {
       Waypoint.windowContext = true
       Waypoint.windowContext = new Context(window)
-***REMOVED***
+    }
 
     this.createThrottledScrollHandler()
     this.createThrottledResizeHandler()
@@ -212,7 +212,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   /* Private */
   Context.prototype.add = function(waypoint) {
     var axis = waypoint.options.horizontal ? 'horizontal' : 'vertical'
-    this.waypoints[axis***REMOVED***[waypoint.key***REMOVED*** = waypoint
+    this.waypoints[axis][waypoint.key] = waypoint
     this.refresh()
   }
 
@@ -223,8 +223,8 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     var isWindow = this.element == this.element.window
     if (horizontalEmpty && verticalEmpty && !isWindow) {
       this.adapter.off('.waypoints')
-      delete contexts[this.key***REMOVED***
-***REMOVED***
+      delete contexts[this.key]
+    }
   }
 
   /* Private */
@@ -234,14 +234,14 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     function resizeHandler() {
       self.handleResize()
       self.didResize = false
-***REMOVED***
+    }
 
     this.adapter.on('resize.waypoints', function() {
       if (!self.didResize) {
         self.didResize = true
         Waypoint.requestAnimationFrame(resizeHandler)
-  ***REMOVED***
-***REMOVED***)
+      }
+    })
   }
 
   /* Private */
@@ -250,14 +250,14 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     function scrollHandler() {
       self.handleScroll()
       self.didScroll = false
-***REMOVED***
+    }
 
     this.adapter.on('scroll.waypoints', function() {
       if (!self.didScroll || Waypoint.isTouch) {
         self.didScroll = true
         Waypoint.requestAnimationFrame(scrollHandler)
-  ***REMOVED***
-***REMOVED***)
+      }
+    })
   }
 
   /* Private */
@@ -274,44 +274,44 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         oldScroll: this.oldScroll.x,
         forward: 'right',
         backward: 'left'
-  ***REMOVED***
+      },
       vertical: {
         newScroll: this.adapter.scrollTop(),
         oldScroll: this.oldScroll.y,
         forward: 'down',
         backward: 'up'
-  ***REMOVED***
-***REMOVED***
+      }
+    }
 
     for (var axisKey in axes) {
-      var axis = axes[axisKey***REMOVED***
+      var axis = axes[axisKey]
       var isForward = axis.newScroll > axis.oldScroll
       var direction = isForward ? axis.forward : axis.backward
 
-      for (var waypointKey in this.waypoints[axisKey***REMOVED***) {
-        var waypoint = this.waypoints[axisKey***REMOVED***[waypointKey***REMOVED***
+      for (var waypointKey in this.waypoints[axisKey]) {
+        var waypoint = this.waypoints[axisKey][waypointKey]
         if (waypoint.triggerPoint === null) {
           continue
-    ***REMOVED***
+        }
         var wasBeforeTriggerPoint = axis.oldScroll < waypoint.triggerPoint
         var nowAfterTriggerPoint = axis.newScroll >= waypoint.triggerPoint
         var crossedForward = wasBeforeTriggerPoint && nowAfterTriggerPoint
         var crossedBackward = !wasBeforeTriggerPoint && !nowAfterTriggerPoint
         if (crossedForward || crossedBackward) {
           waypoint.queueTrigger(direction)
-          triggeredGroups[waypoint.group.id***REMOVED*** = waypoint.group
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
+          triggeredGroups[waypoint.group.id] = waypoint.group
+        }
+      }
+    }
 
     for (var groupKey in triggeredGroups) {
-      triggeredGroups[groupKey***REMOVED***.flushTriggers()
-***REMOVED***
+      triggeredGroups[groupKey].flushTriggers()
+    }
 
     this.oldScroll = {
       x: axes.horizontal.newScroll,
       y: axes.vertical.newScroll
-***REMOVED***
+    }
   }
 
   /* Private */
@@ -319,14 +319,14 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     /*eslint-disable eqeqeq */
     if (this.element == this.element.window) {
       return Waypoint.viewportHeight()
-***REMOVED***
+    }
     /*eslint-enable eqeqeq */
     return this.adapter.innerHeight()
   }
 
   /* Private */
   Context.prototype.remove = function(waypoint) {
-    delete this.waypoints[waypoint.axis***REMOVED***[waypoint.key***REMOVED***
+    delete this.waypoints[waypoint.axis][waypoint.key]
     this.checkEmpty()
   }
 
@@ -335,7 +335,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     /*eslint-disable eqeqeq */
     if (this.element == this.element.window) {
       return Waypoint.viewportWidth()
-***REMOVED***
+    }
     /*eslint-enable eqeqeq */
     return this.adapter.innerWidth()
   }
@@ -343,15 +343,15 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   /* Public */
   /* http://imakewebthings.com/waypoints/api/context-destroy */
   Context.prototype.destroy = function() {
-    var allWaypoints = [***REMOVED***
+    var allWaypoints = []
     for (var axis in this.waypoints) {
-      for (var waypointKey in this.waypoints[axis***REMOVED***) {
-        allWaypoints.push(this.waypoints[axis***REMOVED***[waypointKey***REMOVED***)
-  ***REMOVED***
-***REMOVED***
+      for (var waypointKey in this.waypoints[axis]) {
+        allWaypoints.push(this.waypoints[axis][waypointKey])
+      }
+    }
     for (var i = 0, end = allWaypoints.length; i < end; i++) {
-      allWaypoints[i***REMOVED***.destroy()
-***REMOVED***
+      allWaypoints[i].destroy()
+    }
   }
 
   /* Public */
@@ -374,7 +374,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         forward: 'right',
         backward: 'left',
         offsetProp: 'left'
-  ***REMOVED***
+      },
       vertical: {
         contextOffset: isWindow ? 0 : contextOffset.top,
         contextScroll: isWindow ? 0 : this.oldScroll.y,
@@ -383,13 +383,13 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         forward: 'down',
         backward: 'up',
         offsetProp: 'top'
-  ***REMOVED***
-***REMOVED***
+      }
+    }
 
     for (var axisKey in axes) {
-      var axis = axes[axisKey***REMOVED***
-      for (var waypointKey in this.waypoints[axisKey***REMOVED***) {
-        var waypoint = this.waypoints[axisKey***REMOVED***[waypointKey***REMOVED***
+      var axis = axes[axisKey]
+      for (var waypointKey in this.waypoints[axisKey]) {
+        var waypoint = this.waypoints[axisKey][waypointKey]
         var adjustment = waypoint.options.offset
         var oldTriggerPoint = waypoint.triggerPoint
         var elementOffset = 0
@@ -398,18 +398,18 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         var triggeredBackward, triggeredForward
 
         if (waypoint.element !== waypoint.element.window) {
-          elementOffset = waypoint.adapter.offset()[axis.offsetProp***REMOVED***
-    ***REMOVED***
+          elementOffset = waypoint.adapter.offset()[axis.offsetProp]
+        }
 
         if (typeof adjustment === 'function') {
           adjustment = adjustment.apply(waypoint)
-    ***REMOVED***
+        }
         else if (typeof adjustment === 'string') {
           adjustment = parseFloat(adjustment)
           if (waypoint.options.offset.indexOf('%') > - 1) {
             adjustment = Math.ceil(axis.contextDimension * adjustment / 100)
-      ***REMOVED***
-    ***REMOVED***
+          }
+        }
 
         contextModifier = axis.contextScroll - axis.contextOffset
         waypoint.triggerPoint = Math.floor(elementOffset + contextModifier - adjustment)
@@ -420,24 +420,24 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
         if (!freshWaypoint && triggeredBackward) {
           waypoint.queueTrigger(axis.backward)
-          triggeredGroups[waypoint.group.id***REMOVED*** = waypoint.group
-    ***REMOVED***
+          triggeredGroups[waypoint.group.id] = waypoint.group
+        }
         else if (!freshWaypoint && triggeredForward) {
           waypoint.queueTrigger(axis.forward)
-          triggeredGroups[waypoint.group.id***REMOVED*** = waypoint.group
-    ***REMOVED***
+          triggeredGroups[waypoint.group.id] = waypoint.group
+        }
         else if (freshWaypoint && axis.oldScroll >= waypoint.triggerPoint) {
           waypoint.queueTrigger(axis.forward)
-          triggeredGroups[waypoint.group.id***REMOVED*** = waypoint.group
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
+          triggeredGroups[waypoint.group.id] = waypoint.group
+        }
+      }
+    }
 
     Waypoint.requestAnimationFrame(function() {
       for (var groupKey in triggeredGroups) {
-        triggeredGroups[groupKey***REMOVED***.flushTriggers()
-  ***REMOVED***
-***REMOVED***)
+        triggeredGroups[groupKey].flushTriggers()
+      }
+    })
 
     return this
   }
@@ -450,20 +450,20 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   /* Private */
   Context.refreshAll = function() {
     for (var contextId in contexts) {
-      contexts[contextId***REMOVED***.refresh()
-***REMOVED***
+      contexts[contextId].refresh()
+    }
   }
 
   /* Public */
   /* http://imakewebthings.com/waypoints/api/context-find-by-element */
   Context.findByElement = function(element) {
-    return contexts[element.waypointContextKey***REMOVED***
+    return contexts[element.waypointContextKey]
   }
 
   window.onload = function() {
     if (oldWindowLoad) {
       oldWindowLoad()
-***REMOVED***
+    }
     Context.refreshAll()
   }
 
@@ -499,9 +499,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     this.name = options.name
     this.axis = options.axis
     this.id = this.name + '-' + this.axis
-    this.waypoints = [***REMOVED***
+    this.waypoints = []
     this.clearTriggerQueues()
-    groups[this.axis***REMOVED***[this.name***REMOVED*** = this
+    groups[this.axis][this.name] = this
   }
 
   /* Private */
@@ -512,26 +512,26 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   /* Private */
   Group.prototype.clearTriggerQueues = function() {
     this.triggerQueues = {
-      up: [***REMOVED***,
-      down: [***REMOVED***,
-      left: [***REMOVED***,
-      right: [***REMOVED***
-***REMOVED***
+      up: [],
+      down: [],
+      left: [],
+      right: []
+    }
   }
 
   /* Private */
   Group.prototype.flushTriggers = function() {
     for (var direction in this.triggerQueues) {
-      var waypoints = this.triggerQueues[direction***REMOVED***
+      var waypoints = this.triggerQueues[direction]
       var reverse = direction === 'up' || direction === 'left'
       waypoints.sort(reverse ? byReverseTriggerPoint : byTriggerPoint)
       for (var i = 0, end = waypoints.length; i < end; i += 1) {
-        var waypoint = waypoints[i***REMOVED***
+        var waypoint = waypoints[i]
         if (waypoint.options.continuous || i === waypoints.length - 1) {
-          waypoint.trigger([direction***REMOVED***)
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
+          waypoint.trigger([direction])
+        }
+      }
+    }
     this.clearTriggerQueues()
   }
 
@@ -540,19 +540,19 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     this.waypoints.sort(byTriggerPoint)
     var index = Waypoint.Adapter.inArray(waypoint, this.waypoints)
     var isLast = index === this.waypoints.length - 1
-    return isLast ? null : this.waypoints[index + 1***REMOVED***
+    return isLast ? null : this.waypoints[index + 1]
   }
 
   /* Private */
   Group.prototype.previous = function(waypoint) {
     this.waypoints.sort(byTriggerPoint)
     var index = Waypoint.Adapter.inArray(waypoint, this.waypoints)
-    return index ? this.waypoints[index - 1***REMOVED*** : null
+    return index ? this.waypoints[index - 1] : null
   }
 
   /* Private */
   Group.prototype.queueTrigger = function(waypoint, direction) {
-    this.triggerQueues[direction***REMOVED***.push(waypoint)
+    this.triggerQueues[direction].push(waypoint)
   }
 
   /* Private */
@@ -560,24 +560,24 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     var index = Waypoint.Adapter.inArray(waypoint, this.waypoints)
     if (index > -1) {
       this.waypoints.splice(index, 1)
-***REMOVED***
+    }
   }
 
   /* Public */
   /* http://imakewebthings.com/waypoints/api/first */
   Group.prototype.first = function() {
-    return this.waypoints[0***REMOVED***
+    return this.waypoints[0]
   }
 
   /* Public */
   /* http://imakewebthings.com/waypoints/api/last */
   Group.prototype.last = function() {
-    return this.waypoints[this.waypoints.length - 1***REMOVED***
+    return this.waypoints[this.waypoints.length - 1]
   }
 
   /* Private */
   Group.findOrCreate = function(options) {
-    return groups[options.axis***REMOVED***[options.name***REMOVED*** || new Group(options)
+    return groups[options.axis][options.name] || new Group(options)
   }
 
   Waypoint.Group = Group
@@ -594,7 +594,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   function getWindow(element) {
     if (isWindow(element)) {
       return element
-***REMOVED***
+    }
     return element.defaultView
   }
 
@@ -616,65 +616,65 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   NoFrameworkAdapter.prototype.off = function(event, handler) {
     function removeListeners(element, listeners, handler) {
       for (var i = 0, end = listeners.length - 1; i < end; i++) {
-        var listener = listeners[i***REMOVED***
+        var listener = listeners[i]
         if (!handler || handler === listener) {
           element.removeEventListener(listener)
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
+        }
+      }
+    }
 
     var eventParts = event.split('.')
-    var eventType = eventParts[0***REMOVED***
-    var namespace = eventParts[1***REMOVED***
+    var eventType = eventParts[0]
+    var namespace = eventParts[1]
     var element = this.element
 
-    if (namespace && this.handlers[namespace***REMOVED*** && eventType) {
-      removeListeners(element, this.handlers[namespace***REMOVED***[eventType***REMOVED***, handler)
-      this.handlers[namespace***REMOVED***[eventType***REMOVED*** = [***REMOVED***
-***REMOVED***
+    if (namespace && this.handlers[namespace] && eventType) {
+      removeListeners(element, this.handlers[namespace][eventType], handler)
+      this.handlers[namespace][eventType] = []
+    }
     else if (eventType) {
       for (var ns in this.handlers) {
-        removeListeners(element, this.handlers[ns***REMOVED***[eventType***REMOVED*** || [***REMOVED***, handler)
-        this.handlers[ns***REMOVED***[eventType***REMOVED*** = [***REMOVED***
-  ***REMOVED***
-***REMOVED***
-    else if (namespace && this.handlers[namespace***REMOVED***) {
-      for (var type in this.handlers[namespace***REMOVED***) {
-        removeListeners(element, this.handlers[namespace***REMOVED***[type***REMOVED***, handler)
-  ***REMOVED***
-      this.handlers[namespace***REMOVED*** = {}
-***REMOVED***
+        removeListeners(element, this.handlers[ns][eventType] || [], handler)
+        this.handlers[ns][eventType] = []
+      }
+    }
+    else if (namespace && this.handlers[namespace]) {
+      for (var type in this.handlers[namespace]) {
+        removeListeners(element, this.handlers[namespace][type], handler)
+      }
+      this.handlers[namespace] = {}
+    }
   }
 
   /* Adapted from jQuery 1.x offset() */
   NoFrameworkAdapter.prototype.offset = function() {
     if (!this.element.ownerDocument) {
       return null
-***REMOVED***
+    }
 
     var documentElement = this.element.ownerDocument.documentElement
     var win = getWindow(this.element.ownerDocument)
     var rect = {
       top: 0,
       left: 0
-***REMOVED***
+    }
 
     if (this.element.getBoundingClientRect) {
       rect = this.element.getBoundingClientRect()
-***REMOVED***
+    }
 
     return {
       top: rect.top + win.pageYOffset - documentElement.clientTop,
       left: rect.left + win.pageXOffset - documentElement.clientLeft
-***REMOVED***
+    }
   }
 
   NoFrameworkAdapter.prototype.on = function(event, handler) {
     var eventParts = event.split('.')
-    var eventType = eventParts[0***REMOVED***
-    var namespace = eventParts[1***REMOVED*** || '__default'
-    var nsHandlers = this.handlers[namespace***REMOVED*** = this.handlers[namespace***REMOVED*** || {}
-    var nsTypeList = nsHandlers[eventType***REMOVED*** = nsHandlers[eventType***REMOVED*** || [***REMOVED***
+    var eventType = eventParts[0]
+    var namespace = eventParts[1] || '__default'
+    var nsHandlers = this.handlers[namespace] = this.handlers[namespace] || {}
+    var nsTypeList = nsHandlers[eventType] = nsHandlers[eventType] || []
 
     nsTypeList.push(handler)
     this.element.addEventListener(eventType, handler)
@@ -688,7 +688,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       computedStyle = window.getComputedStyle(this.element)
       height += parseInt(computedStyle.marginTop, 10)
       height += parseInt(computedStyle.marginBottom, 10)
-***REMOVED***
+    }
 
     return height
   }
@@ -701,7 +701,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       computedStyle = window.getComputedStyle(this.element)
       width += parseInt(computedStyle.marginLeft, 10)
       width += parseInt(computedStyle.marginRight, 10)
-***REMOVED***
+    }
 
     return width
   }
@@ -723,18 +723,18 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       if (typeof target === 'object' && typeof obj === 'object') {
         for (var key in obj) {
           if (obj.hasOwnProperty(key)) {
-            target[key***REMOVED*** = obj[key***REMOVED***
-      ***REMOVED***
-    ***REMOVED***
-  ***REMOVED***
+            target[key] = obj[key]
+          }
+        }
+      }
 
       return target
-***REMOVED***
+    }
 
     for (var i = 1, end = args.length; i < end; i++) {
-      merge(args[0***REMOVED***, args[i***REMOVED***)
-***REMOVED***
-    return args[0***REMOVED***
+      merge(args[0], args[i])
+    }
+    return args[0]
   }
 
   NoFrameworkAdapter.inArray = function(element, array, i) {
@@ -745,7 +745,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     /* eslint no-unused-vars: 0 */
     for (var name in obj) {
       return false
-***REMOVED***
+    }
     return true
   }
 

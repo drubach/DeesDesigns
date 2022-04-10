@@ -1,4 +1,4 @@
-***REMOVED***dees_designs URL Configuration
+"""dees_designs URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -12,7 +12,7 @@ Class-based views
 Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-***REMOVED***
+"""
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
@@ -22,5 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')), #Required by allauth.(Other items settings.py)
     path('', include('home.urls')),
-    path('projects/', include('projects.urls'))
-***REMOVED***+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('projects/', include('projects.urls')),
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

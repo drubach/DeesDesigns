@@ -1,8 +1,8 @@
-[mysqld_safe***REMOVED***
+[mysqld_safe]
 socket		= /var/run/mysqld/mysqld.sock
 nice		= 0
 
-[mysqld***REMOVED***
+[mysqld]
 user		= gitpod
 pid-file	= /var/run/mysqld/mysqld.pid
 socket		= /var/run/mysqld/mysqld.sock

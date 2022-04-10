@@ -4,14 +4,14 @@
 <html lang="en">
 
 <head>
-***REMOVED***% block meta %}
+    {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-***REMOVED***% endblock %}
+    {% endblock %}
 
-***REMOVED***% block extra_meta %}
-***REMOVED***% endblock %}
+    {% block extra_meta %}
+    {% endblock %}
         
     <title>Dee's Designs {% block extra_title %}{% endblock %}</title>
     <meta content="Online presence for Dee's Designs, boutique graphic design firm." name="description">
@@ -24,7 +24,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i&subset=cyrillic" rel="stylesheet">
 
-***REMOVED***% block corecss %}
+    {% block corecss %}
     <!-- Vendor CSS Files -->
     <link href="{% static 'lonely/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'lonely/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
@@ -35,13 +35,13 @@
 
     <!-- Template Main CSS File -->
     <link href="{% static 'lonely/assets/css/style.css' %}" rel="stylesheet">
-***REMOVED***% endblock %}
+    {% endblock %}
 
-***REMOVED***% block extra_css %}
-***REMOVED***% endblock %}
+    {% block extra_css %}
+    {% endblock %}
 
-***REMOVED***% block extra_js %}
-***REMOVED***% endblock %}
+    {% block extra_js %}
+    {% endblock %}
 
   <!-- =======================================================
   * Template Name: Lonely - v4.7.0
@@ -52,8 +52,8 @@
 </head>
 
 <body>
-***REMOVED***% block hero %}
-***REMOVED***% endblock %}
+    {% block hero %}
+    {% endblock %}
 
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
@@ -63,7 +63,7 @@
             <h1><a href= "{% url 'home' %}">Dee's Designs</a></h1>
         </div>
 
-  ***REMOVED***% block navbar%}
+      {% block navbar%}
         <nav id="navbar" class="navbar">
             <nav id="navbar" class="navbar">
                 <ul>
@@ -73,52 +73,52 @@
                     <li><a class="nav-link scrollto" href="{% url 'home' %}#portfolio">Portfolio</a></li>
                     <li><a class="nav-link scrollto" href="{% url 'home' %}#testimonials">Testimonials</a></li>
                     <li><a class="nav-link scrollto" href="{% url 'home' %}#contact">Contact</a></li>
-                    <li class="dropdown"><a href="#"><span>My Account </span> <i class="bi bi-chevron-down"></i></a>
+                    <li class="dropdown"><a href=""><span>My Account </span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                        ***REMOVED***% if request.user.is_authenticated %}
-                            ***REMOVED***% if request.user.is_superuser %}
+                            {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
                                     <li><a href="{% url 'admin:index' %}" class="dropdown-item">Site Management</a></li>
-                            ***REMOVED***% endif %}
+                                {% endif %}
                                     <li><a href="" class="dropdown-item">My Profile</a></li>
                                     <li><a href="{% url 'projects' %}" class="dropdown-item">My Projects</a></li>
                                     <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
-                        ***REMOVED***% else %}
+                            {% else %}
                                 <li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
                                 <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
-                        ***REMOVED***% endif %}
+                            {% endif %}
                         </ul>                       
                     </li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
-  ***REMOVED***% endblock %}
+      {% endblock %}
 
     </div>
   </header><!-- End Header -->
 
   {% if messages %}
       <div class="message-container">
-      ***REMOVED***% for message in messages %}
-          ***REMOVED***% with message.level as level %}
-              ***REMOVED***% if level == 40 %}
-                  ***REMOVED***% include 'includes/toasts/toast_error.html' %}
-              ***REMOVED***% elif level == 30 %}
-                  ***REMOVED***% include 'includes/toasts/toast_warning.html' %}
-              ***REMOVED***% elif level == 25 %}
-                  ***REMOVED***% include 'includes/toasts/toast_success.html' %}
-              ***REMOVED***% else %}
-                  ***REMOVED***% include 'includes/toasts/toast_info.html' %}
-              ***REMOVED***% endif %}
-          ***REMOVED***% endwith %}
-      ***REMOVED***% endfor %}
+          {% for message in messages %}
+              {% with message.level as level %}
+                  {% if level == 40 %}
+                      {% include 'includes/toasts/toast_error.html' %}
+                  {% elif level == 30 %}
+                      {% include 'includes/toasts/toast_warning.html' %}
+                  {% elif level == 25 %}
+                      {% include 'includes/toasts/toast_success.html' %}
+                  {% else %}
+                      {% include 'includes/toasts/toast_info.html' %}
+                  {% endif %}
+              {% endwith %}
+          {% endfor %}
       </div>
-***REMOVED***% endif %}
+    {% endif %}
 
-***REMOVED***% block page_header %}
-***REMOVED***% endblock %}
+    {% block page_header %}
+    {% endblock %}
 
-***REMOVED***% block content %}
-***REMOVED***% endblock %}
+    {% block content %}
+    {% endblock %}
 
     <!-- ======= Footer ======= -->
     <footer id="footer">
@@ -140,7 +140,7 @@
     </footer><!-- End  Footer -->
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-***REMOVED***% block corejs %}
+    {% block corejs %}
     <!-- Vendor JS Files -->
     <script src="{% static 'lonely/assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'lonely/assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
@@ -157,10 +157,10 @@
     
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/0ead8c87cb.js" crossorigin="anonymous"></script>
-***REMOVED***% endblock %}
+    {% endblock %}
 
-***REMOVED***% block postload_js %}
-***REMOVED***% endblock %}
+    {% block postload_js %}
+    {% endblock %}
 
 </body>
 

@@ -7,11 +7,11 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('projects', '0001_initial'),
-    ***REMOVED***
+    ]
 
     operations = [
         migrations.RemoveField(
             model_name='project',
             name='user',
         ),
-    ***REMOVED***
+    ]

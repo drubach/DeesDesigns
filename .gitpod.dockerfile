@@ -62,7 +62,7 @@ RUN sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release 
 ENV PGDATA="/workspace/.pgsql/data"
 
 RUN mkdir -p ~/.pg_ctl/bin ~/.pg_ctl/sockets \
-    && echo '#!/bin/bash\n[ ! -d $PGDATA ***REMOVED*** && mkdir -p $PGDATA && initdb --auth=trust -D $PGDATA\npg_ctl -D $PGDATA -l ~/.pg_ctl/log -o "-k ~/.pg_ctl/sockets" start\n' > ~/.pg_ctl/bin/pg_start \
+    && echo '#!/bin/bash\n[ ! -d $PGDATA ] && mkdir -p $PGDATA && initdb --auth=trust -D $PGDATA\npg_ctl -D $PGDATA -l ~/.pg_ctl/log -o "-k ~/.pg_ctl/sockets" start\n' > ~/.pg_ctl/bin/pg_start \
     && echo '#!/bin/bash\npg_ctl -D $PGDATA -l ~/.pg_ctl/log -o "-k ~/.pg_ctl/sockets" stop\n' > ~/.pg_ctl/bin/pg_stop \
     && chmod +x ~/.pg_ctl/bin/*
 
@@ -95,8 +95,8 @@ RUN echo 'alias run="python3 $GITPOD_REPO_ROOT/manage.py runserver 0.0.0.0:8000"
     echo 'alias make_url="python3 $GITPOD_REPO_ROOT/.vscode/make_url.py "' >> ~/.bashrc && \
     echo ". /etc/mysql/mysql-bashrc-launch.sh" >> ~/.bashrc && \
     echo 'FILE="$GITPOD_REPO_ROOT/.vscode/post_upgrade.sh"' >> ~/.bashrc && \
-    echo 'if [ -z "$POST_UPGRADE_RUN" ***REMOVED***; then' >> ~/.bashrc && \
-    echo '  if [[ -f "$FILE" ***REMOVED******REMOVED***; then' >> ~/.bashrc && \
+    echo 'if [ -z "$POST_UPGRADE_RUN" ]; then' >> ~/.bashrc && \
+    echo '  if [[ -f "$FILE" ]]; then' >> ~/.bashrc && \
     echo '    . "$GITPOD_REPO_ROOT/.vscode/post_upgrade.sh"' >> ~/.bashrc && \
     echo "  fi" >> ~/.bashrc && \
     echo "fi" >> ~/.bashrc

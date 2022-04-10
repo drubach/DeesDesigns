@@ -4,14 +4,14 @@ This project is meant to provide an online presence for the small local business
 
 Dee's Designs is a small singularly owned boutique graphic design business based in western NY. This project gives Dee's Designs an online platform to advertise their services, and for customers to purchase them, create accounts, edit delivery information, and provide quick contact with the business owner.
 
-[Take a look at the project here***REMOVED***().
+[Take a look at the project here]().
 <hr>
 
 ## **UX**
 
 This site is designed to give the user a visually pleasing way to browse the services and examples for the boutique graphic design firm, Dee's Designs.
 
-For inspiration, I looked at a number of Bootstrap Templates to get a beautiful front end design. In the end, I chose the [LONELY***REMOVED***(https://bootstrapmade.com/demo/Lonely/) template from [BOOTSTRAPMADE***REMOVED***(https://bootstrapmade.com/). Interestingly enough, this was made especially for a small graphic design firm.
+For inspiration, I looked at a number of Bootstrap Templates to get a beautiful front end design. In the end, I chose the [LONELY](https://bootstrapmade.com/demo/Lonely/) template from [BOOTSTRAPMADE](https://bootstrapmade.com/). Interestingly enough, this was made especially for a small graphic design firm.
 <hr>
 
 ### **User Stories:**
@@ -51,13 +51,13 @@ For inspiration, I looked at a number of Bootstrap Templates to get a beautiful 
 <hr>
 
 ### **Wireframes:**
-* Desktop - [View***REMOVED***(media/Desktop-Dees.png)
-* Tablet - [View***REMOVED***(media/Tablet-Dees.png)
-* Mobile - [View***REMOVED***(media/Mobile-Dees.png)
+* Desktop - [View](media/Desktop-Dees.png)
+* Tablet - [View](media/Tablet-Dees.png)
+* Mobile - [View](media/Mobile-Dees.png)
 <hr>
 
 ### **Database Schema:**
-* Diagram - [View***REMOVED***(media/DatabaseDesign-Dees.png)
+* Diagram - [View](media/DatabaseDesign-Dees.png)
 <hr>
 
 ### **Features:**
@@ -113,9 +113,9 @@ Allauth
 
 ## **Bugs**
 
-* **Slider not working** - Direction to implement correctly from [Easy Tutorials YouTube Channel***REMOVED***(https://www.youtube.com/watch?v=9yLxmbICrTM).
+* **Slider not working** - Direction to implement correctly from [Easy Tutorials YouTube Channel](https://www.youtube.com/watch?v=9yLxmbICrTM).
 
-* **Counters not working** - Direction to implement correctly from [GitHubHot.com***REMOVED***(https://githubhot.com/repo/cncagency/purecounterjs).
+* **Counters not working** - Direction to implement correctly from [GitHubHot.com](https://githubhot.com/repo/cncagency/purecounterjs).
 
 * **Back to top button not working** - Moved position of Javascript to the bottom of the HTML body.
 
@@ -125,11 +125,11 @@ Allauth
 ### **Media**
 * The majority of the media was provided within the Bootstrap template.
 
-* Favicons were generated using this [Generator***REMOVED***(https://www.favicon-generator.org/).
+* Favicons were generated using this [Generator](https://www.favicon-generator.org/).
 
-* Icons were taken from [Flaticon.com***REMOVED***(https://www.flaticon.com/packs/alphabet-and-numbers-18).
+* Icons were taken from [Flaticon.com](https://www.flaticon.com/packs/alphabet-and-numbers-18).
 
-* Logos, poster, portraits and murals were taken from [Kaggle.com***REMOVED***(https://www.kaggle.com/datasets/thedownhill/art-images-drawings-painting-sculpture-engraving).
+* Logos, poster, portraits and murals were taken from [Kaggle.com](https://www.kaggle.com/datasets/thedownhill/art-images-drawings-painting-sculpture-engraving).
 <hr>
 
 ### **Content**
@@ -140,9 +140,9 @@ Allauth
 ### **Code**
 * Some of the Python and HTML templating was taken from the Boutique Ado Project because the premise of an online store is the same.
 
-* Some ideas were also taken from looking at the website for the online business [VyeRose***REMOVED***(https://vyerose.herokuapp.com/).
+* Some ideas were also taken from looking at the website for the online business [VyeRose](https://vyerose.herokuapp.com/).
 
-* Thumbnail code for project images was taken from [W3 Schools***REMOVED***(https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_thumbnail_image).
+* Thumbnail code for project images was taken from [W3 Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_thumbnail_image).
 
 * Code for sending an email manually in Django was taken from this Stack Overflow post.
 

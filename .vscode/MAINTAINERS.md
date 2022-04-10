@@ -7,7 +7,7 @@ Author(s): Matt Rudge
 
 ## Overview
 
-As of 23rd September, 2021, the [Gitpod Full Template***REMOVED***(https://github.com/Code-Institute-Org/gitpod-full-template) now has versioning features. Versioning capability is provided by the following files, all in the .vscode directory:
+As of 23rd September, 2021, the [Gitpod Full Template](https://github.com/Code-Institute-Org/gitpod-full-template) now has versioning features. Versioning capability is provided by the following files, all in the .vscode directory:
 
 `arctictern.py`	- the migration tool to allow the student’s workspace to be updated
 

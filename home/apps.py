@@ -1,9 +1,9 @@
-***REMOVED*** App class instantiation.***REMOVED***
+""" App class instantiation."""
 from django.apps import AppConfig
 
 
 class HomeConfig(AppConfig):
-    ***REMOVED*** Home config ***REMOVED***
+    """ Home config """
 
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'home'

@@ -1,26 +1,25 @@
-***REMOVED*** Models for Projects App ***REMOVED***
+""" Models for Projects App """
 from django.db import models
 from django.contrib.auth.models import User
 
 class Type(models.Model):
-    ***REMOVED*** db Model for Types of projects ***REMOVED***
+    """ db Model for Types of projects """
     class Meta:
-        ***REMOVED*** Ensure plural name for the group. ***REMOVED***
+        """ Ensure plural name for the group. """
         verbose_name_plural = 'Types'
-
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
     def __str__(self):
-        ***REMOVED*** Function to return type name. ***REMOVED***
+        """ Function to return type name. """
         return str(self.name)
 
     def get_friendly_name(self):
-        ***REMOVED*** Function to return type friendly name. ***REMOVED***
+        """ Function to return type friendly name. """
         return self.friendly_name
 
 class Project(models.Model):
-    ***REMOVED*** db Model for project info ***REMOVED***
+    """ db Model for project info """
     user = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
     project_name = models.CharField(max_length=254)
     description = models.TextField()
@@ -32,5 +31,5 @@ class Project(models.Model):
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
-        ***REMOVED*** Function to return project name. ***REMOVED***
+        """ Function to return project name. """
         return str(self.project_name)

@@ -10,12 +10,12 @@
     if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
       _typeof = function (obj) {
         return typeof obj;
-  ***REMOVED***;
-***REMOVED*** else {
+      };
+    } else {
       _typeof = function (obj) {
         return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-  ***REMOVED***;
-***REMOVED***
+      };
+    }
 
     return _typeof(obj);
   }
@@ -23,17 +23,17 @@
   function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
       throw new TypeError("Cannot call a class as a function");
-***REMOVED***
+    }
   }
 
   function _defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i***REMOVED***;
+      var descriptor = props[i];
       descriptor.enumerable = descriptor.enumerable || false;
       descriptor.configurable = true;
       if ("value" in descriptor) descriptor.writable = true;
       Object.defineProperty(target, descriptor.key, descriptor);
-***REMOVED***
+    }
   }
 
   function _createClass(Constructor, protoProps, staticProps) {
@@ -49,71 +49,71 @@
     var i = 0;
     var length = arguments.length;
 
-    if (Object.prototype.toString.call(arguments[0***REMOVED***) === '[object Boolean***REMOVED***') {
-      deep = arguments[0***REMOVED***;
+    if (Object.prototype.toString.call(arguments[0]) === '[object Boolean]') {
+      deep = arguments[0];
       i++;
-***REMOVED***
+    }
 
     var merge = function merge(obj) {
       for (var prop in obj) {
         if (Object.prototype.hasOwnProperty.call(obj, prop)) {
-          if (deep && Object.prototype.toString.call(obj[prop***REMOVED***) === '[object Object***REMOVED***') {
-            extended[prop***REMOVED*** = extend(true, extended[prop***REMOVED***, obj[prop***REMOVED***);
-      ***REMOVED*** else {
-            extended[prop***REMOVED*** = obj[prop***REMOVED***;
-      ***REMOVED***
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***;
+          if (deep && Object.prototype.toString.call(obj[prop]) === '[object Object]') {
+            extended[prop] = extend(true, extended[prop], obj[prop]);
+          } else {
+            extended[prop] = obj[prop];
+          }
+        }
+      }
+    };
 
     for (; i < length; i++) {
-      var obj = arguments[i***REMOVED***;
+      var obj = arguments[i];
       merge(obj);
-***REMOVED***
+    }
 
     return extended;
   }
   function each(collection, callback) {
     if (isNode(collection) || collection === window || collection === document) {
-      collection = [collection***REMOVED***;
-***REMOVED***
+      collection = [collection];
+    }
 
     if (!isArrayLike(collection) && !isObject(collection)) {
-      collection = [collection***REMOVED***;
-***REMOVED***
+      collection = [collection];
+    }
 
     if (size(collection) == 0) {
       return;
-***REMOVED***
+    }
 
     if (isArrayLike(collection) && !isObject(collection)) {
       var l = collection.length,
           i = 0;
 
       for (; i < l; i++) {
-        if (callback.call(collection[i***REMOVED***, collection[i***REMOVED***, i, collection) === false) {
+        if (callback.call(collection[i], collection[i], i, collection) === false) {
           break;
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED*** else if (isObject(collection)) {
+        }
+      }
+    } else if (isObject(collection)) {
       for (var key in collection) {
         if (has(collection, key)) {
-          if (callback.call(collection[key***REMOVED***, collection[key***REMOVED***, key, collection) === false) {
+          if (callback.call(collection[key], collection[key], key, collection) === false) {
             break;
-      ***REMOVED***
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
+          }
+        }
+      }
+    }
   }
   function getNodeEvents(node) {
-    var name = arguments.length > 1 && arguments[1***REMOVED*** !== undefined ? arguments[1***REMOVED*** : null;
-    var fn = arguments.length > 2 && arguments[2***REMOVED*** !== undefined ? arguments[2***REMOVED*** : null;
-    var cache = node[uid***REMOVED*** = node[uid***REMOVED*** || [***REMOVED***;
+    var name = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+    var fn = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+    var cache = node[uid] = node[uid] || [];
     var data = {
       all: cache,
       evt: null,
       found: null
-***REMOVED***;
+    };
 
     if (name && fn && size(cache) > 0) {
       each(cache, function (cl, i) {
@@ -121,14 +121,14 @@
           data.found = true;
           data.evt = i;
           return false;
-    ***REMOVED***
-  ***REMOVED***);
-***REMOVED***
+        }
+      });
+    }
 
     return data;
   }
   function addEvent(eventName) {
-    var _ref = arguments.length > 1 && arguments[1***REMOVED*** !== undefined ? arguments[1***REMOVED*** : {},
+    var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
         onElement = _ref.onElement,
         withCallback = _ref.withCallback,
         _ref$avoidDuplicate = _ref.avoidDuplicate,
@@ -138,22 +138,22 @@
         _ref$useCapture = _ref.useCapture,
         useCapture = _ref$useCapture === void 0 ? false : _ref$useCapture;
 
-    var thisArg = arguments.length > 2 ? arguments[2***REMOVED*** : undefined;
-    var element = onElement || [***REMOVED***;
+    var thisArg = arguments.length > 2 ? arguments[2] : undefined;
+    var element = onElement || [];
 
     if (isString(element)) {
       element = document.querySelectorAll(element);
-***REMOVED***
+    }
 
     function handler(event) {
       if (isFunction(withCallback)) {
         withCallback.call(thisArg, event, this);
-  ***REMOVED***
+      }
 
       if (once) {
         handler.destroy();
-  ***REMOVED***
-***REMOVED***
+      }
+    }
 
     handler.destroy = function () {
       each(element, function (el) {
@@ -161,13 +161,13 @@
 
         if (events.found) {
           events.all.splice(events.evt, 1);
-    ***REMOVED***
+        }
 
         if (el.removeEventListener) {
           el.removeEventListener(eventName, handler, useCapture);
-    ***REMOVED***
-  ***REMOVED***);
-***REMOVED***;
+        }
+      });
+    };
 
     each(element, function (el) {
       var events = getNodeEvents(el, eventName, handler);
@@ -177,20 +177,20 @@
         events.all.push({
           eventName: eventName,
           fn: handler
-    ***REMOVED***);
-  ***REMOVED***
-***REMOVED***);
+        });
+      }
+    });
     return handler;
   }
   function addClass(node, name) {
     each(name.split(' '), function (cl) {
       return node.classList.add(cl);
-***REMOVED***);
+    });
   }
   function removeClass(node, name) {
     each(name.split(' '), function (cl) {
       return node.classList.remove(cl);
-***REMOVED***);
+    });
   }
   function hasClass(node, name) {
     return node.classList.contains(name);
@@ -201,36 +201,36 @@
 
       if (!elem) {
         return false;
-  ***REMOVED***
+      }
 
       var matches = typeof elem.matches == 'function' ? elem.matches(selector) : elem.msMatchesSelector(selector);
 
       if (matches) {
         return elem;
-  ***REMOVED***
-***REMOVED***
+      }
+    }
   }
   function animateElement(element) {
-    var animation = arguments.length > 1 && arguments[1***REMOVED*** !== undefined ? arguments[1***REMOVED*** : '';
-    var callback = arguments.length > 2 && arguments[2***REMOVED*** !== undefined ? arguments[2***REMOVED*** : false;
+    var animation = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+    var callback = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
 
     if (!element || animation === '') {
       return false;
-***REMOVED***
+    }
 
     if (animation == 'none') {
       if (isFunction(callback)) {
         callback();
-  ***REMOVED***
+      }
 
       return false;
-***REMOVED***
+    }
 
     var animationEnd = whichAnimationEvent();
     var animationNames = animation.split(' ');
     each(animationNames, function (name) {
       addClass(element, 'g' + name);
-***REMOVED***);
+    });
     addEvent(animationEnd, {
       onElement: element,
       avoidDuplicate: false,
@@ -238,16 +238,16 @@
       withCallback: function withCallback(event, target) {
         each(animationNames, function (name) {
           removeClass(target, 'g' + name);
-    ***REMOVED***);
+        });
 
         if (isFunction(callback)) {
           callback();
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***);
+        }
+      }
+    });
   }
   function cssTransform(node) {
-    var translate = arguments.length > 1 && arguments[1***REMOVED*** !== undefined ? arguments[1***REMOVED*** : '';
+    var translate = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
 
     if (translate == '') {
       node.style.webkitTransform = '';
@@ -256,7 +256,7 @@
       node.style.OTransform = '';
       node.style.transform = '';
       return false;
-***REMOVED***
+    }
 
     node.style.webkitTransform = translate;
     node.style.MozTransform = translate;
@@ -277,7 +277,7 @@
 
     while (temp.firstChild) {
       frag.appendChild(temp.firstChild);
-***REMOVED***
+    }
 
     return frag;
   }
@@ -285,7 +285,7 @@
     return {
       width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
       height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
-***REMOVED***;
+    };
   }
   function whichAnimationEvent() {
     var t,
@@ -295,13 +295,13 @@
       OAnimation: 'oAnimationEnd',
       MozAnimation: 'animationend',
       WebkitAnimation: 'webkitAnimationEnd'
-***REMOVED***;
+    };
 
     for (t in animations) {
-      if (el.style[t***REMOVED*** !== undefined) {
-        return animations[t***REMOVED***;
-  ***REMOVED***
-***REMOVED***
+      if (el.style[t] !== undefined) {
+        return animations[t];
+      }
+    }
   }
   function whichTransitionEvent() {
     var t,
@@ -311,13 +311,13 @@
       OTransition: 'oTransitionEnd',
       MozTransition: 'transitionend',
       WebkitTransition: 'webkitTransitionEnd'
-***REMOVED***;
+    };
 
     for (t in transitions) {
-      if (el.style[t***REMOVED*** !== undefined) {
-        return transitions[t***REMOVED***;
-  ***REMOVED***
-***REMOVED***
+      if (el.style[t] !== undefined) {
+        return transitions[t];
+      }
+    }
   }
   function createIframe(config) {
     var url = config.url,
@@ -332,19 +332,19 @@
 
     if (allow) {
       iframe.setAttribute('allow', allow);
-***REMOVED***
+    }
 
     iframe.onload = function () {
       addClass(iframe, 'node-ready');
 
       if (isFunction(callback)) {
         callback();
-  ***REMOVED***
-***REMOVED***;
+      }
+    };
 
     if (appendTo) {
       appendTo.appendChild(iframe);
-***REMOVED***
+    }
 
     return iframe;
   }
@@ -352,67 +352,67 @@
     if (check()) {
       onComplete();
       return;
-***REMOVED***
+    }
 
     if (!delay) {
       delay = 100;
-***REMOVED***
+    }
 
     var timeoutPointer;
     var intervalPointer = setInterval(function () {
       if (!check()) {
         return;
-  ***REMOVED***
+      }
 
       clearInterval(intervalPointer);
 
       if (timeoutPointer) {
         clearTimeout(timeoutPointer);
-  ***REMOVED***
+      }
 
       onComplete();
-***REMOVED*** delay);
+    }, delay);
 
     if (timeout) {
       timeoutPointer = setTimeout(function () {
         clearInterval(intervalPointer);
-  ***REMOVED*** timeout);
-***REMOVED***
+      }, timeout);
+    }
   }
   function injectAssets(url, waitFor, callback) {
     if (isNil(url)) {
       console.error('Inject assets error');
       return;
-***REMOVED***
+    }
 
     if (isFunction(waitFor)) {
       callback = waitFor;
       waitFor = false;
-***REMOVED***
+    }
 
     if (isString(waitFor) && waitFor in window) {
       if (isFunction(callback)) {
         callback();
-  ***REMOVED***
+      }
 
       return;
-***REMOVED***
+    }
 
     var found;
 
     if (url.indexOf('.css') !== -1) {
-      found = document.querySelectorAll('link[href="' + url + '"***REMOVED***');
+      found = document.querySelectorAll('link[href="' + url + '"]');
 
       if (found && found.length > 0) {
         if (isFunction(callback)) {
           callback();
-    ***REMOVED***
+        }
 
         return;
-  ***REMOVED***
+      }
 
-      var head = document.getElementsByTagName('head')[0***REMOVED***;
-      var headStyles = head.querySelectorAll('link[rel="stylesheet"***REMOVED***');
+      var head = document.getElementsByTagName('head')[0];
+      var headStyles = head.querySelectorAll('link[rel="stylesheet"]');
       var link = document.createElement('link');
       link.rel = 'stylesheet';
       link.type = 'text/css';
@@ -420,36 +420,36 @@
       link.media = 'all';
 
       if (headStyles) {
-        head.insertBefore(link, headStyles[0***REMOVED***);
-  ***REMOVED*** else {
+        head.insertBefore(link, headStyles[0]);
+      } else {
         head.appendChild(link);
-  ***REMOVED***
+      }
 
       if (isFunction(callback)) {
         callback();
-  ***REMOVED***
+      }
 
       return;
-***REMOVED***
+    }
 
-    found = document.querySelectorAll('script[src="' + url + '"***REMOVED***');
+    found = document.querySelectorAll('script[src="' + url + '"]');
 
     if (found && found.length > 0) {
       if (isFunction(callback)) {
         if (isString(waitFor)) {
           waitUntil(function () {
-            return typeof window[waitFor***REMOVED*** !== 'undefined';
-  ***REMOVED*** function () {
+            return typeof window[waitFor] !== 'undefined';
+          }, function () {
             callback();
-      ***REMOVED***);
+          });
           return false;
-    ***REMOVED***
+        }
 
         callback();
-  ***REMOVED***
+      }
 
       return;
-***REMOVED***
+    }
 
     var script = document.createElement('script');
     script.type = 'text/javascript';
@@ -459,16 +459,16 @@
       if (isFunction(callback)) {
         if (isString(waitFor)) {
           waitUntil(function () {
-            return typeof window[waitFor***REMOVED*** !== 'undefined';
-  ***REMOVED*** function () {
+            return typeof window[waitFor] !== 'undefined';
+          }, function () {
             callback();
-      ***REMOVED***);
+          });
           return false;
-    ***REMOVED***
+        }
 
         callback();
-  ***REMOVED***
-***REMOVED***;
+      }
+    };
 
     document.body.appendChild(script);
     return;
@@ -509,64 +509,64 @@
     if (isObject(o)) {
       if (o.keys) {
         return o.keys().length;
-  ***REMOVED***
+      }
 
       var l = 0;
 
       for (var k in o) {
         if (has(o, k)) {
           l++;
-    ***REMOVED***
-  ***REMOVED***
+        }
+      }
 
       return l;
-***REMOVED*** else {
+    } else {
       return o.length;
-***REMOVED***
+    }
   }
   function isNumber(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
   }
 
   function getNextFocusElement() {
-    var current = arguments.length > 0 && arguments[0***REMOVED*** !== undefined ? arguments[0***REMOVED*** : -1;
-    var btns = document.querySelectorAll('.gbtn[data-taborder***REMOVED***:not(.disabled)');
+    var current = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : -1;
+    var btns = document.querySelectorAll('.gbtn[data-taborder]:not(.disabled)');
 
     if (!btns.length) {
       return false;
-***REMOVED***
+    }
 
     if (btns.length == 1) {
-      return btns[0***REMOVED***;
-***REMOVED***
+      return btns[0];
+    }
 
     if (typeof current == 'string') {
       current = parseInt(current);
-***REMOVED***
+    }
 
     var newIndex = current < 0 ? 1 : current + 1;
 
     if (newIndex > btns.length) {
       newIndex = '1';
-***REMOVED***
+    }
 
-    var orders = [***REMOVED***;
+    var orders = [];
     each(btns, function (btn) {
       orders.push(btn.getAttribute('data-taborder'));
-***REMOVED***);
+    });
     var nextOrders = orders.filter(function (el) {
       return el >= parseInt(newIndex);
-***REMOVED***);
-    var nextFocus = nextOrders.sort()[0***REMOVED***;
-    return document.querySelector(".gbtn[data-taborder=\"".concat(nextFocus, "\"***REMOVED***"));
+    });
+    var nextFocus = nextOrders.sort()[0];
+    return document.querySelector(".gbtn[data-taborder=\"".concat(nextFocus, "\"]"));
   }
 
   function keyboardNavigation(instance) {
     if (instance.events.hasOwnProperty('keyboard')) {
       return false;
-***REMOVED***
+    }
 
-    instance.events['keyboard'***REMOVED*** = addEvent('keydown', {
+    instance.events['keyboard'] = addEvent('keydown', {
       onElement: window,
       withCallback: function withCallback(event, target) {
         event = event || window.event;
@@ -580,15 +580,15 @@
 
             if (activeElement == 'input' || activeElement == 'textarea' || activeElement == 'button') {
               return;
-        ***REMOVED***
-      ***REMOVED***
+            }
+          }
 
           event.preventDefault();
-          var btns = document.querySelectorAll('.gbtn[data-taborder***REMOVED***');
+          var btns = document.querySelectorAll('.gbtn[data-taborder]');
 
           if (!btns || btns.length <= 0) {
             return;
-      ***REMOVED***
+          }
 
           if (!focusedButton) {
             var first = getNextFocusElement();
@@ -596,10 +596,10 @@
             if (first) {
               first.focus();
               addClass(first, 'focused');
-        ***REMOVED***
+            }
 
             return;
-      ***REMOVED***
+          }
 
           var currentFocusOrder = focusedButton.getAttribute('data-taborder');
           var nextFocus = getNextFocusElement(currentFocusOrder);
@@ -608,22 +608,22 @@
           if (nextFocus) {
             nextFocus.focus();
             addClass(nextFocus, 'focused');
-      ***REMOVED***
-    ***REMOVED***
+          }
+        }
 
         if (key == 39) {
           instance.nextSlide();
-    ***REMOVED***
+        }
 
         if (key == 37) {
           instance.prevSlide();
-    ***REMOVED***
+        }
 
         if (key == 27) {
           instance.close();
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***);
+        }
+      }
+    });
   }
 
   function getLen(v) {
@@ -639,13 +639,13 @@
 
     if (mr === 0) {
       return 0;
-***REMOVED***
+    }
 
     var r = dot(v1, v2) / mr;
 
     if (r > 1) {
       r = 1;
-***REMOVED***
+    }
 
     return Math.acos(r);
   }
@@ -659,7 +659,7 @@
 
     if (cross(v1, v2) > 0) {
       angle *= -1;
-***REMOVED***
+    }
 
     return angle * 180 / Math.PI;
   }
@@ -668,40 +668,40 @@
     function EventsHandlerAdmin(el) {
       _classCallCheck(this, EventsHandlerAdmin);
 
-      this.handlers = [***REMOVED***;
+      this.handlers = [];
       this.el = el;
-***REMOVED***
+    }
 
     _createClass(EventsHandlerAdmin, [{
       key: "add",
       value: function add(handler) {
         this.handlers.push(handler);
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "del",
       value: function del(handler) {
         if (!handler) {
-          this.handlers = [***REMOVED***;
-    ***REMOVED***
+          this.handlers = [];
+        }
 
         for (var i = this.handlers.length; i >= 0; i--) {
-          if (this.handlers[i***REMOVED*** === handler) {
+          if (this.handlers[i] === handler) {
             this.handlers.splice(i, 1);
-      ***REMOVED***
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED*** {
+          }
+        }
+      }
+    }, {
       key: "dispatch",
       value: function dispatch() {
         for (var i = 0, len = this.handlers.length; i < len; i++) {
-          var handler = this.handlers[i***REMOVED***;
+          var handler = this.handlers[i];
 
           if (typeof handler === 'function') {
             handler.apply(this.el, arguments);
-      ***REMOVED***
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED******REMOVED***);
+          }
+        }
+      }
+    }]);
 
     return EventsHandlerAdmin;
   }();
@@ -728,7 +728,7 @@
       this.preV = {
         x: null,
         y: null
-  ***REMOVED***;
+      };
       this.pinchStartLen = null;
       this.zoom = 1;
       this.isDoubleTap = false;
@@ -764,26 +764,26 @@
       this.preTapPosition = {
         x: null,
         y: null
-  ***REMOVED***;
-***REMOVED***
+      };
+    }
 
     _createClass(TouchEvents, [{
       key: "start",
       value: function start(evt) {
         if (!evt.touches) {
           return;
-    ***REMOVED***
+        }
 
-        var ignoreDragFor = ['a', 'button', 'input'***REMOVED***;
+        var ignoreDragFor = ['a', 'button', 'input'];
 
         if (evt.target && evt.target.nodeName && ignoreDragFor.indexOf(evt.target.nodeName.toLowerCase()) >= 0) {
           console.log('ignore drag for this touched element', evt.target.nodeName.toLowerCase());
           return;
-    ***REMOVED***
+        }
 
         this.now = Date.now();
-        this.x1 = evt.touches[0***REMOVED***.pageX;
-        this.y1 = evt.touches[0***REMOVED***.pageY;
+        this.x1 = evt.touches[0].pageX;
+        this.y1 = evt.touches[0].pageY;
         this.delta = this.now - (this.last || this.now);
         this.touchStart.dispatch(evt, this.element);
 
@@ -792,8 +792,8 @@
 
           if (this.isDoubleTap) {
             clearTimeout(this.singleTapTimeout);
-      ***REMOVED***
-    ***REMOVED***
+          }
+        }
 
         this.preTapPosition.x = this.x1;
         this.preTapPosition.y = this.y1;
@@ -807,51 +807,51 @@
           this._cancelSingleTap();
 
           var v = {
-            x: evt.touches[1***REMOVED***.pageX - this.x1,
-            y: evt.touches[1***REMOVED***.pageY - this.y1
-      ***REMOVED***;
+            x: evt.touches[1].pageX - this.x1,
+            y: evt.touches[1].pageY - this.y1
+          };
           preV.x = v.x;
           preV.y = v.y;
           this.pinchStartLen = getLen(preV);
           this.multipointStart.dispatch(evt, this.element);
-    ***REMOVED***
+        }
 
         this._preventTap = false;
         this.longTapTimeout = setTimeout(function () {
           this.longTap.dispatch(evt, this.element);
           this._preventTap = true;
-    ***REMOVED***.bind(this), 750);
-  ***REMOVED***
-***REMOVED*** {
+        }.bind(this), 750);
+      }
+    }, {
       key: "move",
       value: function move(evt) {
         if (!evt.touches) {
           return;
-    ***REMOVED***
+        }
 
         var preV = this.preV,
             len = evt.touches.length,
-            currentX = evt.touches[0***REMOVED***.pageX,
-            currentY = evt.touches[0***REMOVED***.pageY;
+            currentX = evt.touches[0].pageX,
+            currentY = evt.touches[0].pageY;
         this.isDoubleTap = false;
 
         if (len > 1) {
-          var sCurrentX = evt.touches[1***REMOVED***.pageX,
-              sCurrentY = evt.touches[1***REMOVED***.pageY;
+          var sCurrentX = evt.touches[1].pageX,
+              sCurrentY = evt.touches[1].pageY;
           var v = {
-            x: evt.touches[1***REMOVED***.pageX - currentX,
-            y: evt.touches[1***REMOVED***.pageY - currentY
-      ***REMOVED***;
+            x: evt.touches[1].pageX - currentX,
+            y: evt.touches[1].pageY - currentY
+          };
 
           if (preV.x !== null) {
             if (this.pinchStartLen > 0) {
               evt.zoom = getLen(v) / this.pinchStartLen;
               this.pinch.dispatch(evt, this.element);
-        ***REMOVED***
+            }
 
             evt.angle = getRotateAngle(v, preV);
             this.rotate.dispatch(evt, this.element);
-      ***REMOVED***
+          }
 
           preV.x = v.x;
           preV.y = v.y;
@@ -859,15 +859,15 @@
           if (this.x2 !== null && this.sx2 !== null) {
             evt.deltaX = (currentX - this.x2 + sCurrentX - this.sx2) / 2;
             evt.deltaY = (currentY - this.y2 + sCurrentY - this.sy2) / 2;
-      ***REMOVED*** else {
+          } else {
             evt.deltaX = 0;
             evt.deltaY = 0;
-      ***REMOVED***
+          }
 
           this.twoFingerPressMove.dispatch(evt, this.element);
           this.sx2 = sCurrentX;
           this.sy2 = sCurrentY;
-    ***REMOVED*** else {
+        } else {
           if (this.x2 !== null) {
             evt.deltaX = currentX - this.x2;
             evt.deltaY = currentY - this.y2;
@@ -876,14 +876,14 @@
 
             if (movedX > 10 || movedY > 10) {
               this._preventTap = true;
-        ***REMOVED***
-      ***REMOVED*** else {
+            }
+          } else {
             evt.deltaX = 0;
             evt.deltaY = 0;
-      ***REMOVED***
+          }
 
           this.pressMove.dispatch(evt, this.element);
-    ***REMOVED***
+        }
 
         this.touchMove.dispatch(evt, this.element);
 
@@ -894,14 +894,14 @@
 
         if (len > 1) {
           evt.preventDefault();
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED*** {
+        }
+      }
+    }, {
       key: "end",
       value: function end(evt) {
         if (!evt.changedTouches) {
           return;
-    ***REMOVED***
+        }
 
         this._cancelLongTap();
 
@@ -910,31 +910,31 @@
         if (evt.touches.length < 2) {
           this.multipointEnd.dispatch(evt, this.element);
           this.sx2 = this.sy2 = null;
-    ***REMOVED***
+        }
 
         if (this.x2 && Math.abs(this.x1 - this.x2) > 30 || this.y2 && Math.abs(this.y1 - this.y2) > 30) {
           evt.direction = this._swipeDirection(this.x1, this.x2, this.y1, this.y2);
           this.swipeTimeout = setTimeout(function () {
             self.swipe.dispatch(evt, self.element);
-  ***REMOVED*** 0);
-    ***REMOVED*** else {
+          }, 0);
+        } else {
           this.tapTimeout = setTimeout(function () {
             if (!self._preventTap) {
               self.tap.dispatch(evt, self.element);
-        ***REMOVED***
+            }
 
             if (self.isDoubleTap) {
               self.doubleTap.dispatch(evt, self.element);
               self.isDoubleTap = false;
-        ***REMOVED***
-  ***REMOVED*** 0);
+            }
+          }, 0);
 
           if (!self.isDoubleTap) {
             self.singleTapTimeout = setTimeout(function () {
               self.singleTap.dispatch(evt, self.element);
-    ***REMOVED*** 250);
-      ***REMOVED***
-    ***REMOVED***
+            }, 250);
+          }
+        }
 
         this.touchEnd.dispatch(evt, this.element);
         this.preV.x = 0;
@@ -942,8 +942,8 @@
         this.zoom = 1;
         this.pinchStartLen = null;
         this.x1 = this.x2 = this.y1 = this.y2 = null;
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "cancelAll",
       value: function cancelAll() {
         this._preventTap = true;
@@ -951,60 +951,60 @@
         clearTimeout(this.tapTimeout);
         clearTimeout(this.longTapTimeout);
         clearTimeout(this.swipeTimeout);
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "cancel",
       value: function cancel(evt) {
         this.cancelAll();
         this.touchCancel.dispatch(evt, this.element);
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "_cancelLongTap",
       value: function _cancelLongTap() {
         clearTimeout(this.longTapTimeout);
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "_cancelSingleTap",
       value: function _cancelSingleTap() {
         clearTimeout(this.singleTapTimeout);
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "_swipeDirection",
       value: function _swipeDirection(x1, x2, y1, y2) {
         return Math.abs(x1 - x2) >= Math.abs(y1 - y2) ? x1 - x2 > 0 ? 'Left' : 'Right' : y1 - y2 > 0 ? 'Up' : 'Down';
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "on",
       value: function on(evt, handler) {
-        if (this[evt***REMOVED***) {
-          this[evt***REMOVED***.add(handler);
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED*** {
+        if (this[evt]) {
+          this[evt].add(handler);
+        }
+      }
+    }, {
       key: "off",
       value: function off(evt, handler) {
-        if (this[evt***REMOVED***) {
-          this[evt***REMOVED***.del(handler);
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED*** {
+        if (this[evt]) {
+          this[evt].del(handler);
+        }
+      }
+    }, {
       key: "destroy",
       value: function destroy() {
         if (this.singleTapTimeout) {
           clearTimeout(this.singleTapTimeout);
-    ***REMOVED***
+        }
 
         if (this.tapTimeout) {
           clearTimeout(this.tapTimeout);
-    ***REMOVED***
+        }
 
         if (this.longTapTimeout) {
           clearTimeout(this.longTapTimeout);
-    ***REMOVED***
+        }
 
         if (this.swipeTimeout) {
           clearTimeout(this.swipeTimeout);
-    ***REMOVED***
+        }
 
         this.element.removeEventListener('touchstart', this.start);
         this.element.removeEventListener('touchmove', this.move);
@@ -1028,8 +1028,8 @@
         this.preV = this.pinchStartLen = this.zoom = this.isDoubleTap = this.delta = this.last = this.now = this.tapTimeout = this.singleTapTimeout = this.longTapTimeout = this.swipeTimeout = this.x1 = this.x2 = this.y1 = this.y2 = this.preTapPosition = this.rotate = this.touchStart = this.multipointStart = this.multipointEnd = this.pinch = this.swipe = this.tap = this.doubleTap = this.longTap = this.singleTap = this.pressMove = this.touchMove = this.touchEnd = this.touchCancel = this.twoFingerPressMove = null;
         window.removeEventListener('scroll', this._cancelAllHandler);
         return null;
-  ***REMOVED***
-***REMOVED******REMOVED***);
+      }
+    }]);
 
     return TouchEvents;
   }();
@@ -1043,7 +1043,7 @@
 
     if (windowWidth > 769) {
       media = container;
-***REMOVED***
+    }
 
     addClass(media, 'greset');
     cssTransform(media, 'translate3d(0, 0, 0)');
@@ -1052,19 +1052,19 @@
       once: true,
       withCallback: function withCallback(event, target) {
         removeClass(media, 'greset');
-  ***REMOVED***
-***REMOVED***);
+      }
+    });
     media.style.opacity = '';
 
     if (desc) {
       desc.style.opacity = '';
-***REMOVED***
+    }
   }
 
   function touchNavigation(instance) {
     if (instance.events.hasOwnProperty('touch')) {
       return false;
-***REMOVED***
+    }
 
     var winSize = windowSize();
     var winWidth = winSize.width;
@@ -1100,20 +1100,20 @@
       touchStart: function touchStart(e) {
         process = true;
 
-        if (hasClass(e.targetTouches[0***REMOVED***.target, 'ginner-container') || closest(e.targetTouches[0***REMOVED***.target, '.gslide-desc') || e.targetTouches[0***REMOVED***.target.nodeName.toLowerCase() == 'a') {
+        if (hasClass(e.targetTouches[0].target, 'ginner-container') || closest(e.targetTouches[0].target, '.gslide-desc') || e.targetTouches[0].target.nodeName.toLowerCase() == 'a') {
           process = false;
-    ***REMOVED***
+        }
 
-        if (closest(e.targetTouches[0***REMOVED***.target, '.gslide-inline') && !hasClass(e.targetTouches[0***REMOVED***.target.parentNode, 'gslide-inline')) {
+        if (closest(e.targetTouches[0].target, '.gslide-inline') && !hasClass(e.targetTouches[0].target.parentNode, 'gslide-inline')) {
           process = false;
-    ***REMOVED***
+        }
 
         if (process) {
-          endCoords = e.targetTouches[0***REMOVED***;
-          startCoords.pageX = e.targetTouches[0***REMOVED***.pageX;
-          startCoords.pageY = e.targetTouches[0***REMOVED***.pageY;
-          xDown = e.targetTouches[0***REMOVED***.clientX;
-          yDown = e.targetTouches[0***REMOVED***.clientY;
+          endCoords = e.targetTouches[0];
+          startCoords.pageX = e.targetTouches[0].pageX;
+          startCoords.pageY = e.targetTouches[0].pageY;
+          xDown = e.targetTouches[0].clientX;
+          yDown = e.targetTouches[0].clientY;
           currentSlide = instance.activeSlide;
           media = currentSlide.querySelector('.gslide-media');
           isInlined = currentSlide.querySelector('.gslide-inline');
@@ -1121,55 +1121,55 @@
 
           if (hasClass(media, 'gslide-image')) {
             mediaImage = media.querySelector('img');
-      ***REMOVED***
+          }
 
           var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
           if (windowWidth > 769) {
             media = currentSlide.querySelector('.ginner-container');
-      ***REMOVED***
+          }
 
           removeClass(overlay, 'greset');
 
           if (e.pageX > 20 && e.pageX < window.innerWidth - 20) {
             return;
-      ***REMOVED***
+          }
 
           e.preventDefault();
-    ***REMOVED***
-  ***REMOVED***
+        }
+      },
       touchMove: function touchMove(e) {
         if (!process) {
           return;
-    ***REMOVED***
+        }
 
-        endCoords = e.targetTouches[0***REMOVED***;
+        endCoords = e.targetTouches[0];
 
         if (doingZoom || imageZoomed) {
           return;
-    ***REMOVED***
+        }
 
         if (isInlined && isInlined.offsetHeight > winHeight) {
           var moved = startCoords.pageX - endCoords.pageX;
 
           if (Math.abs(moved) <= 13) {
             return false;
-      ***REMOVED***
-    ***REMOVED***
+          }
+        }
 
         doingMove = true;
-        var xUp = e.targetTouches[0***REMOVED***.clientX;
-        var yUp = e.targetTouches[0***REMOVED***.clientY;
+        var xUp = e.targetTouches[0].clientX;
+        var yUp = e.targetTouches[0].clientY;
         var xDiff = xDown - xUp;
         var yDiff = yDown - yUp;
 
         if (Math.abs(xDiff) > Math.abs(yDiff)) {
           vSwipe = false;
           hSwipe = true;
-    ***REMOVED*** else {
+        } else {
           hSwipe = false;
           vSwipe = true;
-    ***REMOVED***
+        }
 
         hDistance = endCoords.pageX - startCoords.pageX;
         hDistancePercent = hDistance * 100 / winWidth;
@@ -1183,8 +1183,8 @@
 
           if (instance.settings.touchFollowAxis) {
             hDistancePercent = 0;
-      ***REMOVED***
-    ***REMOVED***
+          }
+        }
 
         if (hSwipe) {
           opacity = 1 - Math.abs(hDistance) / winWidth;
@@ -1192,19 +1192,19 @@
 
           if (instance.settings.touchFollowAxis) {
             vDistancePercent = 0;
-      ***REMOVED***
-    ***REMOVED***
+          }
+        }
 
         if (!mediaImage) {
           return cssTransform(media, "translate3d(".concat(hDistancePercent, "%, 0, 0)"));
-    ***REMOVED***
+        }
 
         cssTransform(media, "translate3d(".concat(hDistancePercent, "%, ").concat(vDistancePercent, "%, 0)"));
-  ***REMOVED***
+      },
       touchEnd: function touchEnd() {
         if (!process) {
           return;
-    ***REMOVED***
+        }
 
         doingMove = false;
 
@@ -1212,7 +1212,7 @@
           lastZoomedPosX = zoomedPosX;
           lastZoomedPosY = zoomedPosY;
           return;
-    ***REMOVED***
+        }
 
         var v = Math.abs(parseInt(vDistancePercent));
         var h = Math.abs(parseInt(hDistancePercent));
@@ -1220,27 +1220,27 @@
         if (v > 29 && mediaImage) {
           instance.close();
           return;
-    ***REMOVED***
+        }
 
         if (v < 29 && h < 25) {
           addClass(overlay, 'greset');
           overlay.style.opacity = 1;
           return resetSlideMove(media);
-    ***REMOVED***
-  ***REMOVED***
+        }
+      },
       multipointEnd: function multipointEnd() {
         setTimeout(function () {
           doingZoom = false;
-***REMOVED*** 50);
-  ***REMOVED***
+        }, 50);
+      },
       multipointStart: function multipointStart() {
         doingZoom = true;
         initScale = currentScale ? currentScale : 1;
-  ***REMOVED***
+      },
       pinch: function pinch(evt) {
         if (!mediaImage || doingMove) {
           return false;
-    ***REMOVED***
+        }
 
         doingZoom = true;
         mediaImage.scaleX = mediaImage.scaleY = initScale * evt.zoom;
@@ -1256,15 +1256,15 @@
           zoomedPosY = null;
           mediaImage.setAttribute('style', '');
           return;
-    ***REMOVED***
+        }
 
         if (scale > maxScale) {
           scale = maxScale;
-    ***REMOVED***
+        }
 
         mediaImage.style.transform = "scale3d(".concat(scale, ", ").concat(scale, ", 1)");
         currentScale = scale;
-  ***REMOVED***
+      },
       pressMove: function pressMove(e) {
         if (imageZoomed && !doingZoom) {
           var mhDistance = endCoords.pageX - startCoords.pageX;
@@ -1272,11 +1272,11 @@
 
           if (lastZoomedPosX) {
             mhDistance = mhDistance + lastZoomedPosX;
-      ***REMOVED***
+          }
 
           if (lastZoomedPosY) {
             mvDistance = mvDistance + lastZoomedPosY;
-      ***REMOVED***
+          }
 
           zoomedPosX = mhDistance;
           zoomedPosY = mvDistance;
@@ -1284,46 +1284,46 @@
 
           if (currentScale) {
             style += " scale3d(".concat(currentScale, ", ").concat(currentScale, ", 1)");
-      ***REMOVED***
+          }
 
           cssTransform(mediaImage, style);
-    ***REMOVED***
-  ***REMOVED***
+        }
+      },
       swipe: function swipe(evt) {
         if (imageZoomed) {
           return;
-    ***REMOVED***
+        }
 
         if (doingZoom) {
           doingZoom = false;
           return;
-    ***REMOVED***
+        }
 
         if (evt.direction == 'Left') {
           if (instance.index == instance.elements.length - 1) {
             return resetSlideMove(media);
-      ***REMOVED***
+          }
 
           instance.nextSlide();
-    ***REMOVED***
+        }
 
         if (evt.direction == 'Right') {
           if (instance.index == 0) {
             return resetSlideMove(media);
-      ***REMOVED***
+          }
 
           instance.prevSlide();
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***);
-    instance.events['touch'***REMOVED*** = touchInstance;
+        }
+      }
+    });
+    instance.events['touch'] = touchInstance;
   }
 
   var ZoomImages = function () {
     function ZoomImages(el, slide) {
       var _this = this;
 
-      var onclose = arguments.length > 2 && arguments[2***REMOVED*** !== undefined ? arguments[2***REMOVED*** : null;
+      var onclose = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
 
       _classCallCheck(this, ZoomImages);
 
@@ -1333,7 +1333,7 @@
 
       if (this.img.setZoomEvents) {
         return false;
-  ***REMOVED***
+      }
 
       this.active = false;
       this.zoomedIn = false;
@@ -1346,30 +1346,30 @@
       this.yOffset = 0;
       this.img.addEventListener('mousedown', function (e) {
         return _this.dragStart(e);
-  ***REMOVED*** false);
+      }, false);
       this.img.addEventListener('mouseup', function (e) {
         return _this.dragEnd(e);
-  ***REMOVED*** false);
+      }, false);
       this.img.addEventListener('mousemove', function (e) {
         return _this.drag(e);
-  ***REMOVED*** false);
+      }, false);
       this.img.addEventListener('click', function (e) {
         if (_this.slide.classList.contains('dragging-nav')) {
           _this.zoomOut();
 
           return false;
-    ***REMOVED***
+        }
 
         if (!_this.zoomedIn) {
           return _this.zoomIn();
-    ***REMOVED***
+        }
 
         if (_this.zoomedIn && !_this.dragging) {
           _this.zoomOut();
-    ***REMOVED***
-  ***REMOVED*** false);
+        }
+      }, false);
       this.img.setZoomEvents = true;
-***REMOVED***
+    }
 
     _createClass(ZoomImages, [{
       key: "zoomIn",
@@ -1378,7 +1378,7 @@
 
         if (this.zoomedIn || winWidth <= 768) {
           return;
-    ***REMOVED***
+        }
 
         var img = this.img;
         img.setAttribute('data-style', img.getAttribute('style'));
@@ -1388,12 +1388,12 @@
         if (img.naturalWidth > winWidth) {
           var centerX = winWidth / 2 - img.naturalWidth / 2;
           this.setTranslate(this.img.parentNode, centerX, 0);
-    ***REMOVED***
+        }
 
         this.slide.classList.add('zoomed');
         this.zoomedIn = true;
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "zoomOut",
       value: function zoomOut() {
         this.img.parentNode.setAttribute('style', '');
@@ -1409,9 +1409,9 @@
 
         if (this.onclose && typeof this.onclose == 'function') {
           this.onclose();
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED*** {
+        }
+      }
+    }, {
       key: "dragStart",
       value: function dragStart(e) {
         e.preventDefault();
@@ -1419,22 +1419,22 @@
         if (!this.zoomedIn) {
           this.active = false;
           return;
-    ***REMOVED***
+        }
 
         if (e.type === 'touchstart') {
-          this.initialX = e.touches[0***REMOVED***.clientX - this.xOffset;
-          this.initialY = e.touches[0***REMOVED***.clientY - this.yOffset;
-    ***REMOVED*** else {
+          this.initialX = e.touches[0].clientX - this.xOffset;
+          this.initialY = e.touches[0].clientY - this.yOffset;
+        } else {
           this.initialX = e.clientX - this.xOffset;
           this.initialY = e.clientY - this.yOffset;
-    ***REMOVED***
+        }
 
         if (e.target === this.img) {
           this.active = true;
           this.img.classList.add('dragging');
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED*** {
+        }
+      }
+    }, {
       key: "dragEnd",
       value: function dragEnd(e) {
         var _this2 = this;
@@ -1448,51 +1448,51 @@
           _this2.img.isDragging = false;
 
           _this2.img.classList.remove('dragging');
-***REMOVED*** 100);
-  ***REMOVED***
-***REMOVED*** {
+        }, 100);
+      }
+    }, {
       key: "drag",
       value: function drag(e) {
         if (this.active) {
           e.preventDefault();
 
           if (e.type === 'touchmove') {
-            this.currentX = e.touches[0***REMOVED***.clientX - this.initialX;
-            this.currentY = e.touches[0***REMOVED***.clientY - this.initialY;
-      ***REMOVED*** else {
+            this.currentX = e.touches[0].clientX - this.initialX;
+            this.currentY = e.touches[0].clientY - this.initialY;
+          } else {
             this.currentX = e.clientX - this.initialX;
             this.currentY = e.clientY - this.initialY;
-      ***REMOVED***
+          }
 
           this.xOffset = this.currentX;
           this.yOffset = this.currentY;
           this.img.isDragging = true;
           this.dragging = true;
           this.setTranslate(this.img, this.currentX, this.currentY);
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED*** {
+        }
+      }
+    }, {
       key: "onMove",
       value: function onMove(e) {
         if (!this.zoomedIn) {
           return;
-    ***REMOVED***
+        }
 
         var xOffset = e.clientX - this.img.naturalWidth / 2;
         var yOffset = e.clientY - this.img.naturalHeight / 2;
         this.setTranslate(this.img, xOffset, yOffset);
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "setTranslate",
       value: function setTranslate(node, xPos, yPos) {
         node.style.transform = 'translate3d(' + xPos + 'px, ' + yPos + 'px, 0)';
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "widowWidth",
       value: function widowWidth() {
         return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-  ***REMOVED***
-***REMOVED******REMOVED***);
+      }
+    }]);
 
     return ZoomImages;
   }();
@@ -1501,7 +1501,7 @@
     function DragSlides() {
       var _this = this;
 
-      var config = arguments.length > 0 && arguments[0***REMOVED*** !== undefined ? arguments[0***REMOVED*** : {};
+      var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
       _classCallCheck(this, DragSlides);
 
@@ -1533,14 +1533,14 @@
       this.instance = instance;
       this.el.addEventListener('mousedown', function (e) {
         return _this.dragStart(e);
-  ***REMOVED*** false);
+      }, false);
       this.el.addEventListener('mouseup', function (e) {
         return _this.dragEnd(e);
-  ***REMOVED*** false);
+      }, false);
       this.el.addEventListener('mousemove', function (e) {
         return _this.drag(e);
-  ***REMOVED*** false);
-***REMOVED***
+      }, false);
+    }
 
     _createClass(DragSlides, [{
       key: "dragStart",
@@ -1548,23 +1548,23 @@
         if (this.slide.classList.contains('zoomed')) {
           this.active = false;
           return;
-    ***REMOVED***
+        }
 
         if (e.type === 'touchstart') {
-          this.initialX = e.touches[0***REMOVED***.clientX - this.xOffset;
-          this.initialY = e.touches[0***REMOVED***.clientY - this.yOffset;
-    ***REMOVED*** else {
+          this.initialX = e.touches[0].clientX - this.xOffset;
+          this.initialY = e.touches[0].clientY - this.yOffset;
+        } else {
           this.initialX = e.clientX - this.xOffset;
           this.initialY = e.clientY - this.yOffset;
-    ***REMOVED***
+        }
 
         var clicked = e.target.nodeName.toLowerCase();
-        var exludeClicks = ['input', 'select', 'textarea', 'button', 'a'***REMOVED***;
+        var exludeClicks = ['input', 'select', 'textarea', 'button', 'a'];
 
         if (e.target.classList.contains('nodrag') || closest(e.target, '.nodrag') || exludeClicks.indexOf(clicked) !== -1) {
           this.active = false;
           return;
-    ***REMOVED***
+        }
 
         e.preventDefault();
 
@@ -1572,9 +1572,9 @@
           this.active = true;
           this.el.classList.add('dragging');
           this.dragContainer = closest(e.target, '.ginner-container');
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED*** {
+        }
+      }
+    }, {
       key: "dragEnd",
       value: function dragEnd(e) {
         var _this2 = this;
@@ -1594,15 +1594,15 @@
           this.instance.preventOutsideClick = true;
           this.doSlideChange == 'right' && this.instance.prevSlide();
           this.doSlideChange == 'left' && this.instance.nextSlide();
-    ***REMOVED***
+        }
 
         if (this.doSlideClose) {
           this.instance.close();
-    ***REMOVED***
+        }
 
         if (!this.toleranceReached) {
           this.setTranslate(this.dragContainer, 0, 0, true);
-    ***REMOVED***
+        }
 
         setTimeout(function () {
           _this2.instance.preventOutsideClick = false;
@@ -1617,9 +1617,9 @@
 
           _this2.dragContainer.style.transform = '';
           _this2.dragContainer.style.transition = '';
-***REMOVED*** 100);
-  ***REMOVED***
-***REMOVED*** {
+        }, 100);
+      }
+    }, {
       key: "drag",
       value: function drag(e) {
         if (this.active) {
@@ -1627,12 +1627,12 @@
           this.slide.classList.add('dragging-nav');
 
           if (e.type === 'touchmove') {
-            this.currentX = e.touches[0***REMOVED***.clientX - this.initialX;
-            this.currentY = e.touches[0***REMOVED***.clientY - this.initialY;
-      ***REMOVED*** else {
+            this.currentX = e.touches[0].clientX - this.initialX;
+            this.currentY = e.touches[0].clientY - this.initialY;
+          } else {
             this.currentX = e.clientX - this.initialX;
             this.currentY = e.clientY - this.initialY;
-      ***REMOVED***
+          }
 
           this.xOffset = this.currentX;
           this.yOffset = this.currentY;
@@ -1651,7 +1651,7 @@
 
             if (!this.instance.settings.dragAutoSnap && doChange) {
               this.doSlideChange = doChange;
-        ***REMOVED***
+            }
 
             if (this.instance.settings.dragAutoSnap && doChange) {
               this.instance.preventOutsideClick = true;
@@ -1662,8 +1662,8 @@
               doChange == 'right' && this.instance.prevSlide();
               doChange == 'left' && this.instance.nextSlide();
               return;
-        ***REMOVED***
-      ***REMOVED***
+            }
+          }
 
           if (this.toleranceY > 0 && currentYInt > 0 && currentYInt >= currentXInt && (!this.lastDirection || this.lastDirection == 'y')) {
             this.xOffset = 0;
@@ -1673,17 +1673,17 @@
 
             if (!this.instance.settings.dragAutoSnap && doClose) {
               this.doSlideClose = true;
-        ***REMOVED***
+            }
 
             if (this.instance.settings.dragAutoSnap && doClose) {
               this.instance.close();
-        ***REMOVED***
+            }
 
             return;
-      ***REMOVED***
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED*** {
+          }
+        }
+      }
+    }, {
       key: "shouldChange",
       value: function shouldChange() {
         var doChange = false;
@@ -1694,12 +1694,12 @@
 
           if (dragDir == 'left' && this.slide !== this.slide.parentNode.lastChild || dragDir == 'right' && this.slide !== this.slide.parentNode.firstChild) {
             doChange = dragDir;
-      ***REMOVED***
-    ***REMOVED***
+          }
+        }
 
         return doChange;
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "shouldClose",
       value: function shouldClose() {
         var doClose = false;
@@ -1707,24 +1707,24 @@
 
         if (currentYInt >= this.toleranceY) {
           doClose = true;
-    ***REMOVED***
+        }
 
         return doClose;
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "setTranslate",
       value: function setTranslate(node, xPos, yPos) {
-        var animated = arguments.length > 3 && arguments[3***REMOVED*** !== undefined ? arguments[3***REMOVED*** : false;
+        var animated = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
 
         if (animated) {
           node.style.transition = 'all .2s ease';
-    ***REMOVED*** else {
+        } else {
           node.style.transition = '';
-    ***REMOVED***
+        }
 
         node.style.transform = "translate3d(".concat(xPos, "px, ").concat(yPos, "px, 0)");
-  ***REMOVED***
-***REMOVED******REMOVED***);
+      }
+    }]);
 
     return DragSlides;
   }();
@@ -1737,36 +1737,36 @@
     img.addEventListener('load', function () {
       if (isFunction(callback)) {
         callback();
-  ***REMOVED***
-***REMOVED*** false);
+      }
+    }, false);
     img.src = data.href;
 
     if (data.sizes != '' && data.srcset != '') {
       img.sizes = data.sizes;
       img.srcset = data.srcset;
-***REMOVED***
+    }
 
     img.alt = '';
 
     if (!isNil(data.alt) && data.alt !== '') {
       img.alt = data.alt;
-***REMOVED***
+    }
 
     if (data.title !== '') {
       img.setAttribute('aria-labelledby', titleID);
-***REMOVED***
+    }
 
     if (data.description !== '') {
       img.setAttribute('aria-describedby', textID);
-***REMOVED***
+    }
 
     if (data.hasOwnProperty('_hasCustomWidth') && data._hasCustomWidth) {
       img.style.width = data.width;
-***REMOVED***
+    }
 
     if (data.hasOwnProperty('_hasCustomHeight') && data._hasCustomHeight) {
       img.style.height = data.height;
-***REMOVED***
+    }
 
     slideMedia.insertBefore(img, slideMedia.firstChild);
     return;
@@ -1791,21 +1791,21 @@
 
     if (protocol == 'file') {
       protocol = 'http';
-***REMOVED***
+    }
 
     slideMedia.style.maxWidth = data.width;
     injectAssets(this.settings.plyr.js, 'Plyr', function () {
-      if (url.match(/vimeo\.com\/([0-9***REMOVED****)/)) {
+      if (url.match(/vimeo\.com\/([0-9]*)/)) {
         var vimeoID = /vimeo.*\/(\d+)/i.exec(url);
         videoSource = 'vimeo';
-        embedID = vimeoID[1***REMOVED***;
-  ***REMOVED***
+        embedID = vimeoID[1];
+      }
 
-      if (url.match(/(youtube\.com|youtube-nocookie\.com)\/watch\?v=([a-zA-Z0-9\-_***REMOVED***+)/) || url.match(/youtu\.be\/([a-zA-Z0-9\-_***REMOVED***+)/) || url.match(/(youtube\.com|youtube-nocookie\.com)\/embed\/([a-zA-Z0-9\-_***REMOVED***+)/)) {
+      if (url.match(/(youtube\.com|youtube-nocookie\.com)\/watch\?v=([a-zA-Z0-9\-_]+)/) || url.match(/youtu\.be\/([a-zA-Z0-9\-_]+)/) || url.match(/(youtube\.com|youtube-nocookie\.com)\/embed\/([a-zA-Z0-9\-_]+)/)) {
         var youtubeID = getYoutubeID(url);
         videoSource = 'youtube';
         embedID = youtubeID;
-  ***REMOVED***
+      }
 
       if (url.match(/\.(mp4|ogg|webm|mov)$/) !== null) {
         videoSource = 'local';
@@ -1821,27 +1821,27 @@
           mp4: '',
           ogg: '',
           webm: ''
-    ***REMOVED***;
+        };
         format = format == 'mov' ? 'mp4' : format;
-        sources[format***REMOVED*** = url;
+        sources[format] = url;
 
         for (var key in sources) {
           if (sources.hasOwnProperty(key)) {
-            var videoFile = sources[key***REMOVED***;
+            var videoFile = sources[key];
 
             if (data.hasOwnProperty(key)) {
-              videoFile = data[key***REMOVED***;
-        ***REMOVED***
+              videoFile = data[key];
+            }
 
             if (videoFile !== '') {
               html += "<source src=\"".concat(videoFile, "\" type=\"video/").concat(key, "\">");
-        ***REMOVED***
-      ***REMOVED***
-    ***REMOVED***
+            }
+          }
+        }
 
         html += '</video>';
         customPlaceholder = createHTML(html);
-  ***REMOVED***
+      }
 
       var placeholder = customPlaceholder ? customPlaceholder : createHTML("<div id=\"".concat(videoID, "\" data-plyr-provider=\"").concat(videoSource, "\" data-plyr-embed-id=\"").concat(embedID, "\"></div>"));
       addClass(videoWrapper, "".concat(videoSource, "-video gvideo"));
@@ -1852,32 +1852,32 @@
       var player = new Plyr('#' + videoID, playerConfig);
       player.on('ready', function (event) {
         var instance = event.detail.plyr;
-        videoPlayers[videoID***REMOVED*** = instance;
+        videoPlayers[videoID] = instance;
 
         if (isFunction(callback)) {
           callback();
-    ***REMOVED***
-  ***REMOVED***);
+        }
+      });
       waitUntil(function () {
         return slide.querySelector('iframe') && slide.querySelector('iframe').dataset.ready == 'true';
-  ***REMOVED*** function () {
+      }, function () {
         _this.resize(slide);
-  ***REMOVED***);
+      });
       player.on('enterfullscreen', handleMediaFullScreen);
       player.on('exitfullscreen', handleMediaFullScreen);
-***REMOVED***);
+    });
   }
 
   function getYoutubeID(url) {
     var videoID = '';
     url = url.replace(/(>|<)/gi, '').split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
 
-    if (url[2***REMOVED*** !== undefined) {
-      videoID = url[2***REMOVED***.split(/[^0-9a-z_\-***REMOVED***/i);
-      videoID = videoID[0***REMOVED***;
-***REMOVED*** else {
+    if (url[2] !== undefined) {
+      videoID = url[2].split(/[^0-9a-z_\-]/i);
+      videoID = videoID[0];
+    } else {
       videoID = url;
-***REMOVED***
+    }
 
     return videoID;
   }
@@ -1887,11 +1887,11 @@
 
     if (event.type == 'enterfullscreen') {
       addClass(media, 'fullscreen');
-***REMOVED***
+    }
 
     if (event.type == 'exitfullscreen') {
       removeClass(media, 'fullscreen');
-***REMOVED***
+    }
   }
 
   function slideInline(slide, data, index, callback) {
@@ -1905,54 +1905,54 @@
     if (content) {
       if (isString(content)) {
         innerContent = createHTML("<div class=\"ginlined-content\">".concat(content, "</div>"));
-  ***REMOVED***
+      }
 
       if (isNode(content)) {
         if (content.style.display == 'none') {
           content.style.display = 'block';
-    ***REMOVED***
+        }
 
         var container = document.createElement('div');
         container.className = 'ginlined-content';
         container.appendChild(content);
         innerContent = container;
-  ***REMOVED***
-***REMOVED***
+      }
+    }
 
     if (hash) {
       var div = document.getElementById(hash);
 
       if (!div) {
         return false;
-  ***REMOVED***
+      }
 
       var cloned = div.cloneNode(true);
       cloned.style.height = data.height;
       cloned.style.maxWidth = data.width;
       addClass(cloned, 'ginlined-content');
       innerContent = cloned;
-***REMOVED***
+    }
 
     if (!innerContent) {
       console.error('Unable to append inline slide content', data);
       return false;
-***REMOVED***
+    }
 
     slideMedia.style.height = data.height;
     slideMedia.style.width = data.width;
     slideMedia.appendChild(innerContent);
-    this.events['inlineclose' + hash***REMOVED*** = addEvent('click', {
+    this.events['inlineclose' + hash] = addEvent('click', {
       onElement: slideMedia.querySelectorAll('.gtrigger-close'),
       withCallback: function withCallback(e) {
         e.preventDefault();
 
         _this.close();
-  ***REMOVED***
-***REMOVED***);
+      }
+    });
 
     if (isFunction(callback)) {
       callback();
-***REMOVED***
+    }
 
     return;
   }
@@ -1962,7 +1962,7 @@
     var iframe = createIframe({
       url: data.href,
       callback: callback
-***REMOVED***);
+    });
     slideMedia.parentNode.style.maxWidth = data.width;
     slideMedia.parentNode.style.height = data.height;
     slideMedia.appendChild(iframe);
@@ -1971,7 +1971,7 @@
 
   var SlideConfigParser = function () {
     function SlideConfigParser() {
-      var slideParamas = arguments.length > 0 && arguments[0***REMOVED*** !== undefined ? arguments[0***REMOVED*** : {};
+      var slideParamas = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
       _classCallCheck(this, SlideConfigParser);
 
@@ -1990,12 +1990,12 @@
         content: false,
         zoomable: true,
         draggable: true
-  ***REMOVED***;
+      };
 
       if (isObject(slideParamas)) {
         this.defaults = extend(this.defaults, slideParamas);
-  ***REMOVED***
-***REMOVED***
+      }
+    }
 
     _createClass(SlideConfigParser, [{
       key: "sourceType",
@@ -2005,60 +2005,60 @@
 
         if (url.match(/\.(jpeg|jpg|jpe|gif|png|apn|webp|avif|svg)/) !== null) {
           return 'image';
-    ***REMOVED***
+        }
 
-        if (url.match(/(youtube\.com|youtube-nocookie\.com)\/watch\?v=([a-zA-Z0-9\-_***REMOVED***+)/) || url.match(/youtu\.be\/([a-zA-Z0-9\-_***REMOVED***+)/) || url.match(/(youtube\.com|youtube-nocookie\.com)\/embed\/([a-zA-Z0-9\-_***REMOVED***+)/)) {
+        if (url.match(/(youtube\.com|youtube-nocookie\.com)\/watch\?v=([a-zA-Z0-9\-_]+)/) || url.match(/youtu\.be\/([a-zA-Z0-9\-_]+)/) || url.match(/(youtube\.com|youtube-nocookie\.com)\/embed\/([a-zA-Z0-9\-_]+)/)) {
           return 'video';
-    ***REMOVED***
+        }
 
-        if (url.match(/vimeo\.com\/([0-9***REMOVED****)/)) {
+        if (url.match(/vimeo\.com\/([0-9]*)/)) {
           return 'video';
-    ***REMOVED***
+        }
 
         if (url.match(/\.(mp4|ogg|webm|mov)/) !== null) {
           return 'video';
-    ***REMOVED***
+        }
 
         if (url.match(/\.(mp3|wav|wma|aac|ogg)/) !== null) {
           return 'audio';
-    ***REMOVED***
+        }
 
         if (url.indexOf('#') > -1) {
           var hash = origin.split('#').pop();
 
           if (hash.trim() !== '') {
             return 'inline';
-      ***REMOVED***
-    ***REMOVED***
+          }
+        }
 
         if (url.indexOf('goajax=true') > -1) {
           return 'ajax';
-    ***REMOVED***
+        }
 
         return 'external';
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "parseConfig",
       value: function parseConfig(element, settings) {
         var _this = this;
 
         var data = extend({
           descPosition: settings.descPosition
-***REMOVED*** this.defaults);
+        }, this.defaults);
 
         if (isObject(element) && !isNode(element)) {
           if (!has(element, 'type')) {
             if (has(element, 'content') && element.content) {
               element.type = 'inline';
-        ***REMOVED*** else if (has(element, 'href')) {
+            } else if (has(element, 'href')) {
               element.type = this.sourceType(element.href);
-        ***REMOVED***
-      ***REMOVED***
+            }
+          }
 
           var objectData = extend(data, element);
           this.setSize(objectData, settings);
           return objectData;
-    ***REMOVED***
+        }
 
         var url = '';
         var config = element.getAttribute('data-glightbox');
@@ -2066,39 +2066,39 @@
 
         if (nodeType === 'a') {
           url = element.href;
-    ***REMOVED***
+        }
 
         if (nodeType === 'img') {
           url = element.src;
           data.alt = element.alt;
-    ***REMOVED***
+        }
 
         data.href = url;
         each(data, function (val, key) {
           if (has(settings, key) && key !== 'width') {
-            data[key***REMOVED*** = settings[key***REMOVED***;
-      ***REMOVED***
+            data[key] = settings[key];
+          }
 
-          var nodeData = element.dataset[key***REMOVED***;
+          var nodeData = element.dataset[key];
 
           if (!isNil(nodeData)) {
-            data[key***REMOVED*** = _this.sanitizeValue(nodeData);
-      ***REMOVED***
-    ***REMOVED***);
+            data[key] = _this.sanitizeValue(nodeData);
+          }
+        });
 
         if (data.content) {
           data.type = 'inline';
-    ***REMOVED***
+        }
 
         if (!data.type && url) {
           data.type = this.sourceType(url);
-    ***REMOVED***
+        }
 
         if (!isNil(config)) {
-          var cleanKeys = [***REMOVED***;
+          var cleanKeys = [];
           each(data, function (v, k) {
             cleanKeys.push(';\\s?' + k);
-      ***REMOVED***);
+          });
           cleanKeys = cleanKeys.join('\\s?:|');
 
           if (config.trim() !== '') {
@@ -2108,62 +2108,62 @@
               var regex = new RegExp(match);
               var matches = str.match(regex);
 
-              if (matches && matches.length && matches[1***REMOVED***) {
-                var value = matches[1***REMOVED***.trim().replace(/;\s*$/, '');
-                data[key***REMOVED*** = _this.sanitizeValue(value);
-          ***REMOVED***
-        ***REMOVED***);
-      ***REMOVED***
-    ***REMOVED*** else {
+              if (matches && matches.length && matches[1]) {
+                var value = matches[1].trim().replace(/;\s*$/, '');
+                data[key] = _this.sanitizeValue(value);
+              }
+            });
+          }
+        } else {
           if (!data.title && nodeType == 'a') {
             var title = element.title;
 
             if (!isNil(title) && title !== '') {
               data.title = title;
-        ***REMOVED***
-      ***REMOVED***
+            }
+          }
 
           if (!data.title && nodeType == 'img') {
             var alt = element.alt;
 
             if (!isNil(alt) && alt !== '') {
               data.title = alt;
-        ***REMOVED***
-      ***REMOVED***
-    ***REMOVED***
+            }
+          }
+        }
 
         if (data.description && data.description.substring(0, 1) === '.') {
           var description;
 
           try {
             description = document.querySelector(data.description).innerHTML;
-      ***REMOVED*** catch (error) {
+          } catch (error) {
             if (!(error instanceof DOMException)) {
               throw error;
-        ***REMOVED***
-      ***REMOVED***
+            }
+          }
 
           if (description) {
             data.description = description;
-      ***REMOVED***
-    ***REMOVED***
+          }
+        }
 
         if (!data.description) {
           var nodeDesc = element.querySelector('.glightbox-desc');
 
           if (nodeDesc) {
             data.description = nodeDesc.innerHTML;
-      ***REMOVED***
-    ***REMOVED***
+          }
+        }
 
         this.setSize(data, settings, element);
         this.slideConfig = data;
         return data;
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "setSize",
       value: function setSize(data, settings) {
-        var element = arguments.length > 2 && arguments[2***REMOVED*** !== undefined ? arguments[2***REMOVED*** : null;
+        var element = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
         var defaultWith = data.type == 'video' ? this.checkSize(settings.videosWidth) : this.checkSize(settings.width);
         var defaultHeight = this.checkSize(settings.height);
         data.width = has(data, 'width') && data.width !== '' ? this.checkSize(data.width) : defaultWith;
@@ -2172,25 +2172,25 @@
         if (element && data.type == 'image') {
           data._hasCustomWidth = element.dataset.width ? true : false;
           data._hasCustomHeight = element.dataset.height ? true : false;
-    ***REMOVED***
+        }
 
         return data;
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "checkSize",
       value: function checkSize(size) {
         return isNumber(size) ? "".concat(size, "px") : size;
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "sanitizeValue",
       value: function sanitizeValue(val) {
         if (val !== 'true' && val !== 'false') {
           return val;
-    ***REMOVED***
+        }
 
         return val === 'true';
-  ***REMOVED***
-***REMOVED******REMOVED***);
+      }
+    }]);
 
     return SlideConfigParser;
   }();
@@ -2202,19 +2202,19 @@
       this.element = el;
       this.instance = instance;
       this.index = index;
-***REMOVED***
+    }
 
     _createClass(Slide, [{
       key: "setContent",
       value: function setContent() {
         var _this = this;
 
-        var slide = arguments.length > 0 && arguments[0***REMOVED*** !== undefined ? arguments[0***REMOVED*** : null;
-        var callback = arguments.length > 1 && arguments[1***REMOVED*** !== undefined ? arguments[1***REMOVED*** : false;
+        var slide = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+        var callback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
 
         if (hasClass(slide, 'loaded')) {
           return false;
-    ***REMOVED***
+        }
 
         var settings = this.instance.settings;
         var slideConfig = this.slideConfig;
@@ -2225,8 +2225,8 @@
             index: this.index,
             slide: slide,
             player: false
-      ***REMOVED***);
-    ***REMOVED***
+          });
+        }
 
         var type = slideConfig.type;
         var position = slideConfig.descPosition;
@@ -2242,27 +2242,27 @@
           finalCallback = function finalCallback() {
             if (isFunction(callback)) {
               callback();
-        ***REMOVED***
+            }
 
             settings.afterSlideLoad({
               index: _this.index,
               slide: slide,
               player: _this.instance.getSlidePlayerInstance(_this.index)
-        ***REMOVED***);
-      ***REMOVED***;
-    ***REMOVED***
+            });
+          };
+        }
 
         if (slideConfig.title == '' && slideConfig.description == '') {
           if (slideDesc) {
             slideDesc.parentNode.parentNode.removeChild(slideDesc.parentNode);
-      ***REMOVED***
-    ***REMOVED*** else {
+          }
+        } else {
           if (slideTitle && slideConfig.title !== '') {
             slideTitle.id = titleID;
             slideTitle.innerHTML = slideConfig.title;
-      ***REMOVED*** else {
+          } else {
             slideTitle.parentNode.removeChild(slideTitle);
-      ***REMOVED***
+          }
 
           if (slideText && slideConfig.description !== '') {
             slideText.id = textID;
@@ -2271,32 +2271,32 @@
               slideConfig.smallDescription = this.slideShortDesc(slideConfig.description, settings.moreLength, settings.moreText);
               slideText.innerHTML = slideConfig.smallDescription;
               this.descriptionEvents(slideText, slideConfig);
-        ***REMOVED*** else {
+            } else {
               slideText.innerHTML = slideConfig.description;
-        ***REMOVED***
-      ***REMOVED*** else {
+            }
+          } else {
             slideText.parentNode.removeChild(slideText);
-      ***REMOVED***
+          }
 
           addClass(slideMedia.parentNode, "desc-".concat(position));
           addClass(slideDesc.parentNode, "description-".concat(position));
-    ***REMOVED***
+        }
 
         addClass(slideMedia, "gslide-".concat(type));
         addClass(slide, 'loaded');
 
         if (type === 'video') {
-          slideVideo.apply(this.instance, [slide, slideConfig, this.index, finalCallback***REMOVED***);
+          slideVideo.apply(this.instance, [slide, slideConfig, this.index, finalCallback]);
           return;
-    ***REMOVED***
+        }
 
         if (type === 'external') {
-          slideIframe.apply(this, [slide, slideConfig, this.index, finalCallback***REMOVED***);
+          slideIframe.apply(this, [slide, slideConfig, this.index, finalCallback]);
           return;
-    ***REMOVED***
+        }
 
         if (type === 'inline') {
-          slideInline.apply(this.instance, [slide, slideConfig, this.index, finalCallback***REMOVED***);
+          slideInline.apply(this.instance, [slide, slideConfig, this.index, finalCallback]);
 
           if (slideConfig.draggable) {
             new DragSlides({
@@ -2305,11 +2305,11 @@
               toleranceY: settings.dragToleranceY,
               slide: slide,
               instance: this.instance
-        ***REMOVED***);
-      ***REMOVED***
+            });
+          }
 
           return;
-    ***REMOVED***
+        }
 
         if (type === 'image') {
           slideImage(slide, slideConfig, this.index, function () {
@@ -2322,32 +2322,32 @@
                 toleranceY: settings.dragToleranceY,
                 slide: slide,
                 instance: _this.instance
-          ***REMOVED***);
-        ***REMOVED***
+              });
+            }
 
             if (slideConfig.zoomable && img.naturalWidth > img.offsetWidth) {
               addClass(img, 'zoomable');
               new ZoomImages(img, slide, function () {
                 _this.instance.resize();
-          ***REMOVED***);
-        ***REMOVED***
+              });
+            }
 
             if (isFunction(finalCallback)) {
               finalCallback();
-        ***REMOVED***
-      ***REMOVED***);
+            }
+          });
           return;
-    ***REMOVED***
+        }
 
         if (isFunction(finalCallback)) {
           finalCallback();
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED*** {
+        }
+      }
+    }, {
       key: "slideShortDesc",
       value: function slideShortDesc(string) {
-        var n = arguments.length > 1 && arguments[1***REMOVED*** !== undefined ? arguments[1***REMOVED*** : 50;
-        var wordBoundary = arguments.length > 2 && arguments[2***REMOVED*** !== undefined ? arguments[2***REMOVED*** : false;
+        var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 50;
+        var wordBoundary = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
         var div = document.createElement('div');
         div.innerHTML = string;
         var cleanedString = div.innerText;
@@ -2356,18 +2356,18 @@
 
         if (string.length <= n) {
           return string;
-    ***REMOVED***
+        }
 
         var subString = string.substr(0, n - 1);
 
         if (!useWordBoundary) {
           return subString;
-    ***REMOVED***
+        }
 
         div = null;
         return subString + '... <a href="#" class="desc-more">' + wordBoundary + '</a>';
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "descriptionEvents",
       value: function descriptionEvents(desc, data) {
         var _this2 = this;
@@ -2376,7 +2376,7 @@
 
         if (!moreLink) {
           return false;
-    ***REMOVED***
+        }
 
         addEvent('click', {
           onElement: moreLink,
@@ -2387,12 +2387,12 @@
 
             if (!desc) {
               return false;
-        ***REMOVED***
+            }
 
             desc.innerHTML = data.description;
             addClass(body, 'gdesc-open');
             var shortEvent = addEvent('click', {
-              onElement: [body, closest(desc, '.gslide-description')***REMOVED***,
+              onElement: [body, closest(desc, '.gslide-description')],
               withCallback: function withCallback(event, target) {
                 if (event.target.nodeName.toLowerCase() !== 'a') {
                   removeClass(body, 'gdesc-open');
@@ -2403,31 +2403,31 @@
 
                   setTimeout(function () {
                     removeClass(body, 'gdesc-closed');
-          ***REMOVED*** 400);
+                  }, 400);
                   shortEvent.destroy();
-            ***REMOVED***
-          ***REMOVED***
-        ***REMOVED***);
-      ***REMOVED***
-    ***REMOVED***);
-  ***REMOVED***
-***REMOVED*** {
+                }
+              }
+            });
+          }
+        });
+      }
+    }, {
       key: "create",
       value: function create() {
         return createHTML(this.instance.settings.slideHTML);
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "getConfig",
       value: function getConfig() {
         if (!isNode(this.element) && !this.element.hasOwnProperty('draggable')) {
           this.element.draggable = this.instance.settings.draggable;
-    ***REMOVED***
+        }
 
         var parser = new SlideConfigParser(this.instance.settings.slideExtraAttributes);
         this.slideConfig = parser.parseConfig(this.element, this.instance.settings);
         return this.slideConfig;
-  ***REMOVED***
-***REMOVED******REMOVED***);
+      }
+    }]);
 
     return Slide;
   }();
@@ -2438,7 +2438,7 @@
 
   var isTouch$1 = isTouch();
 
-  var html = document.getElementsByTagName('html')[0***REMOVED***;
+  var html = document.getElementsByTagName('html')[0];
   var defaults = {
     selector: '.glightbox',
     elements: null,
@@ -2482,21 +2482,21 @@
         fullscreen: {
           enabled: true,
           iosNative: true
-***REMOVED***
+        },
         youtube: {
           noCookie: true,
           rel: 0,
           showinfo: 0,
           iv_load_policy: 3
-***REMOVED***
+        },
         vimeo: {
           byline: false,
           portrait: false,
           title: false,
           transparent: false
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
+        }
+      }
+    },
     openEffect: 'zoom',
     closeEffect: 'zoom',
     slideEffect: 'slide',
@@ -2506,36 +2506,36 @@
       fade: {
         "in": 'fadeIn',
         out: 'fadeOut'
-  ***REMOVED***
+      },
       zoom: {
         "in": 'zoomIn',
         out: 'zoomOut'
-  ***REMOVED***
+      },
       slide: {
         "in": 'slideInRight',
         out: 'slideOutLeft'
-  ***REMOVED***
+      },
       slideBack: {
         "in": 'slideInLeft',
         out: 'slideOutRight'
-  ***REMOVED***
+      },
       none: {
         "in": 'none',
         out: 'none'
-  ***REMOVED***
-***REMOVED***
+      }
+    },
     svg: {
       close: '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><g><g><path d="M505.943,6.058c-8.077-8.077-21.172-8.077-29.249,0L6.058,476.693c-8.077,8.077-8.077,21.172,0,29.249C10.096,509.982,15.39,512,20.683,512c5.293,0,10.586-2.019,14.625-6.059L505.943,35.306C514.019,27.23,514.019,14.135,505.943,6.058z"/></g></g><g><g><path d="M505.942,476.694L35.306,6.059c-8.076-8.077-21.172-8.077-29.248,0c-8.077,8.076-8.077,21.171,0,29.248l470.636,470.636c4.038,4.039,9.332,6.058,14.625,6.058c5.293,0,10.587-2.019,14.624-6.057C514.018,497.866,514.018,484.771,505.942,476.694z"/></g></g></svg>',
       next: '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.175 477.175" xml:space="preserve"> <g><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"/></g></svg>',
       prev: '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.175 477.175" xml:space="preserve"><g><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"/></g></svg>'
-***REMOVED***
+    }
   };
   defaults.slideHTML = "<div class=\"gslide\">\n    <div class=\"gslide-inner-content\">\n        <div class=\"ginner-container\">\n            <div class=\"gslide-media\">\n            </div>\n            <div class=\"gslide-description\">\n                <div class=\"gdesc-inner\">\n                    <h4 class=\"gslide-title\"></h4>\n                    <div class=\"gslide-desc\"></div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>";
   defaults.lightboxHTML = "<div id=\"glightbox-body\" class=\"glightbox-container\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"false\">\n    <div class=\"gloader visible\"></div>\n    <div class=\"goverlay\"></div>\n    <div class=\"gcontainer\">\n    <div id=\"glightbox-slider\" class=\"gslider\"></div>\n    <button class=\"gclose gbtn\" aria-label=\"Close\" data-taborder=\"3\">{closeSVG}</button>\n    <button class=\"gprev gbtn\" aria-label=\"Previous\" data-taborder=\"2\">{prevSVG}</button>\n    <button class=\"gnext gbtn\" aria-label=\"Next\" data-taborder=\"1\">{nextSVG}</button>\n</div>\n</div>";
 
   var GlightboxInit = function () {
     function GlightboxInit() {
-      var options = arguments.length > 0 && arguments[0***REMOVED*** !== undefined ? arguments[0***REMOVED*** : {};
+      var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
       _classCallCheck(this, GlightboxInit);
 
@@ -2543,9 +2543,9 @@
       this.settings = extend(defaults, options);
       this.effectsClasses = this.getAnimationClasses();
       this.videoPlayers = {};
-      this.apiEvents = [***REMOVED***;
+      this.apiEvents = [];
       this.fullElementsList = false;
-***REMOVED***
+    }
 
     _createClass(GlightboxInit, [{
       key: "init",
@@ -2561,21 +2561,21 @@
               e.preventDefault();
 
               _this.open(target);
-        ***REMOVED***
-      ***REMOVED***);
-    ***REMOVED***
+            }
+          });
+        }
 
         this.elements = this.getElements();
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "open",
       value: function open() {
-        var element = arguments.length > 0 && arguments[0***REMOVED*** !== undefined ? arguments[0***REMOVED*** : null;
-        var startAt = arguments.length > 1 && arguments[1***REMOVED*** !== undefined ? arguments[1***REMOVED*** : null;
+        var element = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+        var startAt = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
 
         if (this.elements.length == 0) {
           return false;
-    ***REMOVED***
+        }
 
         this.activeSlide = null;
         this.prevActiveSlideIndex = null;
@@ -2588,24 +2588,24 @@
           if (gallery) {
             this.fullElementsList = this.elements;
             this.elements = this.getGalleryElements(this.elements, gallery);
-      ***REMOVED***
+          }
 
           if (isNil(index)) {
             index = this.getElementIndex(element);
 
             if (index < 0) {
               index = 0;
-        ***REMOVED***
-      ***REMOVED***
-    ***REMOVED***
+            }
+          }
+        }
 
         if (!isNumber(index)) {
           index = 0;
-    ***REMOVED***
+        }
 
         this.build();
 
-        animateElement(this.overlay, this.settings.openEffect == 'none' ? 'none' : this.settings.cssEfects.fade["in"***REMOVED***);
+        animateElement(this.overlay, this.settings.openEffect == 'none' ? 'none' : this.settings.cssEfects.fade["in"]);
 
         var body = document.body;
         var scrollBar = window.innerWidth - document.documentElement.clientWidth;
@@ -2618,7 +2618,7 @@
           document.head.appendChild(styleSheet);
 
           addClass(body, 'gscrollbar-fixer');
-    ***REMOVED***
+        }
 
         addClass(body, 'glightbox-open');
 
@@ -2628,7 +2628,7 @@
           addClass(document.body, 'glightbox-mobile');
 
           this.settings.slideEffect = 'slide';
-    ***REMOVED***
+        }
 
         this.showSlide(index, true);
 
@@ -2636,40 +2636,40 @@
           addClass(this.prevButton, 'glightbox-button-hidden');
 
           addClass(this.nextButton, 'glightbox-button-hidden');
-    ***REMOVED*** else {
+        } else {
           removeClass(this.prevButton, 'glightbox-button-hidden');
 
           removeClass(this.nextButton, 'glightbox-button-hidden');
-    ***REMOVED***
+        }
 
         this.lightboxOpen = true;
         this.trigger('open');
 
         if (isFunction(this.settings.onOpen)) {
           this.settings.onOpen();
-    ***REMOVED***
+        }
 
         if (isTouch$1 && this.settings.touchNavigation) {
           touchNavigation(this);
-    ***REMOVED***
+        }
 
         if (this.settings.keyboardNavigation) {
           keyboardNavigation(this);
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED*** {
+        }
+      }
+    }, {
       key: "openAt",
       value: function openAt() {
-        var index = arguments.length > 0 && arguments[0***REMOVED*** !== undefined ? arguments[0***REMOVED*** : 0;
+        var index = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
         this.open(null, index);
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "showSlide",
       value: function showSlide() {
         var _this2 = this;
 
-        var index = arguments.length > 0 && arguments[0***REMOVED*** !== undefined ? arguments[0***REMOVED*** : 0;
-        var first = arguments.length > 1 && arguments[1***REMOVED*** !== undefined ? arguments[1***REMOVED*** : false;
+        var index = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+        var first = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
 
         show(this.loader);
 
@@ -2678,19 +2678,19 @@
 
         if (current) {
           removeClass(current, 'current');
-    ***REMOVED***
+        }
 
         this.slideAnimateOut();
-        var slideNode = this.slidesContainer.querySelectorAll('.gslide')[index***REMOVED***;
+        var slideNode = this.slidesContainer.querySelectorAll('.gslide')[index];
 
         if (hasClass(slideNode, 'loaded')) {
           this.slideAnimateIn(slideNode, first);
 
           hide(this.loader);
-    ***REMOVED*** else {
+        } else {
           show(this.loader);
 
-          var slide = this.elements[index***REMOVED***;
+          var slide = this.elements[index];
           var slideData = {
             index: this.index,
             slide: slideNode,
@@ -2699,7 +2699,7 @@
             slideIndex: this.index,
             trigger: slide.node,
             player: null
-      ***REMOVED***;
+          };
           this.trigger('slide_before_load', slideData);
           slide.instance.setContent(slideNode, function () {
             hide(_this2.loader);
@@ -2709,8 +2709,8 @@
             _this2.slideAnimateIn(slideNode, first);
 
             _this2.trigger('slide_after_load', slideData);
-      ***REMOVED***);
-    ***REMOVED***
+          });
+        }
 
         this.slideDescription = slideNode.querySelector('.gslide-description');
         this.slideDescriptionContained = this.slideDescription && hasClass(this.slideDescription.parentNode, 'gslide-media');
@@ -2718,31 +2718,31 @@
         if (this.settings.preload) {
           this.preloadSlide(index + 1);
           this.preloadSlide(index - 1);
-    ***REMOVED***
+        }
 
         this.updateNavigationClasses();
         this.activeSlide = slideNode;
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "preloadSlide",
       value: function preloadSlide(index) {
         var _this3 = this;
 
         if (index < 0 || index > this.elements.length - 1) {
           return false;
-    ***REMOVED***
+        }
 
-        if (isNil(this.elements[index***REMOVED***)) {
+        if (isNil(this.elements[index])) {
           return false;
-    ***REMOVED***
+        }
 
-        var slideNode = this.slidesContainer.querySelectorAll('.gslide')[index***REMOVED***;
+        var slideNode = this.slidesContainer.querySelectorAll('.gslide')[index];
 
         if (hasClass(slideNode, 'loaded')) {
           return false;
-    ***REMOVED***
+        }
 
-        var slide = this.elements[index***REMOVED***;
+        var slide = this.elements[index];
         var type = slide.type;
         var slideData = {
           index: index,
@@ -2752,59 +2752,59 @@
           slideIndex: index,
           trigger: slide.node,
           player: null
-    ***REMOVED***;
+        };
         this.trigger('slide_before_load', slideData);
 
         if (type == 'video' || type == 'external') {
           setTimeout(function () {
             slide.instance.setContent(slideNode, function () {
               _this3.trigger('slide_after_load', slideData);
-        ***REMOVED***);
-  ***REMOVED*** 200);
-    ***REMOVED*** else {
+            });
+          }, 200);
+        } else {
           slide.instance.setContent(slideNode, function () {
             _this3.trigger('slide_after_load', slideData);
-      ***REMOVED***);
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED*** {
+          });
+        }
+      }
+    }, {
       key: "prevSlide",
       value: function prevSlide() {
         this.goToSlide(this.index - 1);
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "nextSlide",
       value: function nextSlide() {
         this.goToSlide(this.index + 1);
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "goToSlide",
       value: function goToSlide() {
-        var index = arguments.length > 0 && arguments[0***REMOVED*** !== undefined ? arguments[0***REMOVED*** : false;
+        var index = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
         this.prevActiveSlide = this.activeSlide;
         this.prevActiveSlideIndex = this.index;
 
         if (!this.loop() && (index < 0 || index > this.elements.length - 1)) {
           return false;
-    ***REMOVED***
+        }
 
         if (index < 0) {
           index = this.elements.length - 1;
-    ***REMOVED*** else if (index >= this.elements.length) {
+        } else if (index >= this.elements.length) {
           index = 0;
-    ***REMOVED***
+        }
 
         this.showSlide(index);
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "insertSlide",
       value: function insertSlide() {
-        var config = arguments.length > 0 && arguments[0***REMOVED*** !== undefined ? arguments[0***REMOVED*** : {};
-        var index = arguments.length > 1 && arguments[1***REMOVED*** !== undefined ? arguments[1***REMOVED*** : -1;
+        var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+        var index = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : -1;
 
         if (index < 0) {
           index = this.elements.length;
-    ***REMOVED***
+        }
 
         var slide = new Slide(config, this, index);
         var data = slide.getConfig();
@@ -2824,24 +2824,24 @@
         if (this.slidesContainer) {
           if (index > totalSlides) {
             this.slidesContainer.appendChild(newSlide);
-      ***REMOVED*** else {
-            var existingSlide = this.slidesContainer.querySelectorAll('.gslide')[index***REMOVED***;
+          } else {
+            var existingSlide = this.slidesContainer.querySelectorAll('.gslide')[index];
             this.slidesContainer.insertBefore(newSlide, existingSlide);
-      ***REMOVED***
+          }
 
           if (this.settings.preload && this.index == 0 && index == 0 || this.index - 1 == index || this.index + 1 == index) {
             this.preloadSlide(index);
-      ***REMOVED***
+          }
 
           if (this.index == 0 && index == 0) {
             this.index = 1;
-      ***REMOVED***
+          }
 
           this.updateNavigationClasses();
-          addedSlideNode = this.slidesContainer.querySelectorAll('.gslide')[index***REMOVED***;
+          addedSlideNode = this.slidesContainer.querySelectorAll('.gslide')[index];
           addedSlidePlayer = this.getSlidePlayerInstance(index);
           slideInfo.slideNode = addedSlideNode;
-    ***REMOVED***
+        }
 
         this.trigger('slide_inserted', {
           index: index,
@@ -2851,47 +2851,47 @@
           slideIndex: index,
           trigger: null,
           player: addedSlidePlayer
-    ***REMOVED***);
+        });
 
         if (isFunction(this.settings.slideInserted)) {
           this.settings.slideInserted({
             index: index,
             slide: addedSlideNode,
             player: addedSlidePlayer
-      ***REMOVED***);
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED*** {
+          });
+        }
+      }
+    }, {
       key: "removeSlide",
       value: function removeSlide() {
-        var index = arguments.length > 0 && arguments[0***REMOVED*** !== undefined ? arguments[0***REMOVED*** : -1;
+        var index = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : -1;
 
         if (index < 0 || index > this.elements.length - 1) {
           return false;
-    ***REMOVED***
+        }
 
-        var slide = this.slidesContainer && this.slidesContainer.querySelectorAll('.gslide')[index***REMOVED***;
+        var slide = this.slidesContainer && this.slidesContainer.querySelectorAll('.gslide')[index];
 
         if (slide) {
           if (this.getActiveSlideIndex() == index) {
             if (index == this.elements.length - 1) {
               this.prevSlide();
-        ***REMOVED*** else {
+            } else {
               this.nextSlide();
-        ***REMOVED***
-      ***REMOVED***
+            }
+          }
 
           slide.parentNode.removeChild(slide);
-    ***REMOVED***
+        }
 
         this.elements.splice(index, 1);
         this.trigger('slide_removed', index);
 
         if (isFunction(this.settings.slideRemoved)) {
           this.settings.slideRemoved(index);
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED*** {
+        }
+      }
+    }, {
       key: "slideAnimateIn",
       value: function slideAnimateIn(slide, first) {
         var _this4 = this;
@@ -2903,81 +2903,81 @@
           slide: this.prevActiveSlide,
           slideNode: this.prevActiveSlide,
           slideIndex: this.prevActiveSlide,
-          slideConfig: isNil(this.prevActiveSlideIndex) ? null : this.elements[this.prevActiveSlideIndex***REMOVED***.slideConfig,
-          trigger: isNil(this.prevActiveSlideIndex) ? null : this.elements[this.prevActiveSlideIndex***REMOVED***.node,
+          slideConfig: isNil(this.prevActiveSlideIndex) ? null : this.elements[this.prevActiveSlideIndex].slideConfig,
+          trigger: isNil(this.prevActiveSlideIndex) ? null : this.elements[this.prevActiveSlideIndex].node,
           player: this.getSlidePlayerInstance(this.prevActiveSlideIndex)
-    ***REMOVED***;
+        };
         var nextData = {
           index: this.index,
           slide: this.activeSlide,
           slideNode: this.activeSlide,
-          slideConfig: this.elements[this.index***REMOVED***.slideConfig,
+          slideConfig: this.elements[this.index].slideConfig,
           slideIndex: this.index,
-          trigger: this.elements[this.index***REMOVED***.node,
+          trigger: this.elements[this.index].node,
           player: this.getSlidePlayerInstance(this.index)
-    ***REMOVED***;
+        };
 
         if (slideMedia.offsetWidth > 0 && slideDesc) {
           hide(slideDesc);
 
           slideDesc.style.display = '';
-    ***REMOVED***
+        }
 
         removeClass(slide, this.effectsClasses);
 
         if (first) {
-          animateElement(slide, this.settings.cssEfects[this.settings.openEffect***REMOVED***["in"***REMOVED***, function () {
+          animateElement(slide, this.settings.cssEfects[this.settings.openEffect]["in"], function () {
             if (_this4.settings.autoplayVideos) {
               _this4.slidePlayerPlay(slide);
-        ***REMOVED***
+            }
 
             _this4.trigger('slide_changed', {
               prev: prevData,
               current: nextData
-        ***REMOVED***);
+            });
 
             if (isFunction(_this4.settings.afterSlideChange)) {
-              _this4.settings.afterSlideChange.apply(_this4, [prevData, nextData***REMOVED***);
-        ***REMOVED***
-      ***REMOVED***);
-    ***REMOVED*** else {
+              _this4.settings.afterSlideChange.apply(_this4, [prevData, nextData]);
+            }
+          });
+        } else {
           var effectName = this.settings.slideEffect;
-          var animIn = effectName !== 'none' ? this.settings.cssEfects[effectName***REMOVED***["in"***REMOVED*** : effectName;
+          var animIn = effectName !== 'none' ? this.settings.cssEfects[effectName]["in"] : effectName;
 
           if (this.prevActiveSlideIndex > this.index) {
             if (this.settings.slideEffect == 'slide') {
-              animIn = this.settings.cssEfects.slideBack["in"***REMOVED***;
-        ***REMOVED***
-      ***REMOVED***
+              animIn = this.settings.cssEfects.slideBack["in"];
+            }
+          }
 
           animateElement(slide, animIn, function () {
             if (_this4.settings.autoplayVideos) {
               _this4.slidePlayerPlay(slide);
-        ***REMOVED***
+            }
 
             _this4.trigger('slide_changed', {
               prev: prevData,
               current: nextData
-        ***REMOVED***);
+            });
 
             if (isFunction(_this4.settings.afterSlideChange)) {
-              _this4.settings.afterSlideChange.apply(_this4, [prevData, nextData***REMOVED***);
-        ***REMOVED***
-      ***REMOVED***);
-    ***REMOVED***
+              _this4.settings.afterSlideChange.apply(_this4, [prevData, nextData]);
+            }
+          });
+        }
 
         setTimeout(function () {
           _this4.resize(slide);
-***REMOVED*** 100);
+        }, 100);
 
         addClass(slide, 'current');
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "slideAnimateOut",
       value: function slideAnimateOut() {
         if (!this.prevActiveSlide) {
           return false;
-    ***REMOVED***
+        }
 
         var prevSlide = this.prevActiveSlide;
 
@@ -2986,7 +2986,7 @@
         addClass(prevSlide, 'prev');
 
         var animation = this.settings.slideEffect;
-        var animOut = animation !== 'none' ? this.settings.cssEfects[animation***REMOVED***.out : animation;
+        var animOut = animation !== 'none' ? this.settings.cssEfects[animation].out : animation;
         this.slidePlayerPause(prevSlide);
         this.trigger('slide_before_change', {
           prev: {
@@ -2994,36 +2994,36 @@
             slide: this.prevActiveSlide,
             slideNode: this.prevActiveSlide,
             slideIndex: this.prevActiveSlideIndex,
-            slideConfig: isNil(this.prevActiveSlideIndex) ? null : this.elements[this.prevActiveSlideIndex***REMOVED***.slideConfig,
-            trigger: isNil(this.prevActiveSlideIndex) ? null : this.elements[this.prevActiveSlideIndex***REMOVED***.node,
+            slideConfig: isNil(this.prevActiveSlideIndex) ? null : this.elements[this.prevActiveSlideIndex].slideConfig,
+            trigger: isNil(this.prevActiveSlideIndex) ? null : this.elements[this.prevActiveSlideIndex].node,
             player: this.getSlidePlayerInstance(this.prevActiveSlideIndex)
-  ***REMOVED***
+          },
           current: {
             index: this.index,
             slide: this.activeSlide,
             slideNode: this.activeSlide,
             slideIndex: this.index,
-            slideConfig: this.elements[this.index***REMOVED***.slideConfig,
-            trigger: this.elements[this.index***REMOVED***.node,
+            slideConfig: this.elements[this.index].slideConfig,
+            trigger: this.elements[this.index].node,
             player: this.getSlidePlayerInstance(this.index)
-      ***REMOVED***
-    ***REMOVED***);
+          }
+        });
 
         if (isFunction(this.settings.beforeSlideChange)) {
           this.settings.beforeSlideChange.apply(this, [{
             index: this.prevActiveSlideIndex,
             slide: this.prevActiveSlide,
             player: this.getSlidePlayerInstance(this.prevActiveSlideIndex)
-  ***REMOVED*** {
+          }, {
             index: this.index,
             slide: this.activeSlide,
             player: this.getSlidePlayerInstance(this.index)
-      ***REMOVED******REMOVED***);
-    ***REMOVED***
+          }]);
+        }
 
         if (this.prevActiveSlideIndex > this.index && this.settings.slideEffect == 'slide') {
           animOut = this.settings.cssEfects.slideBack.out;
-    ***REMOVED***
+        }
 
         animateElement(prevSlide, animOut, function () {
           var container = prevSlide.querySelector('.ginner-container');
@@ -3038,29 +3038,29 @@
 
           if (desc) {
             desc.style.opacity = '';
-      ***REMOVED***
+          }
 
           removeClass(prevSlide, 'prev');
-    ***REMOVED***);
-  ***REMOVED***
-***REMOVED*** {
+        });
+      }
+    }, {
       key: "getAllPlayers",
       value: function getAllPlayers() {
         return this.videoPlayers;
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "getSlidePlayerInstance",
       value: function getSlidePlayerInstance(index) {
         var id = 'gvideo' + index;
         var videoPlayers = this.getAllPlayers();
 
-        if (has(videoPlayers, id) && videoPlayers[id***REMOVED***) {
-          return videoPlayers[id***REMOVED***;
-    ***REMOVED***
+        if (has(videoPlayers, id) && videoPlayers[id]) {
+          return videoPlayers[id];
+        }
 
         return false;
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "stopSlideVideo",
       value: function stopSlideVideo(slide) {
         if (isNode(slide)) {
@@ -3068,17 +3068,17 @@
 
           if (node) {
             slide = node.getAttribute('data-index');
-      ***REMOVED***
-    ***REMOVED***
+          }
+        }
 
         console.log('stopSlideVideo is deprecated, use slidePlayerPause');
         var player = this.getSlidePlayerInstance(slide);
 
         if (player && player.playing) {
           player.pause();
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED*** {
+        }
+      }
+    }, {
       key: "slidePlayerPause",
       value: function slidePlayerPause(slide) {
         if (isNode(slide)) {
@@ -3086,16 +3086,16 @@
 
           if (node) {
             slide = node.getAttribute('data-index');
-      ***REMOVED***
-    ***REMOVED***
+          }
+        }
 
         var player = this.getSlidePlayerInstance(slide);
 
         if (player && player.playing) {
           player.pause();
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED*** {
+        }
+      }
+    }, {
       key: "playSlideVideo",
       value: function playSlideVideo(slide) {
         if (isNode(slide)) {
@@ -3103,17 +3103,17 @@
 
           if (node) {
             slide = node.getAttribute('data-index');
-      ***REMOVED***
-    ***REMOVED***
+          }
+        }
 
         console.log('playSlideVideo is deprecated, use slidePlayerPlay');
         var player = this.getSlidePlayerInstance(slide);
 
         if (player && !player.playing) {
           player.play();
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED*** {
+        }
+      }
+    }, {
       key: "slidePlayerPlay",
       value: function slidePlayerPlay(slide) {
         if (isNode(slide)) {
@@ -3121,8 +3121,8 @@
 
           if (node) {
             slide = node.getAttribute('data-index');
-      ***REMOVED***
-    ***REMOVED***
+          }
+        }
 
         var player = this.getSlidePlayerInstance(slide);
 
@@ -3131,16 +3131,16 @@
 
           if (this.settings.autofocusVideos) {
             player.elements.container.focus();
-      ***REMOVED***
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED*** {
+          }
+        }
+      }
+    }, {
       key: "setElements",
       value: function setElements(elements) {
         var _this5 = this;
 
         this.settings.elements = false;
-        var newElements = [***REMOVED***;
+        var newElements = [];
 
         if (elements && elements.length) {
           each(elements, function (el, i) {
@@ -3153,8 +3153,8 @@
             slideInfo.instance = slide;
             slideInfo.index = i;
             newElements.push(slideInfo);
-      ***REMOVED***);
-    ***REMOVED***
+          });
+        }
 
         this.elements = newElements;
 
@@ -3166,13 +3166,13 @@
               var slide = createHTML(_this5.settings.slideHTML);
 
               _this5.slidesContainer.appendChild(slide);
-        ***REMOVED***);
+            });
 
             this.showSlide(0, true);
-      ***REMOVED***
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED*** {
+          }
+        }
+      }
+    }, {
       key: "getElementIndex",
       value: function getElementIndex(node) {
         var index = false;
@@ -3181,18 +3181,18 @@
           if (has(el, 'node') && el.node == node) {
             index = i;
             return true;
-      ***REMOVED***
-    ***REMOVED***);
+          }
+        });
 
         return index;
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "getElements",
       value: function getElements() {
         var _this6 = this;
 
-        var list = [***REMOVED***;
-        this.elements = this.elements ? this.elements : [***REMOVED***;
+        var list = [];
+        this.elements = this.elements ? this.elements : [];
 
         if (!isNil(this.settings.elements) && isArray(this.settings.elements) && this.settings.elements.length) {
           each(this.settings.elements, function (el, i) {
@@ -3206,19 +3206,19 @@
             slideInfo.instance = slide;
             slideInfo.slideConfig = elData;
             list.push(slideInfo);
-      ***REMOVED***);
-    ***REMOVED***
+          });
+        }
 
         var nodes = false;
         var selector = this.getSelector();
 
         if (selector) {
           nodes = document.querySelectorAll(this.getSelector());
-    ***REMOVED***
+        }
 
         if (!nodes) {
           return list;
-    ***REMOVED***
+        }
 
         each(nodes, function (el, i) {
           var slide = new Slide(el, _this6, i);
@@ -3232,73 +3232,73 @@
           slideInfo.slideConfig = elData;
           slideInfo.gallery = el.getAttribute('data-gallery');
           list.push(slideInfo);
-    ***REMOVED***);
+        });
 
         return list;
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "getGalleryElements",
       value: function getGalleryElements(list, gallery) {
         return list.filter(function (el) {
           return el.gallery == gallery;
-    ***REMOVED***);
-  ***REMOVED***
-***REMOVED*** {
+        });
+      }
+    }, {
       key: "getSelector",
       value: function getSelector() {
         if (this.settings.elements) {
           return false;
-    ***REMOVED***
+        }
 
         if (this.settings.selector && this.settings.selector.substring(0, 5) == 'data-') {
-          return "*[".concat(this.settings.selector, "***REMOVED***");
-    ***REMOVED***
+          return "*[".concat(this.settings.selector, "]");
+        }
 
         return this.settings.selector;
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "getActiveSlide",
       value: function getActiveSlide() {
-        return this.slidesContainer.querySelectorAll('.gslide')[this.index***REMOVED***;
-  ***REMOVED***
-***REMOVED*** {
+        return this.slidesContainer.querySelectorAll('.gslide')[this.index];
+      }
+    }, {
       key: "getActiveSlideIndex",
       value: function getActiveSlideIndex() {
         return this.index;
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "getAnimationClasses",
       value: function getAnimationClasses() {
-        var effects = [***REMOVED***;
+        var effects = [];
 
         for (var key in this.settings.cssEfects) {
           if (this.settings.cssEfects.hasOwnProperty(key)) {
-            var effect = this.settings.cssEfects[key***REMOVED***;
-            effects.push("g".concat(effect["in"***REMOVED***));
+            var effect = this.settings.cssEfects[key];
+            effects.push("g".concat(effect["in"]));
             effects.push("g".concat(effect.out));
-      ***REMOVED***
-    ***REMOVED***
+          }
+        }
 
         return effects.join(' ');
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "build",
       value: function build() {
         var _this7 = this;
 
         if (this.built) {
           return false;
-    ***REMOVED***
+        }
 
         var children = document.body.childNodes;
-        var bodyChildElms = [***REMOVED***;
+        var bodyChildElms = [];
 
         each(children, function (el) {
           if (el.parentNode == document.body && el.nodeName.charAt(0) !== '#' && el.hasAttribute && !el.hasAttribute('aria-hidden')) {
             bodyChildElms.push(el);
             el.setAttribute('aria-hidden', 'true');
-      ***REMOVED***
-    ***REMOVED***);
+          }
+        });
 
         var nextSVG = has(this.settings.svg, 'next') ? this.settings.svg.next : '';
         var prevSVG = has(this.settings.svg, 'prev') ? this.settings.svg.prev : '';
@@ -3323,82 +3323,82 @@
         addClass(this.modal, 'glightbox-' + this.settings.skin);
 
         if (this.settings.closeButton && closeButton) {
-          this.events['close'***REMOVED*** = addEvent('click', {
+          this.events['close'] = addEvent('click', {
             onElement: closeButton,
             withCallback: function withCallback(e, target) {
               e.preventDefault();
 
               _this7.close();
-        ***REMOVED***
-      ***REMOVED***);
-    ***REMOVED***
+            }
+          });
+        }
 
         if (closeButton && !this.settings.closeButton) {
           closeButton.parentNode.removeChild(closeButton);
-    ***REMOVED***
+        }
 
         if (this.nextButton) {
-          this.events['next'***REMOVED*** = addEvent('click', {
+          this.events['next'] = addEvent('click', {
             onElement: this.nextButton,
             withCallback: function withCallback(e, target) {
               e.preventDefault();
 
               _this7.nextSlide();
-        ***REMOVED***
-      ***REMOVED***);
-    ***REMOVED***
+            }
+          });
+        }
 
         if (this.prevButton) {
-          this.events['prev'***REMOVED*** = addEvent('click', {
+          this.events['prev'] = addEvent('click', {
             onElement: this.prevButton,
             withCallback: function withCallback(e, target) {
               e.preventDefault();
 
               _this7.prevSlide();
-        ***REMOVED***
-      ***REMOVED***);
-    ***REMOVED***
+            }
+          });
+        }
 
         if (this.settings.closeOnOutsideClick) {
-          this.events['outClose'***REMOVED*** = addEvent('click', {
+          this.events['outClose'] = addEvent('click', {
             onElement: modal,
             withCallback: function withCallback(e, target) {
               if (!_this7.preventOutsideClick && !hasClass(document.body, 'glightbox-mobile') && !closest(e.target, '.ginner-container')) {
                 if (!closest(e.target, '.gbtn') && !hasClass(e.target, 'gnext') && !hasClass(e.target, 'gprev')) {
                   _this7.close();
-            ***REMOVED***
-          ***REMOVED***
-        ***REMOVED***
-      ***REMOVED***);
-    ***REMOVED***
+                }
+              }
+            }
+          });
+        }
 
         each(this.elements, function (slide, i) {
           _this7.slidesContainer.appendChild(slide.instance.create());
 
-          slide.slideNode = _this7.slidesContainer.querySelectorAll('.gslide')[i***REMOVED***;
-    ***REMOVED***);
+          slide.slideNode = _this7.slidesContainer.querySelectorAll('.gslide')[i];
+        });
 
         if (isTouch$1) {
           addClass(document.body, 'glightbox-touch');
-    ***REMOVED***
+        }
 
-        this.events['resize'***REMOVED*** = addEvent('resize', {
+        this.events['resize'] = addEvent('resize', {
           onElement: window,
           withCallback: function withCallback() {
             _this7.resize();
-      ***REMOVED***
-    ***REMOVED***);
+          }
+        });
         this.built = true;
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "resize",
       value: function resize() {
-        var slide = arguments.length > 0 && arguments[0***REMOVED*** !== undefined ? arguments[0***REMOVED*** : null;
+        var slide = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
         slide = !slide ? this.activeSlide : slide;
 
         if (!slide || hasClass(slide, 'zoomed')) {
           return;
-    ***REMOVED***
+        }
 
         var winSize = windowSize();
 
@@ -3410,24 +3410,24 @@
 
         if (winWidth <= 768) {
           addClass(document.body, 'glightbox-mobile');
-    ***REMOVED*** else {
+        } else {
           removeClass(document.body, 'glightbox-mobile');
-    ***REMOVED***
+        }
 
         if (!video && !image) {
           return;
-    ***REMOVED***
+        }
 
         var descriptionResize = false;
 
         if (description && (hasClass(description, 'description-bottom') || hasClass(description, 'description-top')) && !hasClass(description, 'gabsolute')) {
           descriptionResize = true;
-    ***REMOVED***
+        }
 
         if (image) {
           if (winWidth <= 768) {
             var imgNode = image.querySelector('img');
-      ***REMOVED*** else if (descriptionResize) {
+          } else if (descriptionResize) {
             var descHeight = description.offsetHeight;
 
             var _imgNode = image.querySelector('img');
@@ -3435,8 +3435,8 @@
             _imgNode.setAttribute('style', "max-height: calc(100vh - ".concat(descHeight, "px)"));
 
             description.setAttribute('style', "max-width: ".concat(_imgNode.offsetWidth, "px;"));
-      ***REMOVED***
-    ***REMOVED***
+          }
+        }
 
         if (video) {
           var ratio = has(this.settings.plyr.config, 'ratio') ? this.settings.plyr.config.ratio : '';
@@ -3446,7 +3446,7 @@
             var containerHeight = video.clientHeight;
             var divisor = containerWidth / containerHeight;
             ratio = "".concat(containerWidth / divisor, ":").concat(containerHeight / divisor);
-      ***REMOVED***
+          }
 
           var videoRatio = ratio.split(':');
           var videoWidth = this.settings.videosWidth;
@@ -3454,24 +3454,24 @@
 
           if (isNumber(videoWidth) || videoWidth.indexOf('px') !== -1) {
             maxWidth = parseInt(videoWidth);
-      ***REMOVED*** else {
+          } else {
             if (videoWidth.indexOf('vw') !== -1) {
               maxWidth = winWidth * parseInt(videoWidth) / 100;
-        ***REMOVED*** else if (videoWidth.indexOf('vh') !== -1) {
+            } else if (videoWidth.indexOf('vh') !== -1) {
               maxWidth = winHeight * parseInt(videoWidth) / 100;
-        ***REMOVED*** else if (videoWidth.indexOf('%') !== -1) {
+            } else if (videoWidth.indexOf('%') !== -1) {
               maxWidth = winWidth * parseInt(videoWidth) / 100;
-        ***REMOVED*** else {
+            } else {
               maxWidth = parseInt(video.clientWidth);
-        ***REMOVED***
-      ***REMOVED***
+            }
+          }
 
-          var maxHeight = maxWidth / (parseInt(videoRatio[0***REMOVED***) / parseInt(videoRatio[1***REMOVED***));
+          var maxHeight = maxWidth / (parseInt(videoRatio[0]) / parseInt(videoRatio[1]));
           maxHeight = Math.floor(maxHeight);
 
           if (descriptionResize) {
             winHeight = winHeight - description.offsetHeight;
-      ***REMOVED***
+          }
 
           if (maxWidth > winWidth || maxHeight > winHeight || winHeight < maxHeight && winWidth > maxWidth) {
             var vwidth = video.offsetWidth;
@@ -3482,27 +3482,27 @@
             var vsize = {
               width: vwidth * _ratio,
               height: vheight * _ratio
-        ***REMOVED***;
+            };
             video.parentNode.setAttribute('style', "max-width: ".concat(vsize.width, "px"));
 
             if (descriptionResize) {
               description.setAttribute('style', "max-width: ".concat(vsize.width, "px;"));
-        ***REMOVED***
-      ***REMOVED*** else {
+            }
+          } else {
             video.parentNode.style.maxWidth = "".concat(videoWidth);
 
             if (descriptionResize) {
               description.setAttribute('style', "max-width: ".concat(videoWidth, ";"));
-        ***REMOVED***
-      ***REMOVED***
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED*** {
+            }
+          }
+        }
+      }
+    }, {
       key: "reload",
       value: function reload() {
         this.init();
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "updateNavigationClasses",
       value: function updateNavigationClasses() {
         var loop = this.loop();
@@ -3515,20 +3515,20 @@
           addClass(this.prevButton, 'disabled');
 
           addClass(this.nextButton, 'disabled');
-    ***REMOVED*** else if (this.index === 0 && !loop) {
+        } else if (this.index === 0 && !loop) {
           addClass(this.prevButton, 'disabled');
-    ***REMOVED*** else if (this.index === this.elements.length - 1 && !loop) {
+        } else if (this.index === this.elements.length - 1 && !loop) {
           addClass(this.nextButton, 'disabled');
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED*** {
+        }
+      }
+    }, {
       key: "loop",
       value: function loop() {
         var loop = has(this.settings, 'loopAtEnd') ? this.settings.loopAtEnd : null;
         loop = has(this.settings, 'loop') ? this.settings.loop : loop;
         return loop;
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "close",
       value: function close() {
         var _this8 = this;
@@ -3537,38 +3537,38 @@
           if (this.events) {
             for (var key in this.events) {
               if (this.events.hasOwnProperty(key)) {
-                this.events[key***REMOVED***.destroy();
-          ***REMOVED***
-        ***REMOVED***
+                this.events[key].destroy();
+              }
+            }
 
             this.events = null;
-      ***REMOVED***
+          }
 
           return false;
-    ***REMOVED***
+        }
 
         if (this.closing) {
           return false;
-    ***REMOVED***
+        }
 
         this.closing = true;
         this.slidePlayerPause(this.activeSlide);
 
         if (this.fullElementsList) {
           this.elements = this.fullElementsList;
-    ***REMOVED***
+        }
 
         if (this.bodyHiddenChildElms.length) {
           each(this.bodyHiddenChildElms, function (el) {
             el.removeAttribute('aria-hidden');
-      ***REMOVED***);
-    ***REMOVED***
+          });
+        }
 
         addClass(this.modal, 'glightbox-closing');
 
         animateElement(this.overlay, this.settings.openEffect == 'none' ? 'none' : this.settings.cssEfects.fade.out);
 
-        animateElement(this.activeSlide, this.settings.cssEfects[this.settings.closeEffect***REMOVED***.out, function () {
+        animateElement(this.activeSlide, this.settings.cssEfects[this.settings.closeEffect].out, function () {
           _this8.activeSlide = null;
           _this8.prevActiveSlideIndex = null;
           _this8.prevActiveSlide = null;
@@ -3577,12 +3577,12 @@
           if (_this8.events) {
             for (var _key in _this8.events) {
               if (_this8.events.hasOwnProperty(_key)) {
-                _this8.events[_key***REMOVED***.destroy();
-          ***REMOVED***
-        ***REMOVED***
+                _this8.events[_key].destroy();
+              }
+            }
 
             _this8.events = null;
-      ***REMOVED***
+          }
 
           var body = document.body;
 
@@ -3596,19 +3596,19 @@
 
           if (isFunction(_this8.settings.onClose)) {
             _this8.settings.onClose();
-      ***REMOVED***
+          }
 
           var styles = document.querySelector('.gcss-styles');
 
           if (styles) {
             styles.parentNode.removeChild(styles);
-      ***REMOVED***
+          }
 
           _this8.lightboxOpen = false;
           _this8.closing = null;
-    ***REMOVED***);
-  ***REMOVED***
-***REMOVED*** {
+        });
+      }
+    }, {
       key: "destroy",
       value: function destroy() {
         this.close();
@@ -3616,35 +3616,35 @@
 
         if (this.baseEvents) {
           this.baseEvents.destroy();
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED*** {
+        }
+      }
+    }, {
       key: "on",
       value: function on(evt, callback) {
-        var once = arguments.length > 2 && arguments[2***REMOVED*** !== undefined ? arguments[2***REMOVED*** : false;
+        var once = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
 
         if (!evt || !isFunction(callback)) {
           throw new TypeError('Event name and callback must be defined');
-    ***REMOVED***
+        }
 
         this.apiEvents.push({
           evt: evt,
           once: once,
           callback: callback
-    ***REMOVED***);
-  ***REMOVED***
-***REMOVED*** {
+        });
+      }
+    }, {
       key: "once",
       value: function once(evt, callback) {
         this.on(evt, callback, true);
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "trigger",
       value: function trigger(eventName) {
         var _this9 = this;
 
-        var data = arguments.length > 1 && arguments[1***REMOVED*** !== undefined ? arguments[1***REMOVED*** : null;
-        var onceTriggered = [***REMOVED***;
+        var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+        var onceTriggered = [];
 
         each(this.apiEvents, function (event, i) {
           var evt = event.evt,
@@ -3656,33 +3656,33 @@
 
             if (once) {
               onceTriggered.push(i);
-        ***REMOVED***
-      ***REMOVED***
-    ***REMOVED***);
+            }
+          }
+        });
 
         if (onceTriggered.length) {
           each(onceTriggered, function (i) {
             return _this9.apiEvents.splice(i, 1);
-      ***REMOVED***);
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED*** {
+          });
+        }
+      }
+    }, {
       key: "clearAllEvents",
       value: function clearAllEvents() {
         this.apiEvents.splice(0, this.apiEvents.length);
-  ***REMOVED***
-***REMOVED*** {
+      }
+    }, {
       key: "version",
       value: function version() {
         return _version;
-  ***REMOVED***
-***REMOVED******REMOVED***);
+      }
+    }]);
 
     return GlightboxInit;
   }();
 
   function glightbox () {
-    var options = arguments.length > 0 && arguments[0***REMOVED*** !== undefined ? arguments[0***REMOVED*** : {};
+    var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
     var instance = new GlightboxInit(options);
     instance.init();
     return instance;

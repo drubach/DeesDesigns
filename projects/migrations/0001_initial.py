@@ -11,7 +11,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-    ***REMOVED***
+    ]
 
     operations = [
         migrations.CreateModel(
@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=254)),
                 ('friendly_name', models.CharField(blank=True, max_length=254, null=True)),
-            ***REMOVED***,
+            ],
         ),
         migrations.CreateModel(
             name='Project',
@@ -35,6 +35,6 @@ class Migration(migrations.Migration):
                 ('image', models.ImageField(blank=True, null=True, upload_to='')),
                 ('type', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='projects.type')),
                 ('user', models.OneToOneField(default=1, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
-            ***REMOVED***,
+            ],
         ),
-    ***REMOVED***
+    ]

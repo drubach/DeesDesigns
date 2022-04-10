@@ -1,10 +1,10 @@
-***REMOVED***
+"""
 arctictern.py
 A little script that does a big migration
-***REMOVED***
+"""
 
 import json
-***REMOVED***
+import os
 import requests
 import shutil
 import subprocess
@@ -21,71 +21,71 @@ THIS_VERSION = 1.0
 
 MIGRATE_FILE_LIST = [{"filename": ".theia/settings.json",
                       "url": ".vscode/settings.json"
-              ***REMOVED***
-                 ***REMOVED***"filename": ".gitpod.yml",
+                      },
+                     {"filename": ".gitpod.yml",
                       "url": ".gitpod.yml"
-              ***REMOVED***
-                 ***REMOVED***"filename": ".gitpod.dockerfile",
+                      },
+                     {"filename": ".gitpod.dockerfile",
                       "url": ".gitpod.dockerfile"
-              ***REMOVED***
-                 ***REMOVED***"filename": ".theia/heroku_config.sh",
+                      },
+                     {"filename": ".theia/heroku_config.sh",
                       "url": ".vscode/heroku_config.sh"
-              ***REMOVED***
-                  ***REMOVED***"filename": ".theia/uptime.sh",
+                      },
+                      {"filename": ".theia/uptime.sh",
                       "url": ".vscode/uptime.sh"
-              ***REMOVED***
-                 ***REMOVED***"filename": ".theia/init_tasks.sh",
+                      },
+                     {"filename": ".theia/init_tasks.sh",
                       "url": ".vscode/init_tasks.sh"
-                  ***REMOVED******REMOVED***
+                      }]
 
 UPGRADE_FILE_LIST = [{"filename": ".vscode/client.cnf",
                       "url": ".vscode/client.cnf"
-              ***REMOVED***
-                 ***REMOVED***"filename": ".vscode/mysql.cnf",
+                      },
+                     {"filename": ".vscode/mysql.cnf",
                       "url": ".vscode/mysql.cnf"
-              ***REMOVED***
-                 ***REMOVED***"filename": ".vscode/settings.json",
+                      },
+                     {"filename": ".vscode/settings.json",
                       "url": ".vscode/settings.json"
-              ***REMOVED***
-                 ***REMOVED***"filename": ".vscode/launch.json",
+                      },
+                     {"filename": ".vscode/launch.json",
                       "url": ".vscode/launch.json"
-              ***REMOVED***
-                 ***REMOVED***"filename": ".gitpod.yml",
+                      },
+                     {"filename": ".gitpod.yml",
                       "url": ".gitpod.yml"
-              ***REMOVED***
-                 ***REMOVED***"filename": ".gitpod.dockerfile",
+                      },
+                     {"filename": ".gitpod.dockerfile",
                       "url": ".gitpod.dockerfile"
-              ***REMOVED***
-                 ***REMOVED***"filename": ".vscode/heroku_config.sh",
+                      },
+                     {"filename": ".vscode/heroku_config.sh",
                       "url": ".vscode/heroku_config.sh"
-              ***REMOVED***
-                 ***REMOVED***"filename": ".vscode/init_tasks.sh",
+                      },
+                     {"filename": ".vscode/init_tasks.sh",
                       "url": ".vscode/init_tasks.sh"
-              ***REMOVED***
-                 ***REMOVED***"filename": ".vscode/uptime.sh",
+                      },
+                     {"filename": ".vscode/uptime.sh",
                       "url": ".vscode/uptime.sh"
-              ***REMOVED***
-                 ***REMOVED***"filename": ".vscode/make_url.py",
+                      },
+                     {"filename": ".vscode/make_url.py",
                       "url": ".vscode/make_url.py"
-             ***REMOVED***
-                 ***REMOVED***"filename": ".vscode/arctictern.py",
+                     },
+                     {"filename": ".vscode/arctictern.py",
                       "url": ".vscode/arctictern.py"
-                  ***REMOVED******REMOVED***
+                      }]
 
 FINAL_LINES = "\nexport POST_UPGRADE_RUN=1\nsource ~/.bashrc\n"
 
 
 def needs_upgrade():
-    ***REMOVED***
+    """
     Checks the version of the current template against
     this version.
     Returns True if upgrade is needed, False if not.
-    ***REMOVED***
+    """
 
     if exists(".vscode/version.txt"):
         with open(".vscode/version.txt", "r") as f:
             THIS_VERSION = float(f.read().strip())
-    ***REMOVED***
+    else:
         THIS_VERSION = 1.0
         with open(".vscode/version.txt", "w") as f:
             f.write(str(THIS_VERSION))
@@ -118,12 +118,12 @@ def build_post_upgrade():
 
 
 def process(file, suffix):
-    ***REMOVED***
+    """
     Replaces and optionally backs up the files that
     need to be changed.
     Arguments: file - a path and filename
                suffix - the suffix to the BASE_URL
-    ***REMOVED***
+    """
 
     if BACKUP:
         try:
@@ -137,10 +137,10 @@ def process(file, suffix):
 
 
 def start_migration():
-    ***REMOVED***
+    """
     Calls the process function and
     renames the directory
-    ***REMOVED***
+    """
     if not os.path.isdir(".theia") and MIGRATE:
         sys.exit("The .theia directory does not exist")
 
@@ -151,14 +151,14 @@ def start_migration():
         os.mkdir(".vscode")
 
     for file in FILE_LIST:
-        print(f"Processing: {file['filename'***REMOVED***}")
-        process(file["filename"***REMOVED***, file["url"***REMOVED***)
+        print(f"Processing: {file['filename']}")
+        process(file["filename"], file["url"])
 
     if MIGRATE and os.path.isdir(".vscode"):
         print(".vscode directory already exists")
         if input("Overwrite? Y/N ").lower() == "y":
             shutil.rmtree(".vscode")
-        ***REMOVED***
+        else:
             print("You will need to manually remove the .theia directory after migration.")
 
     if MIGRATE and not os.path.isdir(".vscode"):
@@ -182,7 +182,7 @@ if __name__ == "__main__":
     print("CI Template Migration Utility 0.2")
     print("---------------------------------")
     print("The default action is to upgrade the workspace to the latest version.")
-    print(f"Usage: python3 {sys.argv[0***REMOVED***} [--nobackup --migrate***REMOVED***")
+    print(f"Usage: python3 {sys.argv[0]} [--nobackup --migrate]")
 
     if not BACKUP:
         print("If the --nobackup switch is provided, then changed files will not be backed up.")
@@ -193,5 +193,5 @@ if __name__ == "__main__":
 
     if input("Start? Y/N ").lower() == "y":
         start_migration()
-    ***REMOVED***
+    else:
         sys.exit("Migration cancelled by the user")

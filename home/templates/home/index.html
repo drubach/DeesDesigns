@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
 
-***REMOVED***% block hero %}
+    {% block hero %}
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex flex-column align-items-center justify-content-center">
         <h1>Hi, I'm Dee!</h1>
         <h2>I am a graphic designer</h2>
         <a href="#about" class="btn-get-started scrollto"><i class="bi bi-chevron-double-down"></i></a>
     </section><!-- End Hero -->
-***REMOVED***% endblock %}
+    {% endblock %}
 
-***REMOVED***% block content %}
+    {% block content %}
         <main id="main">
             <!-- ======= About Section ======= -->
             <section id="about" class="about">
@@ -385,14 +385,14 @@
     </section><!-- End Contact Section -->
 
         </main><!-- End #main -->
-***REMOVED***% endblock %}
+    {% endblock %}
 
-***REMOVED***% block postload_js %}
+    {% block postload_js %}
         <script src="static/lonely/assets/vendor/purecounter/purecounter.js"></script>
         <script>
             /** Counter function initialization. */
             new PureCounter({
                 selector: '.purecounter'
-        ***REMOVED***);
+            });
         </script>
-***REMOVED***% endblock %}
+    {% endblock %}

@@ -10,7 +10,7 @@ class Migration(migrations.Migration):
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
         ('projects', '0008_alter_project_cost'),
-    ***REMOVED***
+    ]
 
     operations = [
         migrations.AlterField(
@@ -18,4 +18,4 @@ class Migration(migrations.Migration):
             name='user',
             field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL),
         ),
-    ***REMOVED***
+    ]

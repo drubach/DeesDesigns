@@ -10,7 +10,7 @@ class Migration(migrations.Migration):
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
         ('projects', '0004_remove_project_user'),
-    ***REMOVED***
+    ]
 
     operations = [
         migrations.AddField(
@@ -19,4 +19,4 @@ class Migration(migrations.Migration):
             field=models.OneToOneField(default=1, on_delete=django.db.models.deletion.CASCADE, to='auth.user'),
             preserve_default=False,
         ),
-    ***REMOVED***
+    ]

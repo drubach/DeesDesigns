@@ -17,23 +17,30 @@
                         <li></li>
                     </ol>
                 </div>
-                <!-- Product Filter -->
-                <div class="row">
-                    <div class="col">
-                        <div class="sort-select-wrapper">
-                            <select id="sort-selector" class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Filter by...</option>
-                                {% comment %} <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
-                                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
-                                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option> {% endcomment %}
-                            </select>
-                        </div>
-                    </div>
+                 <!-- Product Filter {% if current_filter == 'None_None' %}selected{% endif %} -->
+    <div class="row">
+        <div class="col">
+            <form method="POST" action="PageObjects">
+                <div class="filter-select-wrapper">
+                    <select class="custom-select custom-select-sm border">
+                        <option value="reset"> Filter by... </option>
+                        <option value="icon">Icons</option>
+                        <option value="logo">Logos</option>
+                        <option value="poster">Posters</option>
+                        <option value="portrait">Portraits</option>
+                        <option value="mural">Murals</option>
+                        <option value="completed">Completed</option>
+                        <option value!="completed">In Progress</option>
+                        {% if request.user.is_superuser %}
+                            <option value="paid">Paid</option>
+                            <option value!="paid">Unpaid</option>
+                        {% endif %}
+                    </select>
                 </div>
-                <!-- End Product Filter -->
+            </form>
+        </div>
+    </div>
+    <!-- End Product Filter -->
             </div>
         </section><!-- End Breadcrumbs Section -->
 

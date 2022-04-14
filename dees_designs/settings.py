@@ -29,13 +29,11 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['dees-designs.herokuapp.com/', '127.0.0.1']
-
-# if DEBUG:
-#     ALLOWED_HOSTS = ['127.0.0.1']
+if DEBUG:
+    ALLOWED_HOSTS = ['127.0.0.1']
 #     SECURE_SSL_REDIRECT = False
-# else:
-#     ALLOWED_HOSTS = [os.environ.get("HEROKU_HOSTNAME")]
+else:
+    ALLOWED_HOSTS = [os.environ.get("HEROKU_HOSTNAME")]
 #     SECURE_SSL_REDIRECT = True
 
 

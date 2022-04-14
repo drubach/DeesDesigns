@@ -29,12 +29,14 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-if DEBUG:
-    ALLOWED_HOSTS = ['127.0.0.1']
-    SECURE_SSL_REDIRECT = False
-else:
-    ALLOWED_HOSTS = [os.environ.get("HEROKU_HOSTNAME")]
-    SECURE_SSL_REDIRECT = True
+ALLOWED_HOSTS = ['dees-designs.herokuapp.com/', 'localhost']
+
+# if DEBUG:
+#     ALLOWED_HOSTS = ['127.0.0.1']
+#     SECURE_SSL_REDIRECT = False
+# else:
+#     ALLOWED_HOSTS = [os.environ.get("HEROKU_HOSTNAME")]
+#     SECURE_SSL_REDIRECT = True
 
 
 # Application definition
@@ -194,7 +196,7 @@ SITE_ID = 1 # Required by allauth
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_VERIFICATION = 'none' #changed from manadatory
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'

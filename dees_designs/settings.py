@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+# from mysqlx import SSLMode
 if os.path.exists("env.py"):
     import env
 
@@ -30,7 +31,7 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 DEBUG = 'DEVELOPMENT' in os.environ
 
 if DEBUG:
-    ALLOWED_HOSTS = ['127.0.0.1']
+    ALLOWED_HOSTS = ['127.0.0.1', , os.environ.get("HEROKU_HOSTNAME")]
     SECURE_SSL_REDIRECT = False
 else:
     ALLOWED_HOSTS = [os.environ.get("HEROKU_HOSTNAME")]
@@ -109,7 +110,7 @@ WSGI_APPLICATION = 'dees_designs.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default':dj_database_url.parse(os.environ.get("DATABASE_URL", sslmode='require'))
+        'default':dj_database_url.parse(os.environ.get("DATABASE_URL"))
     }
 else:
     DATABASES = {

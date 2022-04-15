@@ -389,10 +389,6 @@
 
     {% block postload_js %}
         <script src="static/lonely/assets/vendor/purecounter/purecounter.js"></script>
-        <script>
-            /** Counter function initialization. */
-            new PureCounter({
-                selector: '.purecounter'
-            });
-        </script>
+        <!-- New counter initialization -->
+        <script>new PureCounter({selector: '.purecounter'});</script>
     {% endblock %}

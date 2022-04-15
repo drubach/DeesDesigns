@@ -109,7 +109,7 @@ WSGI_APPLICATION = 'dees_designs.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default':dj_database_url.parse(os.environ.get("DATABASE_URL"))
+        'default':dj_database_url.parse(os.environ.get("DATABASE_URL", sslmode='require'))
     }
 else:
     DATABASES = {

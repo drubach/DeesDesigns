@@ -121,6 +121,8 @@ Allauth
 
 * **Couldn't load example project data** - Error: "sqlite3.IntegrityError: UNIQUE constraint failed: projects_project.user_id" resulted from using models.OneToOneField. Changed to models.ForeignKey for user_id for project and issue resolved.
 
+* **Couldn't log into admin in Heroku** - Error: "Please enter the correct username and password for a staff account. Note that both fields may be case-sensitive." Direction to correct found in [StackOverflow](https://stackoverflow.com/questions/68109989/unable-to-login-to-heroku-admin-panel-after-successfully-creating-superuser).
+
 ## **Credits**
 ### **Media**
 * The majority of the media was provided within the Bootstrap template.

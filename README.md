@@ -123,6 +123,8 @@ Allauth
 
 * **Couldn't log into admin in Heroku** - Error: "Please enter the correct username and password for a staff account. Note that both fields may be case-sensitive." Direction to correct found in [StackOverflow](https://stackoverflow.com/questions/68109989/unable-to-login-to-heroku-admin-panel-after-successfully-creating-superuser).
 
+* **Media files are not showing up** - Error: "typeerror: expected str, bytes or os.pathlike object, not tuple". A hint was found in the second and not checked answer in this article from [StackOverflow](https://stackoverflow.com/questions/64320840/typeerror-expected-str-bytes-or-os-pathlike-object-not-tuple-how-to-solve).
+
 ## **Credits**
 ### **Media**
 * The majority of the media was provided within the Bootstrap template.

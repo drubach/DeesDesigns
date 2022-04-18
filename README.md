@@ -148,7 +148,7 @@ Allauth
 
 * Thumbnail code for project images was taken from [W3 Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_thumbnail_image).
 
-* Code to implement project card filtering on my projects page was taken from [css-tricks.com](https://css-tricks.com/in-page-filtered-search-with-vanilla-javascript/).
+* Code to implement project card filtering on my projects page was taken from [css-tricks.com](https://css-tricks.com/in-page-filtered-search-with-vanilla-javascript/) and [ricardometring.com](https://ricardometring.com/getting-the-value-of-a-select-in-javascript).
 
 * Code for sending an email manually in Django was taken from this Stack Overflow post.
 

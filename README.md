@@ -150,6 +150,8 @@ Allauth
 
 * Code to implement project card filtering on my projects page was taken from [css-tricks.com](https://css-tricks.com/in-page-filtered-search-with-vanilla-javascript/) and [ricardometring.com](https://ricardometring.com/getting-the-value-of-a-select-in-javascript).
 
+* Mobile navigation dropdown list not visible. Accidental additional duplicate code located and removed.
+
 * Code for sending an email manually in Django was taken from this Stack Overflow post.
 
 * Documentation for implementing signing in with Google was provided by the Django Allauth docs.

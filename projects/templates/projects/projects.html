@@ -3,6 +3,11 @@
 
 {% block extra_title %}My Projects{% endblock %}
 
+
+{% block extra_css %}
+<link href="{% static 'css/filterCard.css' %}" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
     <main id="main">
         <!-- ======= Breadcrumbs Section ======= -->
@@ -20,37 +25,37 @@
                  <!-- Product Filter {% if current_filter == 'None_None' %}selected{% endif %} -->
     <div class="row">
         <div class="col">
-            <form method="POST" action="PageObjects">
+            <form method="GET" action="{% url 'projects' %}">
                 <div class="filter-select-wrapper">
-                    <select class="custom-select custom-select-sm border">
-                        <option value="reset"> Filter by... </option>
+                    <select class="custom-select custom-select-sm border"  id="filter-select" type="text" onChange="filterFunction(this)">
+                        <option value="all"> Filter by...all </option>
                         <option value="icon">Icons</option>
                         <option value="logo">Logos</option>
                         <option value="poster">Posters</option>
                         <option value="portrait">Portraits</option>
                         <option value="mural">Murals</option>
-                        <option value="completed">Completed</option>
-                        <option value!="completed">In Progress</option>
+                        {% comment %} <option value="completed">Completed</option>
+                        <option value="inProgress">In Progress</option>
                         {% if request.user.is_superuser %}
                             <option value="paid">Paid</option>
-                            <option value!="paid">Unpaid</option>
-                        {% endif %}
+                            <option value="unPaid">Unpaid</option>
+                        {% endif %} {% endcomment %}
                     </select>
                 </div>
             </form>
         </div>
     </div>
-    <!-- End Product Filter -->
+    <!-- End Project Filter -->
             </div>
         </section><!-- End Breadcrumbs Section -->
 
         <section class="inner-page">
-            <div class="container col-10 offset-1">
+            <div class="container col-10 offset-1" >
                 <div class="row mt-1 mb-2">
                     <div class="row">
                         {% for project in projects %}
-                            <div class="col-sm-12 col-md-6 col-lg-4">
-                                <div class="card-project h-100">
+                            <div class="col-sm-12 col-md-6 col-lg-4 card-filter">
+                                <div class="card-project">
                                     {% if project.image %}
                                     <a href="{% url 'project_detail' project.id %}">
                                         <img src="{{ project.image.url }}" alt="Project Image" style="width:75px">
@@ -81,4 +86,8 @@
 
     </main><!-- End #main -->
 
+{% endblock %}
+
+{% block postload_js %}
+<script src="{% static 'js/filterCard.js' %}"></script>
 {% endblock %}

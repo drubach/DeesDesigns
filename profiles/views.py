@@ -13,8 +13,7 @@
 # def profile(request):
 #     """ Display the user's profile. """
 #     profile = get_object_or_404(UserProfile, user=request.user)
-#     user = get_object_or_404(User, username=request.user)
-    
+#     user = get_object_or_404(User, username=request.user)    
 #     try:
 #         social_account = get_object_or_404(SocialAccount, user_id=request.user)
 #     except:

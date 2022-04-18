@@ -148,6 +148,8 @@ Allauth
 
 * Thumbnail code for project images was taken from [W3 Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_thumbnail_image).
 
+* Code to implement project card filtering on my projects page was taken from [css-tricks.com](https://css-tricks.com/in-page-filtered-search-with-vanilla-javascript/).
+
 * Code for sending an email manually in Django was taken from this Stack Overflow post.
 
 * Documentation for implementing signing in with Google was provided by the Django Allauth docs.
@@ -157,5 +159,6 @@ Allauth
 
 ## **Acknowledgments**
 * My mentor Caleb Mbakwe for continuous and helpful support/design suggestions.
+* My tutor James for giving me the guidance I needed at just the right time.
 * My son for his patient assistance and encouragement that an old dog can learn new tricks.
 <hr>

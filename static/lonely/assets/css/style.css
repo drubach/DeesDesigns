@@ -58,6 +58,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
+# Add / Edit / Delete - project or profile button
+--------------------------------------------------------------*/
+.button-wrapper {
+  width: 100%;
+  text-align: center;
+  margin: 5px 0px 5px 0px;
+}
+
+.button {
+  z-index: 9999;
+  background: #fcf2f7;
+  border-radius: 5px;
+  border-color: #6c757d;
+  font-size: small;
+  color: #6c757d;
+}
+
+.button:hover {
+  background: #db528c;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 #header {

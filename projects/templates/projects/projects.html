@@ -13,9 +13,8 @@
         <!-- ======= Breadcrumbs Section ======= -->
         <section class="breadcrumbs">
             <div class="container">
-
                 <div class="d-flex justify-content-between align-items-center">
-                <h2>My Projects</h2>
+                    <h2>My Projects</h2>
                     <ol>
                         <li><a href="{% url 'home' %}">Home</a></li>
                         <li><a href="">My Projects</a></li>
@@ -23,29 +22,36 @@
                     </ol>
                 </div>
                  <!-- Product Filter {% if current_filter == 'None_None' %}selected{% endif %} -->
-    <div class="row">
-        <div class="col">
-            <form method="GET" action="{% url 'projects' %}">
-                <div class="filter-select-wrapper">
-                    <select class="custom-select custom-select-sm border"  id="filter-select" type="text" onChange="filterFunction(this)">
-                        <option value="all"> Filter by...all </option>
-                        <option value="icon">Icons</option>
-                        <option value="logo">Logos</option>
-                        <option value="poster">Posters</option>
-                        <option value="portrait">Portraits</option>
-                        <option value="mural">Murals</option>
-                        {% comment %} <option value="completed">Completed</option>
-                        <option value="inProgress">In Progress</option>
-                        {% if request.user.is_superuser %}
-                            <option value="paid">Paid</option>
-                            <option value="unPaid">Unpaid</option>
-                        {% endif %} {% endcomment %}
-                    </select>
+                <div class="row">
+                    <div class="col">
+                        <form method="GET" action="{% url 'projects' %}">
+                            <div class="filter-select-wrapper">
+                                <select class="custom-select custom-select-sm border"  id="filter-select" type="text" onChange="filterFunction(this)">
+                                    <option value="all"> Filter by...all </option>
+                                    <option value="icon">Icons</option>
+                                    <option value="logo">Logos</option>
+                                    <option value="poster">Posters</option>
+                                    <option value="portrait">Portraits</option>
+                                    <option value="mural">Murals</option>
+                                    {% comment %} <option value="completed">Completed</option>
+                                    <option value="inProgress">In Progress</option>
+                                    {% if request.user.is_superuser %}
+                                        <option value="paid">Paid</option>
+                                        <option value="unPaid">Unpaid</option>
+                                    {% endif %} {% endcomment %}
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <!--<div class="row">-->
+                       <!--<div class="col">-->
+                            <div class="button-wrapper">
+                                <a href=""><button class="button">Add Project</button></a>
+                            </div>
+                        <!--</div>-->
+                    <!--</div>-->
                 </div>
-            </form>
-        </div>
-    </div>
-    <!-- End Project Filter -->
+                <!-- End Project Filter & button-->
             </div>
         </section><!-- End Breadcrumbs Section -->
 

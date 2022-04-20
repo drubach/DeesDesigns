@@ -76,6 +76,19 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px;
 }
 
+.button-wrapper a {
+  z-index: 9999;
+  padding: 2px 10px 2px 10px;
+  background: #fcf2f7;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: #6c757d;
+  font-size: small;
+  color: #6c757d;
+  margin: 10px;
+}
+
 .button:hover {
   background: #db528c;
   color: #fff;
@@ -84,10 +97,14 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Form
 --------------------------------------------------------------*/
+.form-details {
+  padding: 10px 0px 10px 0px;
+}
+
 .form-wrapper {
   width: 100%;
   text-align: center;
-  margin: 10px 0px 10px 0px;
+  margin: 5px 0px 5px 0px;
   background-color: 0 0 29px 0 rgba(68, 88, 144, 0.2);
 }
 
@@ -100,12 +117,30 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-field {
   width: 100%;
-  margin: 5px 0px 5px 0px;
+  margin: 1px 0px 5px 0px;
   fill: #fcf2f7;
   border-radius: 5px;
   border-color: #6c757d;
   font-size: medium;
   color: #6c757d;
+}
+
+.form-space {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #d43076;
+  bottom: 0;
+  left: 0;
+}
+
+.form-delinfo {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  color: #5a656e;
 }
 
 /*--------------------------------------------------------------
@@ -402,7 +437,7 @@ section {
 }
 
 .section-bg {
-  background: linear-gradient(180deg, #f2f6f9 0%, #fff 100%);
+  background: linear-gradient(180deg, #fff 0%, #f2f6f9 100%,);
 }
 
 .section-title {
@@ -1195,7 +1230,7 @@ section {
 --------------------------------------------------------------*/
 #footer {
   background: #fff;
-  padding: 24px 0;
+  padding: 15px 0;
   font-size: 14px;
   box-shadow: 0px 0 20px 0 rgba(0, 0, 0, 0.12);
 }

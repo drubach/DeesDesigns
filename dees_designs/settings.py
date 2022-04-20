@@ -204,9 +204,7 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
-DIGITAL_DELINFO = 'Icons, Logos and Posters are digital delivery'
-PORTRAIT_DELINFO = 'Delivery and framing (if requested) is on final invoice.'
-PORT_MURAL_COST = 'These items are special quoted only after a project definition meeting.'
+
 ICON_STDCOST = 150.00
 LOGO_STDCOST = 500.00
 POSTERSM_STDCOST = 10.00

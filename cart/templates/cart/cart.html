@@ -1,11 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_title %}My Projects{% endblock %}
+{% block extra_title %}My Cart{% endblock %}
 
 
 {% block extra_css %}
-<link href="{% static 'css/filterCard.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
@@ -14,64 +13,53 @@
         <section class="breadcrumbs">
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">
-                    <h2>My Projects</h2>
+                    <h2>My Cart</h2>
                     <ol>
                         <li><a href="{% url 'home' %}">Home</a></li>
-                        <li><a href="">My Cart</a></li>
+                        <li><a href="" class="active">My Cart</a></li>
                         <li></li>
                     </ol>
                 </div>
-                 <!-- Product Filter {% if current_filter == 'None_None' %}selected{% endif %} -->
+                 <!-- Another another button -->
                 <div class="row">
                     <div class="col">
                         <div class="button-wrapper">
-                            <a href="{% url 'add_project' %}"><button class="button">Add Project</button></a>
+                            {% if cart_items %}
+                                <a href="{% url 'add_project' %}" class="button">Add Another Project</a>
+                            {% else %}
+                                <a href="{% url 'add_project' %}" class="button">Add Project</a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
-                <!-- End Project Filter & button-->
+                <!-- End add another button-->
             </div>
-        </section><!-- End Breadcrumbs Section -->
-
-        <section class="inner-page">
-            <div class="container col-10 offset-1" >
-                <div class="row mt-1 mb-2">
+        </section>
+        <!-- End Breadcrumbs Section -->
+        <!-- Cart Section -->
+        <section class="inner-page section-bg">
+            <div class="container" >
+                <div class="row">
                     <div class="row">
-                        {% for project in projects %}
-                            <div class="col-sm-12 col-md-6 col-lg-4 card-filter">
-                                <div class="card-project">
-                                    {% if project.image %}
-                                    <a href="{% url 'project_detail' project.id %}">
-                                        <img src="{{ project.image.url }}" alt="Project Image" style="width:75px">
-                                    </a>
-                                    {% else %}
-                                    <a href="{% url 'project_detail' project.id %}">
-                                        <img src="{{ MEDIA_URL }}noimage.png" alt="Project Image" style="width:75px">
-                                    </a>
-                                    {% endif %}
-                                    <div class="card-project-body">
-                                        <p class="mb-0">Name: {{ project.project_name }}</p>
-                                    </div>
-                                    <div class="card-project-footer">
-                                        <p class="mb-0">Type: {{ project.type }}</p>
-                                        {% if project.completed %}
-                                            <p>Project complete</p>
-                                        {% else %}
-                                            <p>Project in progress</p>
-                                        {% endif %}
-                                    </div>
+                        <div class="col">
+                            {% if cart_items %}
+                                <div class="project-info">
+                                    <p>cart info will go here</p>
                                 </div>
-                            </div>
-                        {% endfor %}     
+                            {% else %}
+                                <p class="lead mb-5" style="text-align: center">Your cart is empty.</p>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- End Cart-->
 
-    </main><!-- End #main -->
+    </main>
+    <!-- End #main -->
 
 {% endblock %}
 
 {% block postload_js %}
-<script src="{% static 'js/filterCard.js' %}"></script>
 {% endblock %}

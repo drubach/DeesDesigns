@@ -11,9 +11,9 @@ def cart_contents(request):
     grand_total = Decimal(total)
 
     context = {
+        'project_count' : project_count,
         'cart_items' : cart_items,
         'total' : total,
-        'project_count' : project_count,
         'grand_total' : grand_total,
     }
 

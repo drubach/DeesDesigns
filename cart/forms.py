@@ -1,6 +1,6 @@
 """ Form to add projects. """
 from django import forms
-from .models import Project
+from projects.models import Project
 
 
 class ProjectForm(forms.ModelForm):
@@ -8,4 +8,4 @@ class ProjectForm(forms.ModelForm):
     class Meta:
         """ Instantiate class. """
         model = Project
-        fields = ('project_name', 'description', 'type',)
+        fields = ('project_name', 'description', 'type')

@@ -21,8 +21,8 @@
     </section><!-- Breadcrumbs Section -->
 
     <!-- ======= Add Project Details Section ======= -->
-    <section id="project-details" class="project-details">
-        <div class="container-fluid">
+    <section id="form-details" class="form-details section-bg">
+        <div class="container">
         
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
@@ -37,18 +37,20 @@
                                 <label class="form-field-label" for="form-field"> Enter a project name </label>
                             {% elif field.name == 'description' %}
                                 <label class="form-field-label" for="form-field"> Enter a description </label>
-                            {% else %}
+                            {% elif field.name == 'type' %}
                                 <label class="form-field-label" for="form-field"> Choose a type </label>
                             {% endif%}
-                            <div class="form-field" id="form-field"> {{ field }} </div>
-                            {% if field == 'type' %}
-
-                            {% endif %}
+                            <div class="form-field" id="form-field"> {{ field }} </div>   
                         {% endfor %}
+                        <div class="form-space"></div>
                         <div class="button-wrapper">
-                            <button class="button" href="{% url 'projects' %}">Cancel</button>
+                            <a class="button" href="{% url 'projects' %}">Cancel</a>
                             <button class="button" type="submit">Add Project</button>
                         </div>
+                        <div class="form-delinfo">Icons, Logos and Posters are digital delivery.</div>
+                        <div class="form-delinfo">Cost: Icons $150, Logos $500, Posters $10/sq. in.</div>
+                        <div class="form-delinfo">Portrait delivery and framing (if requested) is on final invoice.</div>
+                        <div class="form-delinfo">Portraits and murals are special quoted only after a project definition meeting.</div>                       
                     </form>
                 </div>            
             </div>    

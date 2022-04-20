@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% comment %} {% block extra_title %}{% endblock %} {% endcomment %}
+
+{% block content %}
+<main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Add New Project</h2>
+          <ol>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'projects' %}">My Projects</a></li>
+            <li>Add Project</li>
+          </ol>
+        </div>
+      </div>
+    </section><!-- Breadcrumbs Section -->
+
+    <!-- ======= Add Project Details Section ======= -->
+    <section id="project-details" class="project-details">
+        <div class="container-fluid">
+        
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                
+                </div>
+
+                <div class="col-lg-4 form-wrapper">
+                    <form method="POST"  class="post-form mb-2" action="{% url 'add_project' %}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            {% if field.name == 'project_name' %}
+                                <label class="form-field-label" for="form-field"> Enter a project name </label>
+                            {% elif field.name == 'description' %}
+                                <label class="form-field-label" for="form-field"> Enter a description </label>
+                            {% else %}
+                                <label class="form-field-label" for="form-field"> Choose a type </label>
+                            {% endif%}
+                            <div class="form-field" id="form-field"> {{ field }} </div>
+                            {% if field == 'type' %}
+
+                            {% endif %}
+                        {% endfor %}
+                        <div class="button-wrapper">
+                            <button class="button" href="{% url 'projects' %}">Cancel</button>
+                            <button class="button" type="submit">Add Project</button>
+                        </div>
+                    </form>
+                </div>            
+            </div>    
+        </div>
+    </section><!-- End Add Project-->
+</main><!-- End #main -->
+
+{% endblock %}

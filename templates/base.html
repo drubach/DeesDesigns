@@ -80,7 +80,8 @@
                             {% endif %}
                                 <li><a href="" class="dropdown-item">My Profile</a></li>
                                 <li><a href="{% url 'projects' %}" class="dropdown-item">My Projects</a></li>
-                                <li><a href="" class="dropdown-item">Add Project</a></li>
+                                <li><a href="{% url 'add_project' %}" class="dropdown-item">Add Project</a></li>
+                                <li><a href="" class="dropdown-item">My Cart</a></li>
                                 <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
                         {% else %}
                             <li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
@@ -88,6 +89,28 @@
                         {% endif %}
                     </ul>                       
                 </li>
+                <!--$ cart_grand_total request -->
+                {% if page == "cart" or page == "checkout" or page == "checkout_success" %}
+                    <li><a href="{% url 'view_cart' %}" class="active" id="cart_header"><i class="fas fa-shopping-cart"></i> 
+                        <span class="cart_total">
+                            {% if grand_total %}
+                                ${{ grand_total|floatformat:2 }}
+                            {% else %}
+                                $0.00
+                            {% endif %}
+                        </span></a>
+                    </li>
+                {% else %}
+                    <li><a href="{% url 'view_cart' %}" id="cart_header"><i class="fas fa-shopping-cart"></i>
+                        <span class="cart_total">
+                            {% if grand_total %}
+                                ${{ grand_total|floatformat:2 }}
+                            {% else %}
+                                $0.00
+                            {% endif %}
+                        </span></a>
+                    </li>
+                {% endif %}
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>    
         </nav><!-- .navbar -->

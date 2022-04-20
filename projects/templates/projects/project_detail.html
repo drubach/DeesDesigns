@@ -20,14 +20,17 @@
         <div class="row">
           <div class="col">
               <div class="button-wrapper">
+                {% if project.completed %}
+                {% else %}
                   <a href=""><button class="button">Edit Project</button></a>
+                {% endif %}
               </div>
           </div>
         </div>
       </div>
     </section><!-- Breadcrumbs Section -->
 
-    <!-- ======= Portfolio Details Section ======= -->
+    <!-- ======= Project Details Section ======= -->
     <section id="project-details" class="project-details">
       <div class="container-fluid">
 
@@ -66,9 +69,9 @@
               </ul>
             </div>
             <div class="project-description">
-              <h4>This is an example of project detail</h4>
+              <h4>Description</h4>
               <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+                {{ project.description }}
               </p>
             </div>
           </div>

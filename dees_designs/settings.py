@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount', # Installed from Django allauth doc site.
     'home',
     'projects',
+    'cart',
 
     # Other
     'crispy_forms',

@@ -23,4 +23,6 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')), #Required by allauth.(Other items settings.py)
     path('', include('home.urls')),
     path('projects/', include('projects.urls')),
+    path('cart/', include('cart.urls')),
+
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -73,11 +73,39 @@ h1, h2, h3, h4, h5, h6 {
   border-color: #6c757d;
   font-size: small;
   color: #6c757d;
+  margin: 10px;
 }
 
 .button:hover {
   background: #db528c;
   color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Form
+--------------------------------------------------------------*/
+.form-wrapper {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0px 10px 0px;
+  background-color: 0 0 29px 0 rgba(68, 88, 144, 0.2);
+}
+
+.form-field-label {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #2c4964;
+}
+
+.form-field {
+  width: 100%;
+  margin: 5px 0px 5px 0px;
+  fill: #fcf2f7;
+  border-radius: 5px;
+  border-color: #6c757d;
+  font-size: medium;
+  color: #6c757d;
 }
 
 /*--------------------------------------------------------------

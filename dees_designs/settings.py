@@ -89,6 +89,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
+                'cart.contexts.cart_contents',
             ],
         },
     },
@@ -203,7 +204,16 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
-# STRIPE_CURRENCY = 'usd'
+DIGITAL_DELINFO = 'Icons, Logos and Posters are digital delivery'
+PORTRAIT_DELINFO = 'Delivery and framing (if requested) is on final invoice.'
+PORT_MURAL_COST = 'These items are special quoted only after a project definition meeting.'
+ICON_STDCOST = 150.00
+LOGO_STDCOST = 500.00
+POSTERSM_STDCOST = 10.00
+POSTERSM_THRESHOLD = 187
+POSTERLG_STDCOST = 15.00
+
+STRIPE_CURRENCY = 'usd'
 # STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY")
 # STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
 # STRIPE_WEBHOOK_SECRET = os.environ.get("STRIPE_WEBHOOK_SECRET")

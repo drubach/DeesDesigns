@@ -81,7 +81,7 @@
                                 <li><a href="" class="dropdown-item">My Profile</a></li>
                                 <li><a href="{% url 'projects' %}" class="dropdown-item">My Projects</a></li>
                                 <li><a href="{% url 'add_project' %}" class="dropdown-item">Add Project</a></li>
-                                <li><a href="" class="dropdown-item">My Cart</a></li>
+                                <li><a href="{% url 'view_cart' %}" class="dropdown-item">My Cart</a></li>
                                 <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
                         {% else %}
                             <li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>

@@ -13,29 +13,26 @@ def view_cart(request):
 def add_project(request):
     """ Add proposed project info to cart. """
     if request.method == 'POST':
+        cart = request.session.get('cart', {})
         project_count = 1
         project_name = request.POST.get('project_name')
         description = request.POST.get('description')
-        typex = request.POST.get('type')
-        cart = request.session.get('cart', {})
+        project_type = request.POST.get('type')
         redirect_url = 'cart/cart.html'
 
-        if type in list(cart.keys()):
-            cart[project_count] += project_count
+        if project_count in list(cart.keys()):
+            cart['project_count'] += project_count
         else:
-            cart[project_count] = project_count
+            cart['project_count'] = project_count
+
+        cart['project_name'] = project_name
+        cart['description'] = description
+        cart['project_type'] = project_type
 
         request.session['cart'] = cart
 
-        context = {
-            'page': 'cart',
-            'project_count':project_count,
-            'project_name':project_name,
-            'description':description,
-            'type':typex,
-        }
-
-        return render(request, redirect_url, context)
+        print(request.session['cart'])
+        return render(request, redirect_url)
 
     else:
         form = ProjectForm()

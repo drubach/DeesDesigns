@@ -6,7 +6,7 @@ def cart_contents(request):
 
     cart_items = []
     total = 0.00
-    project_count = 0.00
+    project_count = 0
 
     grand_total = Decimal(total)
 

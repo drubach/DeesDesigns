@@ -92,11 +92,17 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'cart.contexts.cart_contents',
             ],
+            'builtins':[
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
 
 ROOT_URLCONF = 'dees_designs.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # ################ Installed from Django Allauth doc site. (Other items required in urls.py)
 AUTHENTICATION_BACKENDS = [
@@ -206,11 +212,10 @@ LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
 
-ICON_STDCOST = 150.00
-LOGO_STDCOST = 500.00
-POSTERSM_STDCOST = 10.00
-POSTERSM_THRESHOLD = 187
-POSTERLG_STDCOST = 15.00
+ICON_PRICE = 150.00
+LOGO_PRICE = 500.00
+POSTER_PRICE = 1000.00
+PORT_MUR_PRICE = 5000.00
 
 STRIPE_CURRENCY = 'usd'
 # STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY")

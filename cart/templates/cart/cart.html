@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block content %}
-    <main id="main">
+    <main id="main" class="wrapper">
         <!-- ======= Breadcrumbs Section ======= -->
         <section class="breadcrumbs">
             <div class="container">
@@ -44,7 +44,21 @@
                         <div class="col">
                             {% if cart_items %}
                                 <div class="project-info">
-                                    <p>cart info will go here</p>
+                                    <h6 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h6>
+                                </div>
+                                <div class="button-wrapper">
+                                    <a class="button" href="{% url 'projects' %}">
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                        <span class="text-uppercase">Adjust Order</span>
+                                    </a>
+                                    <a class="button" href="{% url 'checkout' %}">
+                                        <span class="text-uppercase">Secure Checkout</span>
+                                        <span class="icon">
+                                            <i class="fas fa-lock"></i>
+                                        </span>
+                                    </a>
                                 </div>
                             {% else %}
                                 <p class="lead mb-5" style="text-align: center">Your cart is empty.</p>

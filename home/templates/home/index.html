@@ -389,6 +389,6 @@
 
     {% block postload_js %}
         <!-- New counter initialization -->
-        <script src="{% static 'lonely/assets/vendor/purecounter/purecounter.js' %}"></script>
-        <script>new PureCounter({selector: ".purecounter"});</script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>$.noConflict(); jQuery(document).ready(new PureCounter({selector: ".purecounter"}));</script>
     {% endblock %}

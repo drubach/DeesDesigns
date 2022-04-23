@@ -125,6 +125,8 @@ Allauth
 
 * **Media files are not showing up** - Error: "typeerror: expected str, bytes or os.pathlike object, not tuple". A hint was found in the second and not checked answer in this article from [StackOverflow](https://stackoverflow.com/questions/64320840/typeerror-expected-str-bytes-or-os-pathlike-object-not-tuple-how-to-solve).
 
+* **Constant Pylint errors** - Error: "Class has no 'objects' member". Solved by installing <i>pylint-django</i> adding a plug in for for this to python.linting.pylintArgs. Instruction to implement from [koenwoortman.com](https://koenwoortman.com/python-django-pylint-class-has-no-objects-member/).
+
 ## **Credits**
 ### **Media**
 * The majority of the media was provided within the Bootstrap template.
@@ -150,7 +152,9 @@ Allauth
 
 * Code to implement project card filtering on my projects page was taken from [css-tricks.com](https://css-tricks.com/in-page-filtered-search-with-vanilla-javascript/) and [ricardometring.com](https://ricardometring.com/getting-the-value-of-a-select-in-javascript).
 
-* Mobile navigation dropdown list not visible. Accidental additional duplicate code located and removed.
+* Code to get drop down value from ModelForm on change was taken from this post on [StackOverflow](https://stackoverflow.com/questions/46124531/how-can-i-add-a-onchange-js-event-to-select-widget-in-django).
+
+* Code to push footer around was taken from [martinpennock.com](http://martinpennock.com/blog/force-footer-bottom-page-css/).
 
 * Code for sending an email manually in Django was taken from this Stack Overflow post.
 

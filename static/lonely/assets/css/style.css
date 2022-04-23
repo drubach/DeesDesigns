@@ -27,6 +27,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", serif;
 }
 
+.wrapper {
+  min-height: calc(100vh - 170px);
+}
+
+.fill{
+  min-height: (100vh);
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -1175,7 +1183,7 @@ section {
 # Project Details
 --------------------------------------------------------------*/
 .project-details {
-  padding-top: 40px;
+  position: realitve;
 }
 .project-details .project-details-slider img {
   width: 100%;
@@ -1228,6 +1236,10 @@ section {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+footer {
+  height: 110px;
+}
+
 #footer {
   background: #fff;
   padding: 15px 0;

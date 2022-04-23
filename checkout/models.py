@@ -61,9 +61,7 @@ class OrderLineItem(models.Model):
                                 on_delete=models.CASCADE, related_name='lineitems')
     project = models.ForeignKey(Project, null=False, blank=False, on_delete=models.CASCADE)
     type = models.ForeignKey(Type, null=False, blank=False, on_delete=models.CASCADE)
-    poster_size = models.IntegerField(null=False, blank=False,
-                                        default=0) #Calculate square inches from imputs.
-    quantity = models.IntegerField(null=False, blank=False, default=0)
+    # quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2,
                                             null=False, blank=False, editable=False)
 
@@ -73,21 +71,6 @@ class OrderLineItem(models.Model):
         Override the original save method to set the lineitem total
         and update the order total.
         """
-        if self.type == 'icons':
-            self.project.price = settings.ICON_STDCOST
-            self.lineitem_total = self.project.price * self.quantity
-        elif self.type == 'logos':
-            self.project.price = settings.LOGO_STDCOST
-            self.lineitem_total = self.project.price * self.quantity
-        elif self.type == 'posters':
-            if self.poster_size <= settings.POSTERSM_THRESHOLD:
-                self.project.price = settings.POSTERSM_STDCOST * self.poster_size
-            else:
-                self.project.price = settings.POSTERLG_STDCOST * self.poster_size
-            self.lineitem_total = self.project.price * self.quantity
-        else:
-            self.lineitem_total = 0
-
         super().save(*args, **kwargs)
 
 

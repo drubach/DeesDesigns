@@ -4,9 +4,37 @@
 
 {% block head_title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
 
-{% block content %}
-    <h1>{% trans "Verify Your E-mail Address" %}</h1>
+{% block extra_title %}Verify Email{% endblock %}
 
-    <p>{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process. Please contact us if you do not receive it within a few minutes.{% endblocktrans %}</p>
+{% block content %}
+<main id="main" class="wrapper">
+  <!-- ======= Breadcrumbs Section ======= -->
+  <section class="breadcrumbs">
+      <div class="container">
+          <div class="d-flex justify-content-between align-items-center">
+              <h2>Verify Email</h2>
+              <ol>
+                  <li><a href="{% url 'home' %}">Home</a></li>
+                  <li><a href="" class="active">Verify Email</a></li>
+                  <li></li>
+              </ol>
+          </div>
+      </div>
+  </section>
+  <!-- End Breadcrumbs Section -->
+  <!-- Verify Email Section -->
+  <section class="inner-page section-bg wrapper">
+    <div class="container" >
+        <div class="row">
+            <h1>{% trans "Verify Your E-mail Address" %}</h1>
+
+            <p>{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process. Please contact us if you do not receive it within a few minutes.{% endblocktrans %}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- End Verify Email-->
 
 {% endblock %}
+

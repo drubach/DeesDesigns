@@ -4,8 +4,37 @@
 
 {% block head_title %}{% trans "Sign Up Closed" %}{% endblock %}
 
-{% block content %}
-<h1>{% trans "Sign Up Closed" %}</h1>
+{% block extra_title %}Sign Up Closed{% endblock %}
 
-<p>{% trans "We are sorry, but the sign up is currently closed." %}</p>
+{% block content %}
+<main id="main" class="wrapper">
+  <!-- ======= Breadcrumbs Section ======= -->
+  <section class="breadcrumbs">
+      <div class="container">
+          <div class="d-flex justify-content-between align-items-center">
+              <h2>Sign Up Closed</h2>
+              <ol>
+                  <li><a href="{% url 'home' %}">Home</a></li>
+                  <li><a href="" class="active">Sign Up Closed</a></li>
+                  <li></li>
+              </ol>
+          </div>
+      </div>
+  </section>
+  <!-- End Breadcrumbs Section -->
+  <!-- Sign Up Closed Section -->
+  <section class="inner-page section-bg wrapper">
+    <div class="container" >
+        <div class="row">
+            <h1>{% trans "Sign Up Closed" %}</h1>
+
+            <p>{% trans "We are sorry, but the sign up is currently closed." %}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- End Sign Up Closed-->
+
 {% endblock %}
+

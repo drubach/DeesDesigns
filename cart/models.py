@@ -10,6 +10,5 @@ class UserCart(models.Model):
     grand_total = 0
     cart = []
     
-
     def __str__(self):
         return str(self.user)

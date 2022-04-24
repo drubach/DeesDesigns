@@ -1,17 +1,25 @@
 """ Context processor to make cart contents available across site. """
+from operator import itemgetter
 from .models import UserCart
 
+cart_items = []
+total = 0
 
 def cart_contents(request):
     """ Cart contents set up. """
     user = UserCart.user
     cart = request.session.get('cart',[])
-    total = 0.00
+
+    res_list = list(map(itemgetter('price'), cart))
+    res_nl= [float(x) for x in res_list]
+    total = sum(res_nl)
+
+    grand_total = total
 
     context = {
         'user': user,
         'cart_items': cart,
-        'total': total
+        'grand_total': grand_total
     }
 
     return context

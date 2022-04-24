@@ -1273,3 +1273,8 @@ footer {
 .cart-rows {
   text-align: center;
 }
+
+.cart-total {
+  text-align: center;
+  padding-bottom: 10px;
+}

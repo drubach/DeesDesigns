@@ -81,9 +81,10 @@
                                         </div>
                                     </div>
                                 {% endfor %}
-
                                 <hr>
-                                <h6 class="mt-4 cart-total"><strong>Cart Total: ${{ grand_total|floatformat:2 }}</strong></h6>
+                                <div col class="cart_total">
+                                    <h6 class="mt-4 cart-total"><strong>Cart Total: $ {{ grand_total|floatformat:2 }}</strong></h6>
+                                </div>
                             </div>
                             <div class="row">
 

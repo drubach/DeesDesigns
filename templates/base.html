@@ -91,7 +91,7 @@
                 </li>
                 <!--$ cart_grand_total request -->
                 {% if page == "cart" or page == "checkout" or page == "checkout_success" %}
-                    <li><a href="{% url 'view_cart' %}" class="active" id="cart_header"><i class="fas fa-shopping-cart"></i> 
+                    <li><a href="{% url 'view_cart' %}" class="active" id="cart_header"><i class="fas fa-shopping-cart"> </i> 
                         <span class="cart_total">
                             {% if grand_total %}
                                 ${{ grand_total|floatformat:2 }}
@@ -101,7 +101,7 @@
                         </span></a>
                     </li>
                 {% else %}
-                    <li><a href="{% url 'view_cart' %}" id="cart_header"><i class="fas fa-shopping-cart"></i>
+                    <li><a href="{% url 'view_cart' %}" id="cart_header"><i class="fas fa-shopping-cart"> </i>
                         <span class="cart_total">
                             {% if grand_total %}
                                 ${{ grand_total|floatformat:2 }}

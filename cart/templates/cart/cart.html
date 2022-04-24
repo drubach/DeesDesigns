@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load cart_tools%}
 
 {% block extra_title %}My Cart{% endblock %}
 
@@ -37,35 +38,75 @@
         </section>
         <!-- End Breadcrumbs Section -->
         <!-- Cart Section -->
-        <section class="inner-page section-bg">
+        <section class="inner-page section-bg wrapper">
             <div class="container" >
                 <div class="row">
-                    <div class="row">
-                        <div class="col">
-                            {% if cart_items %}
-                                <div class="project-info">
-                                    <h6 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h6>
+                    <div>
+                        {% if cart_items %}
+                            <div class="cart-info">
+                                <div class="row cart-rows">
+                                    <div class="col">
+                                        <h5>A summary of your cart contents is below</h5>
+                                    </div>
                                 </div>
-                                <div class="button-wrapper">
-                                    <a class="button" href="{% url 'projects' %}">
-                                        <span class="icon">
-                                            <i class="fas fa-chevron-left"></i>
-                                        </span>
-                                        <span class="text-uppercase">Adjust Order</span>
-                                    </a>
-                                    <a class="button" href="{% url 'checkout' %}">
-                                        <span class="text-uppercase">Secure Checkout</span>
-                                        <span class="icon">
-                                            <i class="fas fa-lock"></i>
-                                        </span>
-                                    </a>
+                                <hr>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="cart-label">Project Name</p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="cart-label">Project Type</p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="cart-label">Price</p>
+                                    </div>
                                 </div>
-                            {% else %}
-                                <p class="lead mb-5" style="text-align: center">Your cart is empty.</p>
-                            {% endif %}
-                        </div>
+                                <hr>
+                                {% for item in cart_items %}
+                                    <div class="row cart-rows">
+                                        <div class="col" id="cart-pn">
+                                            {{ item.project_name }}
+                                        </div>
+                                        {% if item.project_type == 1 %}
+                                            <div class="col" id='type-name'>Icon</div>
+                                        {% elif item.project_type == 2 %}
+                                            <div class="col" id='type-name'>Logo</div>
+                                        {% elif item.project_type == 3 %}
+                                            <div class="col" id='type-name'>Poster</div>
+                                        {% elif item.project_type == 4 %}
+                                            <div class="col" id='type-name'>Portrait/Mural</div>
+                                        {% endif %}
+                                        <div class="col order-sm-last" id='cart-price'>
+                                            <p class="my-0">${{ item.price }}</p>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+
+                                <hr>
+                                <h6 class="mt-4 cart-total"><strong>Cart Total: ${{ cart_grand_total|floatformat:2 }}</strong></h6>
+                            </div>
+                            <div class="row">
+
+                            </div>
+                            <div class="button-wrapper">
+                                <a class="button" href="{% url 'projects' %}">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="text-uppercase">Adjust Order</span>
+                                </a>
+                                <a class="button" href="{% url 'checkout' %}">
+                                    <span class="text-uppercase">Secure Checkout</span>
+                                    <span class="icon">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        {% else %}
+                            <p class="lead mb-5" style="text-align: center">Your cart is empty.</p>
+                        {% endif %}
                     </div>
-                </div>
+                    </div>
             </div>
         </section>
         <!-- End Cart-->

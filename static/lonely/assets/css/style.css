@@ -35,6 +35,9 @@ h1, h2, h3, h4, h5, h6 {
   min-height: (100vh);
 }
 
+.hidden {
+  display: none;
+}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -1257,4 +1260,16 @@ footer {
   padding-top: 8px;
   text-align: center;
   font-size: 13px;
+}
+
+/*--------------------------------------------------------------
+# Cart
+--------------------------------------------------------------*/
+.cart-label {
+  text-align: center;
+  font-weight: bold;
+}
+
+.cart-rows {
+  text-align: center;
 }

@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 class UserCart(models.Model):
     """ Basic cart model. """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    grand_total = 0
+    
     cart = []
     
     def __str__(self):

@@ -6,6 +6,7 @@
 
 
 {% block extra_css %}
+<link href="{% static 'css/cart.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
@@ -50,52 +51,59 @@
                                     </div>
                                 </div>
                                 <hr>
+                                <form class="form update-form" method="POST" action="">
+                                    {% csrf_token %}
+                                    <div class="table-fixed rounded d-none d-md-block">
+                                        <table class="table table-sm table-borderless" style="width=100%">
+                                            <thead class="cart-label">
+                                                <tr>
+                                                    <th scope="col">Project Name</th>
+                                                    <th scope="col">Project Type</th>
+                                                    <th scope="col">Price</th>
+                                                    <th scope="col">Adjust Cart</th>
+                                                </tr>
+                                            </thead>
+                                            {% for item in cart_items %}
+                                            <tr class="cart-rows">
+                                                <td class="col" id="cart-pn">
+                                                    {{ item.project_name }}
+                                                </td>
+                                                <td class="col">
+                                                    {% if item.project_type == 1 %}
+                                                        Icon
+                                                    {% elif item.project_type == 2 %}
+                                                        Logo
+                                                    {% elif item.project_type == 3 %}
+                                                        poster
+                                                    {% elif item.project_type == 4 %}
+                                                        Portrait/Mural
+                                                    {% endif %}
+                                                </td>
+                                                <td class="col" id='cart-price'>${{ item.price }}</td>
+                                                <td class="col">
+                                                    <a class="remove-item text-danger float-right" id= {{ item.item_id }}><small>Remove</small></a>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                        </table>
+                                    <div>
+                                </form>
+                                <hr>
+                               
+                                <hr>
                                 <div class="row">
-                                    <div class="col">
-                                        <p class="cart-label">Project Name</p>
+                                    <div class=" col cart-total">
                                     </div>
-                                    <div class="col">
-                                        <p class="cart-label">Project Type</p>
+                                    <div class=" col cart-total">
                                     </div>
-                                    <div class="col">
-                                        <p class="cart-label">Price</p>
+                                    <div class=" col cart-total">
+                                        <h6 class="mt-4 cart-total"><strong>Cart Total: $ {{ grand_total|floatformat:2 }}</strong></h6>
                                     </div>
-                                </div>
-                                <hr>
-                                {% for item in cart_items %}
-                                    <div class="row cart-rows">
-                                        <div class="col" id="cart-pn">
-                                            {{ item.project_name }}
-                                        </div>
-                                        {% if item.project_type == 1 %}
-                                            <div class="col" id='type-name'>Icon</div>
-                                        {% elif item.project_type == 2 %}
-                                            <div class="col" id='type-name'>Logo</div>
-                                        {% elif item.project_type == 3 %}
-                                            <div class="col" id='type-name'>Poster</div>
-                                        {% elif item.project_type == 4 %}
-                                            <div class="col" id='type-name'>Portrait/Mural</div>
-                                        {% endif %}
-                                        <div class="col order-sm-last" id='cart-price'>
-                                            <p class="my-0">${{ item.price }}</p>
-                                        </div>
-                                    </div>
-                                {% endfor %}
-                                <hr>
-                                <div col class="cart_total">
-                                    <h6 class="mt-4 cart-total"><strong>Cart Total: $ {{ grand_total|floatformat:2 }}</strong></h6>
                                 </div>
                             </div>
                             <div class="row">
-
                             </div>
                             <div class="button-wrapper">
-                                <a class="button" href="{% url 'projects' %}">
-                                    <span class="icon">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="text-uppercase">Adjust Order</span>
-                                </a>
                                 <a class="button" href="{% url 'checkout' %}">
                                     <span class="text-uppercase">Secure Checkout</span>
                                     <span class="icon">
@@ -118,4 +126,19 @@
 {% endblock %}
 
 {% block postload_js %}
+<!-- Get Check All & Delete JS File -->
+{% comment %} <script>
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id');
+        var url = `/cart/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken};
+
+        $.post(url, data)
+            .done(function() {
+                location.reload();
+            });
+    })
+</script> {% endcomment %}
 {% endblock %}

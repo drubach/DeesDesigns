@@ -10,6 +10,7 @@ class UserCartAdmin(admin.ModelAdmin):
     list_display = (
         'user',
         'cart',
+        
     )
     ordering = ('user',)
 

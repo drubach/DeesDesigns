@@ -156,6 +156,8 @@ Allauth
 
 * Code to push footer around was taken from [martinpennock.com](http://martinpennock.com/blog/force-footer-bottom-page-css/).
 
+* Code for check-all function taken from this post on [StackOverflow](https://stackoverflow.com/questions/18537609/how-to-check-all-checkboxes-using-jquery).
+
 * Code for sending an email manually in Django was taken from this Stack Overflow post.
 
 * Documentation for implementing signing in with Google was provided by the Django Allauth docs.

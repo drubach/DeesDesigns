@@ -51,7 +51,7 @@
                                     </div>
                                 </div>
                                 <hr>
-                                <form class="form update-form" method="POST" action="">
+                                <form class="form update-form" method="POST" action="{% url 'add_project' %}">
                                     {% csrf_token %}
                                     <div class="table-fixed rounded d-none d-md-block">
                                         <table class="table table-sm table-borderless" style="width=100%">

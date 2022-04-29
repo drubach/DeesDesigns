@@ -127,6 +127,8 @@ Allauth
 
 * **Constant Pylint errors** - Error: "Class has no 'objects' member". Solved by installing <i>pylint-django</i> adding a plug in for for this to python.linting.pylintArgs. Instruction to implement from [koenwoortman.com](https://koenwoortman.com/python-django-pylint-class-has-no-objects-member/).
 
+* **Adding or removing items from cart 500 errors** - Fixed by using direction from this post in [StackOverflow](https://stackoverflow.com/questions/11241668/what-is-reverse).
+
 ## **Credits**
 ### **Media**
 * The majority of the media was provided within the Bootstrap template.

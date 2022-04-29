@@ -1,6 +1,6 @@
 """ Cart app views. """
 from django.conf import settings
-from django.shortcuts import render, get_object_or_404, HttpResponse, redirect, reverse  
+from django.shortcuts import render, get_object_or_404, HttpResponse, redirect, reverse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from . import contexts
@@ -29,7 +29,7 @@ def add_project(request):
         project_name = request.POST.get('project_name')
         description = request.POST.get('description')
         project_type = int(request.POST.get('type'))
-        redirect_url = 'cart.html'
+        redirect_url = 'cart/cart.html'
 
         if project_type == 1:
             price = settings.ICON_PRICE
@@ -48,7 +48,7 @@ def add_project(request):
         project['price'] = "{0:.2f}".format(price)
         cart.append(project)
         request.session['cart'] = cart
-        return render(request, redirect_url)
+        return HttpResponseRedirect(reverse('view_cart'))
 
     else:
         form = ProjectForm()
@@ -70,8 +70,7 @@ def remove_from_cart(request, item_id):
             messages.success(request, f'Removed item from your cart')
 
             request.session['cart'] = cart
-            return HttpResponse(status=200)
-            # return render(request, 'cart.html')               
+            return HttpResponseRedirect(reverse('view_cart'))             
 
         except Exception as e:
                 messages.error(request, f'Error removing item: {e}')

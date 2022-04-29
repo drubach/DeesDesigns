@@ -19,7 +19,7 @@
                 {% for item in cart_items %}
                     <div class="row">
                         <div class="col-9">
-                            <p class="my-0"><strong>{{ item.prject_name }}</strong></p>
+                            <p class="my-0"><strong>{{ item.project_name }}</strong></p>
                         </div>
                     </div>
                 {% endfor %}
@@ -31,7 +31,7 @@
                         <span class="float-right"> $ {{ total|floatformat:2 }}</span>
                     </p></strong>
                     
-                    <a href="{% url 'view_bag' %}" class="btn btn-black btn-block rounded-0">
+                    <a href="{% url 'cart' %}" class="btn btn-black btn-block rounded-0">
                         <span class="text-uppercase">Go To Secure Checkout</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>

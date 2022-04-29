@@ -67,10 +67,11 @@ def remove_from_cart(request, item_id):
             cart = request.session.get('cart', [])
             print(cart[int(item_id)-1])
             del (cart[int(item_id)-1])
-            messages.success(request, f'Removed {cart.product_name} from your bag')
+            messages.success(request, f'Removed item from your cart')
 
             request.session['cart'] = cart
-            return render(request, 'cart.html')               
+            return HttpResponse(status=200)
+            # return render(request, 'cart.html')               
 
         except Exception as e:
                 messages.error(request, f'Error removing item: {e}')

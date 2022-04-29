@@ -11,13 +11,13 @@ from .forms import ProjectForm
 def view_cart(request):
     """ A view that renders the contents of the cart. """
     cart = request.session.get('cart', [])
-    template = 'cart/cart.html'
+    redirect_url = 'cart/cart.html'
     
     context = {
         'cart':cart,
     }
 
-    return render(request, template, context)
+    return render(request, redirect_url, context)
 
 
 @login_required
@@ -29,7 +29,7 @@ def add_project(request):
         project_name = request.POST.get('project_name')
         description = request.POST.get('description')
         project_type = int(request.POST.get('type'))
-        redirect_url = 'cart/cart.html'
+        redirect_url = 'cart.html'
 
         if project_type == 1:
             price = settings.ICON_PRICE
@@ -48,7 +48,6 @@ def add_project(request):
         project['price'] = "{0:.2f}".format(price)
         cart.append(project)
         request.session['cart'] = cart
-        print(cart)
         return render(request, redirect_url)
 
     else:
@@ -65,20 +64,18 @@ def remove_from_cart(request, item_id):
     """ Remove an item from the cart. """
     if request.method == 'POST':
         try:
-                cart = request.session.get('cart', [])
-                print(cart[int(item_id)-1])
-                cart.pop([int(item_id)-1])
-                messages.success(request, f'Removed {cart.project_name} from your cart')
-                request.session['cart'] = cart
-                template = 'cart/cart.html'
-                context = {
-                    'cart':cart
-                }
-                print(cart)
-                return render(reverse(request), template, context)
-                
+            cart = request.session.get('cart', [])
+            print(cart[int(item_id)-1])
+            del (cart[int(item_id)-1])
+            messages.success(request, f'Removed {cart.product_name} from your bag')
+
+            request.session['cart'] = cart
+            return render(request, 'cart.html')               
 
         except Exception as e:
                 messages.error(request, f'Error removing item: {e}')
                 print(cart)
                 return HttpResponse(status=500)
+    
+    else:
+        return render(request, 'cart.html')

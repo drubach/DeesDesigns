@@ -81,7 +81,7 @@
                                                 </td>
                                                 <td class="col" id='cart-price'>${{ item.price }}</td>
                                                 <td class="col">
-                                                    <a class="remove-item text-danger float-right" id= {{ item.item_id }}><small>Remove</small></a>
+                                                    <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                                                 </td>
                                             </tr>
                                         {% endfor %}
@@ -126,12 +126,12 @@
 {% endblock %}
 
 {% block postload_js %}
-<!-- Get Check All & Delete JS File -->
-{% comment %} <script>
+
+<script>
     // Remove item and reload on click
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id');
+        var itemId = $(this).attr('id').split('remove_')[1];
         var url = `/cart/remove/${itemId}/`;
         var data = {'csrfmiddlewaretoken': csrfToken};
 
@@ -140,5 +140,5 @@
                 location.reload();
             });
     })
-</script> {% endcomment %}
+</script> 
 {% endblock %}

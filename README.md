@@ -4,7 +4,7 @@ This project is meant to provide an online presence for the small local business
 
 Dee's Designs is a small singularly owned boutique graphic design business based in western NY. This project gives Dee's Designs an online platform to advertise their services, and for customers to purchase them, create accounts, edit delivery information, and provide quick contact with the business owner.
 
-[Take a look at the project here]().
+[Take a look at the project here](https://dees-designs.herokuapp.com/).
 <hr>
 
 ## **UX**
@@ -131,6 +131,10 @@ Allauth
 
 * **Can't log in to Admin** - Error is "AttributeError: 'ForwardOneToOneDescriptor' object has no attribute 'pk'". Tried to modify File "C:\Users\rubac\anaconda3\lib\site-packages\django\contrib\admin\templatetags\log.py", line 20, in render
     user_id = context[self.user].pk to .id.
+
+## **Future Work**
+* Finish cart and profile apps.
+* Automate unit tests.
 
 ## **Credits**
 ### **Media**

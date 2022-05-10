@@ -218,9 +218,9 @@ POSTER_PRICE = 1000.00
 PORT_MUR_PRICE = 5000.00
 
 STRIPE_CURRENCY = 'usd'
-# STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY")
-# STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
-# STRIPE_WEBHOOK_SECRET = os.environ.get("STRIPE_WEBHOOK_SECRET")
+STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY")
+STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
+STRIPE_WEBHOOK_SECRET = os.environ.get("STRIPE_WEBHOOK_SECRET")
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'dee@deesdesigns.com'

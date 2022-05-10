@@ -3,7 +3,7 @@
 {% load cart_tools %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'css/checkout.css' %}">
+    {% comment %} <link rel="stylesheet" href="{% static 'css/checkout.css' %}"> {% endcomment %}
 {% endblock %} 
 
 {% block content %}
@@ -120,9 +120,9 @@
 {% endblock %}
 
 {% block postload_js %}
-    {{ block.super }}
+    {% comment %} {{ block.super }}
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
-    <script src="{% static 'js/stripe_elements.js' %}"></script>
+    <script src="{% static 'js/stripe_elements.js' %}"></script> {% endcomment %}
 
 {% endblock %}

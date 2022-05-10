@@ -120,9 +120,9 @@
 {% endblock %}
 
 {% block postload_js %}
-    {% comment %} {{ block.super }}
+    {{ block.super }}
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
-    <script src="{% static 'js/stripe_elements.js' %}"></script> {% endcomment %}
+    <script src="{% static 'js/stripe_elements.js' %}"></script>
 
 {% endblock %}

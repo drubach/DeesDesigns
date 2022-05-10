@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     'allauth', # Installed from Django allauth doc site.
     'allauth.account', # Installed from Django allauth doc site.
     'allauth.socialaccount', # Installed from Django allauth doc site.
-    'allauth.socialaccount.providers.stripe',
     'home',
     'projects',
     'cart',

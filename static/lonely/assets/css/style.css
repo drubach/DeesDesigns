@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form-wrapper {
-  width: 100%;
+  
   text-align: center;
   margin: 5px 0px 5px 0px;
   background-color: 0 0 29px 0 rgba(68, 88, 144, 0.2);
@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form-field {
-  width: 100%;
+
   margin: 1px 0px 5px 0px;
   fill: #fcf2f7;
   border-radius: 5px;

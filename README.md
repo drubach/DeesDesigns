@@ -129,6 +129,9 @@ Allauth
 
 * **Adding or removing items from cart 500 errors** - Fixed by using direction from this post in [StackOverflow](https://stackoverflow.com/questions/11241668/what-is-reverse).
 
+* **Can't log in to Admin** - Error is "AttributeError: 'ForwardOneToOneDescriptor' object has no attribute 'pk'". Tried to modify File "C:\Users\rubac\anaconda3\lib\site-packages\django\contrib\admin\templatetags\log.py", line 20, in render
+    user_id = context[self.user].pk to .id.
+
 ## **Credits**
 ### **Media**
 * The majority of the media was provided within the Bootstrap template.

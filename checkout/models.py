@@ -75,4 +75,4 @@ class OrderLineItem(models.Model):
 
 
     def __str__(self):
-        return f'Type- {self.type} on order {self.order.order_number}'
+        return f'Type: {self.type} on order {self.order.order_number}'

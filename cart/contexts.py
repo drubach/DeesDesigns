@@ -7,7 +7,7 @@ total = 0
 
 def cart_contents(request):
     """ Cart contents set up. """
-    user = UserCart.user
+    
     cart = request.session.get('cart',[])
 
     res_list = list(map(itemgetter('price'), cart))
@@ -17,7 +17,7 @@ def cart_contents(request):
     grand_total = total
 
     context = {
-        'user': user,
+        
         'cart_items': cart,
         'grand_total': grand_total
     }

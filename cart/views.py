@@ -29,7 +29,6 @@ def add_project(request):
         project_name = request.POST.get('project_name')
         description = request.POST.get('description')
         project_type = int(request.POST.get('type'))
-        redirect_url = 'cart/cart.html'
 
         if project_type == 1:
             price = settings.ICON_PRICE
@@ -65,7 +64,6 @@ def remove_from_cart(request, item_id):
     if request.method == 'POST':
         try:
             cart = request.session.get('cart', [])
-            print(cart[int(item_id)-1])
             del (cart[int(item_id)-1])
             messages.success(request, f'Removed item from your cart')
 
@@ -74,7 +72,6 @@ def remove_from_cart(request, item_id):
 
         except Exception as e:
                 messages.error(request, f'Error removing item: {e}')
-                print(cart)
                 return HttpResponse(status=500)
     
     else:

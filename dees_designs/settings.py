@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'allauth', # Installed from Django allauth doc site.
     'allauth.account', # Installed from Django allauth doc site.
     'allauth.socialaccount', # Installed from Django allauth doc site.
+    'allauth.socialaccount.providers.stripe',
     'home',
     'projects',
     'cart',
@@ -220,7 +221,7 @@ PORT_MUR_PRICE = 5000.00
 STRIPE_CURRENCY = 'usd'
 STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY")
 STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
-STRIPE_WEBHOOK_SECRET = os.environ.get("STRIPE_WEBHOOK_SECRET")
+STRIPE_WEBHOOK_SECRET = os.environ.get("    ")
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'dee@deesdesigns.com'

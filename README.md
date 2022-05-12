@@ -149,13 +149,36 @@ Three different online tools were used to validate there were no syntax errors i
 - ![HTML Syntax Test](/media/HTMLValidator.png "W3 HTML Syntax Validator test results")
 
 #### [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
-- ![HTML Syntax Test](/media/HTMLValidator.png "W3 HTML Syntax Validator test results")
+- ![CSS Syntax Test](/media/CSSValidator.png "W3 CSS Syntax Validator test results")
 
-#### [ExtendsClass Validator](https://extendsclass.com/javascript-fiddle.html)
-ExtendsClass Javascript test
-User Stories
-User	Story	Application Feature or Design Element
-A player aged between 5-13 years old:	Easily understood and operated controls.	One button to press to play the game. One button to save the high score or not in a seperate alert.
+#### [Esprima Javascript Validator](https://esprima.org/demo/validate.html)
+- ![Javascript Syntax Test](/media/JSValidator.png "Esprima Javascript Syntax Validator test results")
+
+
+## **User Stories**
+|User|Story|Application Feature or Design Element|
+|----|-----|-------------------------------------|
+|First Time Visitor:|Easily understand the purpose of the site.|Hero image & text and Header on Home page clearly and quickly shows this.|
+||Quickly learn how to navigate the site and make sure it is intuitively accessible for first time users.|Header on Home page clearly and quickly shows this.|
+||Visually appealing to have a pleasant first experience.|Site design is modern and appealing.|
+||Be able to quickly browse examples of designs to quickly determine interest.|The Portfolio section on the Home page and My Projects page do this.|
+||Be able to contact the owner of the store if I have any questions.|Multiple means of contacting the owner are provided on the Home page.|
+||Be able to create an account, submit a request for work.|The Add a Project and Sign in pages accomplish this.|
+|----|-----|-------------------------------------|
+|Returning Visitor Goals:|Be able to login/register so information can be saved, and checkout is handled efficiently.|Login, register and profile saving functionality take care of this.|
+||Have items that I my have in my project cart still be there when I return.|Saving profile and cart session variables take care of this.|
+|----|-----|-------------------------------------|
+|Frequent User Goals:|Be able to save my profile information so that I don't have to re-enter every time I order.|Profile app functionality cover this.|
+||Have the option to custom order if I want to change something to a particular product.|Text form project description allow this.|
+|----|-----|-------------------------------------|
+|Site Owner Goals:|Showcase work.|Portfolio section of home page and My Projects page take care of this.|
+||Process orders online.|Cart, Checkout and Stripe integration take care of this.|
+||Be able to update portfolio.|This is accomplished through the Site Admin for the owner/superuser.|
+||See a list of orders.|Can be seen in the Orders portion of the Site Admin.|
+||Upload finished work to portfolio/project showcase.|This is also accomplished through the Site Admin.|
+    
+    
+    One button to press to play the game. One button to save the high score or not in a seperate alert.
 Responsive and functional on all devices.	The game was designed mobile first and works on mobile and laptop devices.
 Feedback to know when I have been successful or not.	A succesful hit is registered by an image change giving immediate positive feedback. Alerts at the end of the game let you know if you beat your high score or not.
 Increase the challenge when my abilities improve.	There is a built in feature, automatically increasing the speed of play.

@@ -61,7 +61,7 @@ def checkout(request):
             order = order_form.save(commit=False)
             order.save()
             for item in cart:
-                project = Project(project_name=item['project_name'], description=item['description'], cost=item['price'])
+                project = Project(project_name=item['project_name'], description=item['description'], cost=item['price'], type=get_object_or_404(Type, id=item['project_type']), paid=1)
                 project.save()
                 order_line_item = OrderLineItem(
                     order = order,

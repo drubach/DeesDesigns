@@ -8,6 +8,7 @@ class ProjectAdmin(admin.ModelAdmin):
     """ View for project administration. """
     list_display = (
         'user',
+        'project_name',
         'type',
         'completed',
         'paid',

@@ -23,7 +23,7 @@
     <!-- ======= Profile Delete Section ======= -->
   <section class="section-bg">
     <div class="container">
-      <div class="row">
+      <div class="row banner">
         <div class="col-12 col-md-6">
           <div class="allauth-form-inner-content">
             <p>{% trans 'Are you sure you want to delete your profile?' %}</p>
@@ -33,7 +33,7 @@
               {% if redirect_field_value %}
               <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
               {% endif %}
-              <a class="button" href="{% url 'me' %}">Back to My Profile</a>
+              <a class="button" href="{% url 'my_profile' %}">Back to My Profile</a>
               <button id="delete-profile" class="button" type="submit">{% trans 'Delete My Profile' %}</button>
             </form>
           </div>

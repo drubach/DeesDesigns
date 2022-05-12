@@ -24,18 +24,16 @@ For inspiration, I looked at a number of Bootstrap Templates to get a beautiful 
 * Be able to create an account, submit a request for work.
 #### **Returning Visitor Goals:**
 * Be able to login/register so information can be saved, and chekcout is handled efficiently.
-* Be able to login with my Google account so creating an account is painless.
 * Have items that I my have in my project cart still be there when I return.
 #### **Frequent User Goals:**
 * Be able to save my profile information so that I don't have to re-enter every time I order.
-* See my order history to see what I have already bought.
 * Have the option to custom order if I want to change something to a particular product.
 #### **Site Owner Goals:**
 * Showcase work.
 * Process orders online.
 * Be able to update portfolio.
 * See a list of orders.
-* Upload finished work and have customer receive notification of completion.
+* Upload finished work to portfolio.
 <hr>
 
 ### **Design Features Include:**
@@ -61,17 +59,13 @@ For inspiration, I looked at a number of Bootstrap Templates to get a beautiful 
 <hr>
 
 ### **Features:**
-* **User Registration** - Allows user to store their delivery information, their default email, name, phone number, submit a request for services and view their order history.
-
-* **SSO** - Allauth supports signing in and creating an account through many providers, I implemented Google and Facebook.
-
-* **Contact Page** - Allows end users to send emails and questions to the store owner for easy correspondence.
+* **User Registration** - Allows user to store their delivery information, their default email, name, phone number, submit a request for services.
 
 * **Cart Model** - Allows users that are registered with the site to have their cart data stored for easy access if they leave the site and log back in.
 
 * **Responsiveness** - Site responds to all device sizes and looks natural on Desktop, Mobile, and Tablet views.
 
-* **Customizable Store** - Flexible product design allows the owner to add products, edit products, and delete them as their store changes.
+* **Customizable Store** - Flexible project design allows the owner to add projects, and delete them as their store changes.
 
 * **Checkout** - Integration with Stripe allows people to shop and buy products, complete with confirmation emails for both the consumer, and the store owner.
 <hr>
@@ -132,9 +126,51 @@ Allauth
 * **Can't log in to Admin** - Error is "AttributeError: 'ForwardOneToOneDescriptor' object has no attribute 'pk'". Tried to modify File "C:\Users\rubac\anaconda3\lib\site-packages\django\contrib\admin\templatetags\log.py", line 20, in render
     user_id = context[self.user].pk to .id.
 
+* **Toasts not working** - Toasts did not show. Wrote toasts.js to get them to show. Toasts did not close. Added function to specifically close when clicked.
+
+* **Deployed site not working** - Identified multiple issues. Forgot to remove testing code and to uncomment correct code related to user model, Stripe and cart.
+
+## **Testing** 
+### **Functionality**
+* The Website was tested on Google Chrome, Microsoft Edge and Safari browsers and found to function correctly.
+
+* The website was viewed and tested on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX and found to function correctly.
+
+* Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+
+### **Website Performance**
+Lighthouse developer tools were used to test the website performance. The four areas examined are load performance, accessibility, best practices and search engine optimiztation. #### [Lighthouse](https://developers.google.com/web/tools/lighthouse)
+- ![Lighthouse Performance Test](/media/Lighthouse.png "Lighthouse performance test results")
+
+### **Code Syntax**
+Three different online tools were used to validate there were no syntax errors in the project.
+
+#### [W3C HTML Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+- ![HTML Syntax Test](/media/HTMLValidator.png "W3 HTML Syntax Validator test results")
+
+#### [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
+- ![HTML Syntax Test](/media/HTMLValidator.png "W3 HTML Syntax Validator test results")
+
+#### [ExtendsClass Validator](https://extendsclass.com/javascript-fiddle.html)
+ExtendsClass Javascript test
+User Stories
+User	Story	Application Feature or Design Element
+A player aged between 5-13 years old:	Easily understood and operated controls.	One button to press to play the game. One button to save the high score or not in a seperate alert.
+Responsive and functional on all devices.	The game was designed mobile first and works on mobile and laptop devices.
+Feedback to know when I have been successful or not.	A succesful hit is registered by an image change giving immediate positive feedback. Alerts at the end of the game let you know if you beat your high score or not.
+Increase the challenge when my abilities improve.	There is a built in feature, automatically increasing the speed of play.
+Positive feedback when I hit a new high score.	There is built in high score recognition during the session. Additionally, local storage is used to save the high score between sessions.
+Appealing icons and images that I can understand.	The images for the game are simple, cartoonish, fun and brightly colored. The icons for the social media links are standard and easily recognized.
+A parent of a player	An appealing game, so that my child and I can have a positive experience when using it.	The game is responsive on all devices and platforms and design choices emphasize color and simple fun graphics.
+To know who developed the game and to be able to contact them easily.	There is a simple footer that identifies the developer in the copyright information and provides links to multiple social media for contact purposes.
+Technologies Used
+
 ## **Future Work**
-* Finish cart and profile apps.
 * Automate unit tests.
+* Edit information to the project requests.
+* Automate emails for progress status of the project order.
+* Add SSO to allow for easier registering and signing in.
+* Allow customers to automatically filter to view all their projects.
 
 ## **Credits**
 ### **Media**
@@ -177,5 +213,5 @@ Allauth
 ## **Acknowledgments**
 * My mentor Caleb Mbakwe for continuous and helpful support/design suggestions.
 * My tutor James for giving me the guidance I needed at just the right time.
-* My son for his patient assistance and encouragement that an old dog can learn new tricks.
+* My son Jake for his patient assistance and encouragement that an old dog can learn new tricks.
 <hr>

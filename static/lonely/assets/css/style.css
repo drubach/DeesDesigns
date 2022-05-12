@@ -27,10 +27,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", serif;
 }
 
-.fill{
-  min-height: (100vh);
-}
-
 .hidden {
   display: none;
 }
@@ -109,10 +105,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form-wrapper {
-  
   text-align: center;
   margin: 5px 0px 5px 0px;
-  background-color: 0 0 29px 0 rgba(68, 88, 144, 0.2);
 }
 
 .form-field-label {
@@ -450,6 +444,7 @@ section {
 .section-title {
   padding-bottom: 30px;
 }
+
 .section-title h2 {
   font-size: 32px;
   font-weight: bold;
@@ -1188,7 +1183,7 @@ section {
 # Project Details
 --------------------------------------------------------------*/
 .project-details {
-  position: realitve;
+  position: relative;
 }
 .project-details .project-details-slider img {
   width: 100%;

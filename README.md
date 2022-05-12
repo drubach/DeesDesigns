@@ -176,17 +176,6 @@ Three different online tools were used to validate there were no syntax errors i
 ||Be able to update portfolio.|This is accomplished through the Site Admin for the owner/superuser.|
 ||See a list of orders.|Can be seen in the Orders portion of the Site Admin.|
 ||Upload finished work to portfolio/project showcase.|This is also accomplished through the Site Admin.|
-    
-    
-    One button to press to play the game. One button to save the high score or not in a seperate alert.
-Responsive and functional on all devices.	The game was designed mobile first and works on mobile and laptop devices.
-Feedback to know when I have been successful or not.	A succesful hit is registered by an image change giving immediate positive feedback. Alerts at the end of the game let you know if you beat your high score or not.
-Increase the challenge when my abilities improve.	There is a built in feature, automatically increasing the speed of play.
-Positive feedback when I hit a new high score.	There is built in high score recognition during the session. Additionally, local storage is used to save the high score between sessions.
-Appealing icons and images that I can understand.	The images for the game are simple, cartoonish, fun and brightly colored. The icons for the social media links are standard and easily recognized.
-A parent of a player	An appealing game, so that my child and I can have a positive experience when using it.	The game is responsive on all devices and platforms and design choices emphasize color and simple fun graphics.
-To know who developed the game and to be able to contact them easily.	There is a simple footer that identifies the developer in the copyright information and provides links to multiple social media for contact purposes.
-Technologies Used
 
 ## **Future Work**
 * Automate unit tests.

@@ -24,11 +24,7 @@
     <section id="form-details" class="form-details section-bg">
         <div class="container">
         
-            <div class="row" >
-                <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                
-                </div>
-
+            <div class="row justify-content-center align-content-center" >
                 <div class="col-lg-4 form-wrapper">
                     <form method="POST"  class="post-form mb-2" action="{% url 'add_project' %}" enctype="multipart/form-data">
                         {% csrf_token %}

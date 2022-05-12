@@ -13,7 +13,6 @@ class UserProfile(models.Model):
     delivery information and order history
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    default_company_name = models.CharField(max_length=40, null=True, blank=True)
     default_street_address1 = models.CharField(max_length=80, null=True, blank=True)
     default_street_address2 = models.CharField(max_length=80, null=True, blank=True)
     default_town_or_city = models.CharField(max_length=40, null=True, blank=True)
@@ -38,3 +37,11 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
         UserProfile.objects.create(user=instance)
     # Existing users: just save the profile
     instance.userprofile.save()
+
+@receiver(email_confirmed)
+def update_user_email(sender, request, email_address, **kwargs):
+    # Once the email address is confirmed, make new email_address primary.
+    # This also sets user.email to the new email address.
+    # email_address is an instance of allauth.account.models.EmailAddress
+    email_address.set_as_primary()
+    EmailAddress.objects.filter(user=email_address.user).exclude(primary=True).delete()

@@ -27,10 +27,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", serif;
 }
 
-.wrapper {
-  min-height: calc(100vh - 170px);
-}
-
 .fill{
   min-height: (100vh);
 }
@@ -476,6 +472,11 @@ section {
   margin-bottom: 0;
 }
 
+.banner {
+  position:relative;
+  text-align: center;
+}
+
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
@@ -483,6 +484,7 @@ section {
   padding: 15px 0;
   background-color: #fcf2f7;
   min-height: 40px;
+  margin-top: 60px;
 }
 .breadcrumbs h2 {
   font-size: 24px;
@@ -1261,6 +1263,21 @@ footer {
   text-align: center;
   font-size: 13px;
 }
+
+/*--------------------------------------------------------------
+# Profile
+--------------------------------------------------------------*/
+#profile-container {
+  padding-bottom: 10px;
+  position:relative;
+  align-items: center;
+}
+
+.table {
+  position:relative;
+  align-items: center;
+}
+
 
 /*--------------------------------------------------------------
 # Cart

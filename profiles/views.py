@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import UserProfile
-from .forms import UserProfileForm
+from .forms import UserProfileForm, UserForm
 from django.contrib.auth.models import User
 from allauth.account.models import EmailAddress
 from allauth.socialaccount.models import SocialAccount
@@ -36,16 +36,13 @@ def profile(request):
         else:
             messages.error(request, 'Update failed. Please ensure the form is valid.')
     else:
-        form = UserProfileForm(instance=profile)
-    
-    orders = profile.orders.all() 
+        form = UserProfileForm(instance=profile) 
     
     template = 'profiles/profile.html'
     context = {
         'page': 'profile',
         'profile': profile,
         'user': user,
-        'orders': orders,
         'on_profile_page': True,
         'social_account': social_account,
     }
@@ -60,7 +57,7 @@ def edit_profile(request):
     user = get_object_or_404(User, username=request.user)
 
     form = UserProfileForm(instance=profile)
-    orders = profile.orders.all()
+    form_two = UserForm(instance=user)
 
     messages.info(request, f'You are now editing your profile.')
     template = 'profiles/edit_profile.html'
@@ -68,7 +65,7 @@ def edit_profile(request):
     context = {
         'page': 'profile',
         'form': form,
-        'orders': orders,
+        'form_two':form_two,
         'on_profile_page': True,
     }
 

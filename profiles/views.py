@@ -14,25 +14,13 @@ def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
     user = get_object_or_404(User, username=request.user)    
-    try:
-        social_account = get_object_or_404(SocialAccount, user_id=request.user)
-    except:
-        social_account = False
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
-        if form.is_valid():
-            try:
-                user_email = get_object_or_404(EmailAddress, user_id=request.user)
-                if str(request.POST.get('email')) != str(user_email):
-                    new_email = request.POST.get('email')
-                    profile.add_email_address(request, new_email)
-                    messages.success(request, 'Profile updated successfully, please confirm the new email in your profile by clicking the link in the email sent to you.')
-                else:
-                    messages.success(request, 'Profile updated successfully.')
-                form.save()
-            except EmailAddress.MultipleObjectsReturned:
-                messages.error(request, 'Please confirm the email in your profile before attempting to update it again.')
+        form_two = UserForm(request.POST, instance=user)
+        if form.is_valid() and form_two.is_valid():
+            form.save()
+            form_two.save()
         else:
             messages.error(request, 'Update failed. Please ensure the form is valid.')
     else:
@@ -44,7 +32,6 @@ def profile(request):
         'profile': profile,
         'user': user,
         'on_profile_page': True,
-        'social_account': social_account,
     }
 
     return render(request, template, context)

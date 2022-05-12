@@ -9,7 +9,7 @@ from django.conf import settings
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 
-from projects.models import Project
+from projects.models import Project, Type
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from cart.contexts import cart_contents
@@ -46,27 +46,33 @@ def checkout(request):
         cart = request.session.get('cart', {})
 
         form_data = {
-            'full_name': request.POST('full_name'),
-            'email': request.POST('email'),
-            'phone_number': request.POST('phone_number'),
-            'country': request.POST('country'),
-            'postcode': request.POST('postcode'),
-            'town_or_city': request.POST('town_or_city'),
-            'street_address1': request.POST('street_address1'),
-            'street_address2': request.POST('street_address2'),
-            'county': request.POST('county'),
+            'full_name': request.POST['full_name'],
+            'email': request.POST['email'],
+            'phone_number': request.POST['phone_number'],
+            'country': request.POST['country'],
+            'postcode': request.POST['postcode'],
+            'town_or_city': request.POST['town_or_city'],
+            'street_address1': request.POST['street_address1'],
+            'street_address2': request.POST['street_address2'],
+            'county': request.POST['county'],
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            order_form.save()
-            for item_id, item_data in cart.items():
+            order = order_form.save(commit=False)
+            order.save()
+            for item in cart:
+                project = Project(project_name=item['project_name'], description=item['description'], cost=item['price'])
+                project.save()
                 order_line_item = OrderLineItem(
                     order = order,
                     project = project,
-                    type=project_type,
-                    lineitem_total = lineitem_total,
+                    type= get_object_or_404(Type, id=item['project_type']),
+                    lineitem_total = item['price'],
                 ) 
                 order_line_item.save()
+        
+        return redirect(reverse('checkout_success', args=[order.order_number]))
+    
     else:
         cart = request.session.get('cart', {})        
         if not cart:
@@ -105,18 +111,18 @@ def checkout(request):
         else:
             order_form = OrderForm()
         
-        if not stripe_public_key:
-            messages.warning(request, 'Stripe public key is missing. \
-                Did you forget to set it in your environment variables?')
-        
-        template = 'checkout/checkout.html'
-        context = {
-            'order_form': order_form,
-            'stripe_public_key': 'STRIPE_PUBLIC_KEY',
-            'client_secret': intent.client_secret,
-        }
+    if not stripe_public_key:
+        messages.warning(request, 'Stripe public key is missing. \
+            Did you forget to set it in your environment variables?')
+    
+    template = 'checkout/checkout.html'
+    context = {
+        'order_form': order_form,
+        'stripe_public_key': stripe_public_key,
+        'client_secret': intent.client_secret,
+    }
 
-        return render(request, template, context)
+    return render(request, template, context)
 
 def checkout_success(request, order_number):
     """
@@ -126,7 +132,7 @@ def checkout_success(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
     if request.user.is_authenticated:
-        profile = UserProfile.objects.get(user=request.user)
+        profile = get_object_or_404(UserProfile, user=request.user)
         # Attach the user's profile to the order
         order.user_profile = profile
         order.save()
@@ -161,31 +167,6 @@ def checkout_success(request, order_number):
     return render(request, template, context)
 
 
-#############################################################################
-
-
-
-
-
-
-def checkout(request):
-    stripe_public_key = settings.STRIPE_PUBLIC_KEY
-    stripe_secret_key = settings.STRIPE_SECRET_KEY
-
-    if request.method == 'POST':
-        bag = request.session.get('bag', {})
-
-        form_data = {
-            'full_name': request.POST['full_name'],
-            'email': request.POST['email'],
-            'phone_number': request.POST['phone_number'],
-            'country': request.POST['country'],
-            'postcode': request.POST['postcode'],
-            'town_or_city': request.POST['town_or_city'],
-            'street_address1': request.POST['street_address1'],
-            'street_address2': request.POST['street_address2'],
-            'county': request.POST['county'],
-        }
 
         
     
